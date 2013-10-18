@@ -1,0 +1,1121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>M1 Informatique - OIM - mini raytracer: Scene definition API</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">M1 Informatique - OIM - mini raytracer
+   &#160;<span id="projectnumber">2012-2013</span>
+   </div>
+   <div id="projectbrief">Interface de programmation pour un raytracer minimal</div>
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.5.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00052.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Scene definition API</div>  </div>
+<div class="ingroups"><a class="el" href="a00051.html">Simple Raytracing API</a></div></div>
+<div class="contents">
+
+<p>Application Programming Interface for the building simple scenes.  
+<a href="#details">Plus de détails...</a></p>
+<div class="dynheader">
+Graphe de collaboration de Scene definition API:</div>
+<div class="dyncontent">
+<center><table><tr><td><img src="a00052.png" border="0" alt="" usemap="#a00052"/>
+<map name="a00052" id="a00052">
+<area shape="rect" id="node2" href="a00051.html" title="Application Programming Interface for the Very Simple Ray Tracer." alt="" coords="6,5,160,33"/></map>
+</td></tr></table></center>
+</div>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#gad67f595be55be0bc50b4ec08a9c74192">set_camera</a> (float pos_x_, float pos_y_, float pos_z_, float aim_x_, float aim_y_, float aim_z_, float up_x_, float up_y_, float up_z_, float fov_, int x_res_, int y_res_)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">to set the parameters of the camera  <a href="#gad67f595be55be0bc50b4ec08a9c74192"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#ga7338897b0e82076338fb7dd7cadeaddc">add_light</a> (float pos_x_, float pos_y_, float pos_z_, float r_, float g_, float b_)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">to add a light to the scene  <a href="#ga7338897b0e82076338fb7dd7cadeaddc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00007.html">Geometry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#gaf8b0ecdd64116491706ebede06c13b54">create_plane</a> (float pos_x_, float pos_y_, float pos_z_, float normal_x_, float normal_y_, float normal_z_)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">to create a plane  <a href="#gaf8b0ecdd64116491706ebede06c13b54"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00007.html">Geometry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#ga2da051b943f32009496f94737261c248">create_sphere</a> (float pos_x_, float pos_y_, float pos_z_, float radius_)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">to create a sphere  <a href="#ga2da051b943f32009496f94737261c248"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00007.html">Geometry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#gabd60bd9dfe9afb36b127decf9145287d">create_cylinder</a> (float pos_x_, float pos_y_, float pos_z_, float axis_x_, float axis_y_, float axis_z_, float radius_, float length_)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">to create a cylinder  <a href="#gabd60bd9dfe9afb36b127decf9145287d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00012.html">Material</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#gad720b183f0a7c5b1d366a86fae48ff5e">create_matte_mat</a> (float kd_r_, float kd_g_, float kd_b_)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">to create a matte material  <a href="#gad720b183f0a7c5b1d366a86fae48ff5e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00012.html">Material</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#ga5e9b1752bc3635d8e03aeedce96f1378">create_plastic_mat</a> (float kd_r_, float kd_g_, float kd_b_, float ks_r_, float ks_g_, float ks_b_, float shininess_)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">to create a plastic material  <a href="#ga5e9b1752bc3635d8e03aeedce96f1378"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00012.html">Material</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#ga7e84d93db3d16480aa51e9d9cc16d843">create_metal_mat</a> (float kd_r_, float kd_g_, float kd_b_, float kr_r_, float kr_g_, float kr_b_)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">to create a metal-like material  <a href="#ga7e84d93db3d16480aa51e9d9cc16d843"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00012.html">Material</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#ga064ee1f6da1924df4e37334c456ea18f">create_glass_mat</a> (float ks_r_, float ks_g_, float ks_b_, float kt_r_, float kt_g_, float kt_b_, float ior_)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">to create a glass-like material  <a href="#ga064ee1f6da1924df4e37334c456ea18f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#gadf3f8ea1c8bf943db640af01230ed0f7">add_object</a> (<a class="el" href="a00007.html">Geometry</a> *geom_, <a class="el" href="a00012.html">Material</a> *mat_)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">to add a new object to the scene, from its geometry and its material  <a href="#gadf3f8ea1c8bf943db640af01230ed0f7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#ga5102ec4e0cd297fb1e649f5dde3bd029">make_default_scene</a> (int xsize, int ysize)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">to initialize the scene with the default one.  <a href="#ga5102ec4e0cd297fb1e649f5dde3bd029"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#ga16d4353577e7adc824650320333c7245">nb_lights</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00011.html">Light</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#gade62171a2f3b305905e5b0ada32357ff">get_light</a> (int i_)</td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
+<p>Application Programming Interface for the building simple scenes. </p>
+<hr/><h2>Documentation des fonctions</h2>
+<a class="anchor" id="ga7338897b0e82076338fb7dd7cadeaddc"></a><!-- doxytag: member="raytracing.h::add_light" ref="ga7338897b0e82076338fb7dd7cadeaddc" args="(float pos_x_, float pos_y_, float pos_z_, float r_, float g_, float b_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_light </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_x_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_y_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_z_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>r_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>g_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>b_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>to add a light to the scene </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos_x_</td><td>position of the light </td></tr>
+    <tr><td class="paramname">pos_y_</td><td></td></tr>
+    <tr><td class="paramname">pos_z_</td><td></td></tr>
+    <tr><td class="paramname">r_</td><td>color of the light </td></tr>
+    <tr><td class="paramname">g_</td><td></td></tr>
+    <tr><td class="paramname">b_</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="a00040_source.html#l00071">71</a> du fichier <a class="el" href="a00040_source.html">raytracing.cpp</a>.</p>
+
+<p>Références <a class="el" href="a00042_source.html#l00044">Scene::add_light()</a>.</p>
+
+<p>Référencé par <a class="el" href="a00040_source.html#l00204">make_default_scene()</a>, et <a class="el" href="a00043_source.html#l00070">make_platon_scene()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_ga7338897b0e82076338fb7dd7cadeaddc_cgraph.png" border="0" usemap="#a00052_ga7338897b0e82076338fb7dd7cadeaddc_cgraph" alt=""/></div>
+<map name="a00052_ga7338897b0e82076338fb7dd7cadeaddc_cgraph" id="a00052_ga7338897b0e82076338fb7dd7cadeaddc_cgraph">
+<area shape="rect" id="node3" href="a00019.html#a6403f0a1e1cb777d4b335a3eb093979d" title="Scene::add_light" alt="" coords="132,5,252,33"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_ga7338897b0e82076338fb7dd7cadeaddc_icgraph.png" border="0" usemap="#a00052_ga7338897b0e82076338fb7dd7cadeaddc_icgraph" alt=""/></div>
+<map name="a00052_ga7338897b0e82076338fb7dd7cadeaddc_icgraph" id="a00052_ga7338897b0e82076338fb7dd7cadeaddc_icgraph">
+<area shape="rect" id="node3" href="a00052.html#ga5102ec4e0cd297fb1e649f5dde3bd029" title="to initialize the scene with the default one." alt="" coords="130,5,275,33"/><area shape="rect" id="node7" href="a00044.html#a997362d3ed88ba880b0b7130a4ceb95b" title="Construit une scène représentant les solides de platon et visualisée dans une image de taille (xsize..." alt="" coords="132,57,273,85"/><area shape="rect" id="node5" href="a00032.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="323,5,373,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gadf3f8ea1c8bf943db640af01230ed0f7"></a><!-- doxytag: member="raytracing.h::add_object" ref="gadf3f8ea1c8bf943db640af01230ed0f7" args="(Geometry *geom_, Material *mat_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_object </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00007.html">Geometry</a> *&#160;</td>
+          <td class="paramname"><em>geom_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00012.html">Material</a> *&#160;</td>
+          <td class="paramname"><em>mat_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>to add a new object to the scene, from its geometry and its material </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">geom_</td><td></td></tr>
+    <tr><td class="paramname">mat_</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="a00040_source.html#l00197">197</a> du fichier <a class="el" href="a00040_source.html">raytracing.cpp</a>.</p>
+
+<p>Références <a class="el" href="a00042_source.html#l00040">Scene::add_primitive()</a>.</p>
+
+<p>Référencé par <a class="el" href="a00040_source.html#l00204">make_default_scene()</a>, et <a class="el" href="a00043_source.html#l00070">make_platon_scene()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_gadf3f8ea1c8bf943db640af01230ed0f7_cgraph.png" border="0" usemap="#a00052_gadf3f8ea1c8bf943db640af01230ed0f7_cgraph" alt=""/></div>
+<map name="a00052_gadf3f8ea1c8bf943db640af01230ed0f7_cgraph" id="a00052_gadf3f8ea1c8bf943db640af01230ed0f7_cgraph">
+<area shape="rect" id="node3" href="a00019.html#aab20b59647f0f9ba5cc40e5943377a87" title="Scene::add_primitive" alt="" coords="142,5,288,33"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_gadf3f8ea1c8bf943db640af01230ed0f7_icgraph.png" border="0" usemap="#a00052_gadf3f8ea1c8bf943db640af01230ed0f7_icgraph" alt=""/></div>
+<map name="a00052_gadf3f8ea1c8bf943db640af01230ed0f7_icgraph" id="a00052_gadf3f8ea1c8bf943db640af01230ed0f7_icgraph">
+<area shape="rect" id="node3" href="a00052.html#ga5102ec4e0cd297fb1e649f5dde3bd029" title="to initialize the scene with the default one." alt="" coords="141,5,286,33"/><area shape="rect" id="node7" href="a00044.html#a997362d3ed88ba880b0b7130a4ceb95b" title="Construit une scène représentant les solides de platon et visualisée dans une image de taille (xsize..." alt="" coords="143,57,284,85"/><area shape="rect" id="node5" href="a00032.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="334,5,384,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gabd60bd9dfe9afb36b127decf9145287d"></a><!-- doxytag: member="raytracing.h::create_cylinder" ref="gabd60bd9dfe9afb36b127decf9145287d" args="(float pos_x_, float pos_y_, float pos_z_, float axis_x_, float axis_y_, float axis_z_, float radius_, float length_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00007.html">Geometry</a>* create_cylinder </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_x_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_y_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_z_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>axis_x_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>axis_y_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>axis_z_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>length_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>to create a cylinder </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos_x_</td><td>position of the cylinder (center of the cylinder) </td></tr>
+    <tr><td class="paramname">pos_y_</td><td></td></tr>
+    <tr><td class="paramname">pos_z_</td><td></td></tr>
+    <tr><td class="paramname">axis_x_</td><td>axis of the cylinder (direction) </td></tr>
+    <tr><td class="paramname">axis_y_</td><td></td></tr>
+    <tr><td class="paramname">axis_z_</td><td></td></tr>
+    <tr><td class="paramname">radius_</td><td>radius of the cylinder </td></tr>
+    <tr><td class="paramname">length_</td><td>length of the cylinder </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>a new geometry corresponding to the cylinder </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="a00040_source.html#l00118">118</a> du fichier <a class="el" href="a00040_source.html">raytracing.cpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00040_source.html#l00204">make_default_scene()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_gabd60bd9dfe9afb36b127decf9145287d_icgraph.png" border="0" usemap="#a00052_gabd60bd9dfe9afb36b127decf9145287d_icgraph" alt=""/></div>
+<map name="a00052_gabd60bd9dfe9afb36b127decf9145287d_icgraph" id="a00052_gabd60bd9dfe9afb36b127decf9145287d_icgraph">
+<area shape="rect" id="node3" href="a00052.html#ga5102ec4e0cd297fb1e649f5dde3bd029" title="to initialize the scene with the default one." alt="" coords="165,5,310,33"/><area shape="rect" id="node5" href="a00032.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="358,5,408,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga064ee1f6da1924df4e37334c456ea18f"></a><!-- doxytag: member="raytracing.h::create_glass_mat" ref="ga064ee1f6da1924df4e37334c456ea18f" args="(float ks_r_, float ks_g_, float ks_b_, float kt_r_, float kt_g_, float kt_b_, float ior_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00012.html">Material</a>* create_glass_mat </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ks_r_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ks_g_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ks_b_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kt_r_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kt_g_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kt_b_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ior_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>to create a glass-like material </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kr_r_</td><td>the color of the reflective layer </td></tr>
+    <tr><td class="paramname">kr_g_</td><td></td></tr>
+    <tr><td class="paramname">kr_b_</td><td></td></tr>
+    <tr><td class="paramname">kt_r_</td><td>the color of the transmission layer </td></tr>
+    <tr><td class="paramname">kt_g_</td><td></td></tr>
+    <tr><td class="paramname">kt_b_</td><td></td></tr>
+    <tr><td class="paramname">ior_</td><td>the index of refraction of the object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>a new material corresponding to the glass material </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="a00040_source.html#l00184">184</a> du fichier <a class="el" href="a00040_source.html">raytracing.cpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00040_source.html#l00204">make_default_scene()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_ga064ee1f6da1924df4e37334c456ea18f_icgraph.png" border="0" usemap="#a00052_ga064ee1f6da1924df4e37334c456ea18f_icgraph" alt=""/></div>
+<map name="a00052_ga064ee1f6da1924df4e37334c456ea18f_icgraph" id="a00052_ga064ee1f6da1924df4e37334c456ea18f_icgraph">
+<area shape="rect" id="node3" href="a00052.html#ga5102ec4e0cd297fb1e649f5dde3bd029" title="to initialize the scene with the default one." alt="" coords="181,5,326,33"/><area shape="rect" id="node5" href="a00032.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="374,5,424,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gad720b183f0a7c5b1d366a86fae48ff5e"></a><!-- doxytag: member="raytracing.h::create_matte_mat" ref="gad720b183f0a7c5b1d366a86fae48ff5e" args="(float kd_r_, float kd_g_, float kd_b_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00012.html">Material</a>* create_matte_mat </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kd_r_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kd_g_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kd_b_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>to create a matte material </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kd_r_</td><td>the color of the material </td></tr>
+    <tr><td class="paramname">kd_g_</td><td></td></tr>
+    <tr><td class="paramname">kd_b_</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>a new material corresponding to the matte material </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="a00040_source.html#l00134">134</a> du fichier <a class="el" href="a00040_source.html">raytracing.cpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00040_source.html#l00204">make_default_scene()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_gad720b183f0a7c5b1d366a86fae48ff5e_icgraph.png" border="0" usemap="#a00052_gad720b183f0a7c5b1d366a86fae48ff5e_icgraph" alt=""/></div>
+<map name="a00052_gad720b183f0a7c5b1d366a86fae48ff5e_icgraph" id="a00052_gad720b183f0a7c5b1d366a86fae48ff5e_icgraph">
+<area shape="rect" id="node3" href="a00052.html#ga5102ec4e0cd297fb1e649f5dde3bd029" title="to initialize the scene with the default one." alt="" coords="184,5,328,33"/><area shape="rect" id="node5" href="a00032.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="376,5,426,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga7e84d93db3d16480aa51e9d9cc16d843"></a><!-- doxytag: member="raytracing.h::create_metal_mat" ref="ga7e84d93db3d16480aa51e9d9cc16d843" args="(float kd_r_, float kd_g_, float kd_b_, float kr_r_, float kr_g_, float kr_b_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00012.html">Material</a>* create_metal_mat </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kd_r_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kd_g_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kd_b_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kr_r_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kr_g_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kr_b_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>to create a metal-like material </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kd_r_</td><td>the color of the diffuse layer </td></tr>
+    <tr><td class="paramname">kd_g_</td><td></td></tr>
+    <tr><td class="paramname">kd_b_</td><td></td></tr>
+    <tr><td class="paramname">kr_r_</td><td>the color of the reflective layer </td></tr>
+    <tr><td class="paramname">kr_g_</td><td></td></tr>
+    <tr><td class="paramname">kr_b_</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>a new material corresponding to the metal material </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="a00040_source.html#l00167">167</a> du fichier <a class="el" href="a00040_source.html">raytracing.cpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00040_source.html#l00204">make_default_scene()</a>, et <a class="el" href="a00043_source.html#l00070">make_platon_scene()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_ga7e84d93db3d16480aa51e9d9cc16d843_icgraph.png" border="0" usemap="#a00052_ga7e84d93db3d16480aa51e9d9cc16d843_icgraph" alt=""/></div>
+<map name="a00052_ga7e84d93db3d16480aa51e9d9cc16d843_icgraph" id="a00052_ga7e84d93db3d16480aa51e9d9cc16d843_icgraph">
+<area shape="rect" id="node3" href="a00052.html#ga5102ec4e0cd297fb1e649f5dde3bd029" title="to initialize the scene with the default one." alt="" coords="181,5,326,33"/><area shape="rect" id="node7" href="a00044.html#a997362d3ed88ba880b0b7130a4ceb95b" title="Construit une scène représentant les solides de platon et visualisée dans une image de taille (xsize..." alt="" coords="183,57,324,85"/><area shape="rect" id="node5" href="a00032.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="374,5,424,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf8b0ecdd64116491706ebede06c13b54"></a><!-- doxytag: member="raytracing.h::create_plane" ref="gaf8b0ecdd64116491706ebede06c13b54" args="(float pos_x_, float pos_y_, float pos_z_, float normal_x_, float normal_y_, float normal_z_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00007.html">Geometry</a>* create_plane </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_x_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_y_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_z_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>normal_x_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>normal_y_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>normal_z_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>to create a plane </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos_x_</td><td>position of the plane </td></tr>
+    <tr><td class="paramname">pos_y_</td><td></td></tr>
+    <tr><td class="paramname">pos_z_</td><td></td></tr>
+    <tr><td class="paramname">normal_x_</td><td>normal of the plane </td></tr>
+    <tr><td class="paramname">normal_y_</td><td></td></tr>
+    <tr><td class="paramname">normal_z_</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>a new geometry corresponding to the plane. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="a00040_source.html#l00087">87</a> du fichier <a class="el" href="a00040_source.html">raytracing.cpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00040_source.html#l00204">make_default_scene()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_gaf8b0ecdd64116491706ebede06c13b54_icgraph.png" border="0" usemap="#a00052_gaf8b0ecdd64116491706ebede06c13b54_icgraph" alt=""/></div>
+<map name="a00052_gaf8b0ecdd64116491706ebede06c13b54_icgraph" id="a00052_gaf8b0ecdd64116491706ebede06c13b54_icgraph">
+<area shape="rect" id="node3" href="a00052.html#ga5102ec4e0cd297fb1e649f5dde3bd029" title="to initialize the scene with the default one." alt="" coords="152,5,296,33"/><area shape="rect" id="node5" href="a00032.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="344,5,394,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga5e9b1752bc3635d8e03aeedce96f1378"></a><!-- doxytag: member="raytracing.h::create_plastic_mat" ref="ga5e9b1752bc3635d8e03aeedce96f1378" args="(float kd_r_, float kd_g_, float kd_b_, float ks_r_, float ks_g_, float ks_b_, float shininess_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00012.html">Material</a>* create_plastic_mat </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kd_r_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kd_g_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>kd_b_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ks_r_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ks_g_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ks_b_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>shininess_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>to create a plastic material </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kd_r_</td><td>the color of the diffuse layer </td></tr>
+    <tr><td class="paramname">kd_g_</td><td></td></tr>
+    <tr><td class="paramname">kd_b_</td><td></td></tr>
+    <tr><td class="paramname">ks_r_</td><td>the color of the shiny layer </td></tr>
+    <tr><td class="paramname">ks_g_</td><td></td></tr>
+    <tr><td class="paramname">ks_b_</td><td></td></tr>
+    <tr><td class="paramname">shininess_</td><td>the higher, the more spiky the highlight </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>a new material corresponding to the plastic material </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="a00040_source.html#l00149">149</a> du fichier <a class="el" href="a00040_source.html">raytracing.cpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00040_source.html#l00204">make_default_scene()</a>, et <a class="el" href="a00043_source.html#l00070">make_platon_scene()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_ga5e9b1752bc3635d8e03aeedce96f1378_icgraph.png" border="0" usemap="#a00052_ga5e9b1752bc3635d8e03aeedce96f1378_icgraph" alt=""/></div>
+<map name="a00052_ga5e9b1752bc3635d8e03aeedce96f1378_icgraph" id="a00052_ga5e9b1752bc3635d8e03aeedce96f1378_icgraph">
+<area shape="rect" id="node3" href="a00052.html#ga5102ec4e0cd297fb1e649f5dde3bd029" title="to initialize the scene with the default one." alt="" coords="186,5,331,33"/><area shape="rect" id="node7" href="a00044.html#a997362d3ed88ba880b0b7130a4ceb95b" title="Construit une scène représentant les solides de platon et visualisée dans une image de taille (xsize..." alt="" coords="188,57,329,85"/><area shape="rect" id="node5" href="a00032.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="379,5,429,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga2da051b943f32009496f94737261c248"></a><!-- doxytag: member="raytracing.h::create_sphere" ref="ga2da051b943f32009496f94737261c248" args="(float pos_x_, float pos_y_, float pos_z_, float radius_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00007.html">Geometry</a>* create_sphere </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_x_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_y_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_z_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>to create a sphere </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos_x_</td><td>position of the sphere </td></tr>
+    <tr><td class="paramname">pos_y_</td><td></td></tr>
+    <tr><td class="paramname">pos_z_</td><td></td></tr>
+    <tr><td class="paramname">radius_</td><td>its radius </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>a new geometry corresponding to the sphere </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="a00040_source.html#l00101">101</a> du fichier <a class="el" href="a00040_source.html">raytracing.cpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00040_source.html#l00204">make_default_scene()</a>, et <a class="el" href="a00043_source.html#l00070">make_platon_scene()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_ga2da051b943f32009496f94737261c248_icgraph.png" border="0" usemap="#a00052_ga2da051b943f32009496f94737261c248_icgraph" alt=""/></div>
+<map name="a00052_ga2da051b943f32009496f94737261c248_icgraph" id="a00052_ga2da051b943f32009496f94737261c248_icgraph">
+<area shape="rect" id="node3" href="a00052.html#ga5102ec4e0cd297fb1e649f5dde3bd029" title="to initialize the scene with the default one." alt="" coords="160,5,304,33"/><area shape="rect" id="node7" href="a00044.html#a997362d3ed88ba880b0b7130a4ceb95b" title="Construit une scène représentant les solides de platon et visualisée dans une image de taille (xsize..." alt="" coords="162,57,302,85"/><area shape="rect" id="node5" href="a00032.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="352,5,402,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gade62171a2f3b305905e5b0ada32357ff"></a><!-- doxytag: member="raytracing.h::get_light" ref="gade62171a2f3b305905e5b0ada32357ff" args="(int i_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00011.html">Light</a>* get_light </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i_</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>the pointer to the ith light </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="a00040_source.html#l00279">279</a> du fichier <a class="el" href="a00040_source.html">raytracing.cpp</a>.</p>
+
+<p>Références <a class="el" href="a00042_source.html#l00052">Scene::p_lights()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_gade62171a2f3b305905e5b0ada32357ff_cgraph.png" border="0" usemap="#a00052_gade62171a2f3b305905e5b0ada32357ff_cgraph" alt=""/></div>
+<map name="a00052_gade62171a2f3b305905e5b0ada32357ff_cgraph" id="a00052_gade62171a2f3b305905e5b0ada32357ff_cgraph">
+<area shape="rect" id="node3" href="a00019.html#adce64c848c70c77a5ffb822f11a78aae" title="Scene::p_lights" alt="" coords="125,5,238,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga5102ec4e0cd297fb1e649f5dde3bd029"></a><!-- doxytag: member="raytracing.h::make_default_scene" ref="ga5102ec4e0cd297fb1e649f5dde3bd029" args="(int xsize, int ysize)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void make_default_scene </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ysize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>to initialize the scene with the default one. </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xsize</td><td>width of the picture </td></tr>
+    <tr><td class="paramname">ysize</td><td>heigth of the picture </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="a00040_source.html#l00204">204</a> du fichier <a class="el" href="a00040_source.html">raytracing.cpp</a>.</p>
+
+<p>Références <a class="el" href="a00040_source.html#l00071">add_light()</a>, <a class="el" href="a00040_source.html#l00197">add_object()</a>, <a class="el" href="a00040_source.html#l00118">create_cylinder()</a>, <a class="el" href="a00040_source.html#l00184">create_glass_mat()</a>, <a class="el" href="a00040_source.html#l00134">create_matte_mat()</a>, <a class="el" href="a00040_source.html#l00167">create_metal_mat()</a>, <a class="el" href="a00040_source.html#l00087">create_plane()</a>, <a class="el" href="a00040_source.html#l00149">create_plastic_mat()</a>, <a class="el" href="a00040_source.html#l00101">create_sphere()</a>, et <a class="el" href="a00040_source.html#l00046">set_camera()</a>.</p>
+
+<p>Référencé par <a class="el" href="a00032_source.html#l00091">main()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_ga5102ec4e0cd297fb1e649f5dde3bd029_cgraph.png" border="0" usemap="#a00052_ga5102ec4e0cd297fb1e649f5dde3bd029_cgraph" alt=""/></div>
+<map name="a00052_ga5102ec4e0cd297fb1e649f5dde3bd029_cgraph" id="a00052_ga5102ec4e0cd297fb1e649f5dde3bd029_cgraph">
+<area shape="rect" id="node3" href="a00052.html#ga7338897b0e82076338fb7dd7cadeaddc" title="to add a light to the scene" alt="" coords="226,5,302,33"/><area shape="rect" id="node7" href="a00052.html#gadf3f8ea1c8bf943db640af01230ed0f7" title="to add a new object to the scene, from its geometry and its material" alt="" coords="221,57,307,85"/><area shape="rect" id="node11" href="a00052.html#gabd60bd9dfe9afb36b127decf9145287d" title="to create a cylinder" alt="" coords="208,109,320,137"/><area shape="rect" id="node13" href="a00052.html#ga064ee1f6da1924df4e37334c456ea18f" title="to create a glass&#45;like material" alt="" coords="201,161,327,189"/><area shape="rect" id="node15" href="a00052.html#gad720b183f0a7c5b1d366a86fae48ff5e" title="to create a matte material" alt="" coords="200,213,328,241"/><area shape="rect" id="node17" href="a00052.html#ga7e84d93db3d16480aa51e9d9cc16d843" title="to create a metal&#45;like material" alt="" coords="200,265,328,293"/><area shape="rect" id="node19" href="a00052.html#gaf8b0ecdd64116491706ebede06c13b54" title="to create a plane" alt="" coords="215,317,313,345"/><area shape="rect" id="node21" href="a00052.html#ga5e9b1752bc3635d8e03aeedce96f1378" title="to create a plastic material" alt="" coords="197,369,331,397"/><area shape="rect" id="node23" href="a00052.html#ga2da051b943f32009496f94737261c248" title="to create a sphere" alt="" coords="211,421,317,449"/><area shape="rect" id="node25" href="a00052.html#gad67f595be55be0bc50b4ec08a9c74192" title="to set the parameters of the camera" alt="" coords="219,473,309,501"/><area shape="rect" id="node5" href="a00019.html#a6403f0a1e1cb777d4b335a3eb093979d" title="Scene::add_light" alt="" coords="392,5,512,33"/><area shape="rect" id="node9" href="a00019.html#aab20b59647f0f9ba5cc40e5943377a87" title="Scene::add_primitive" alt="" coords="379,57,525,85"/><area shape="rect" id="node27" href="a00019.html#a92e1b2344129de2618f3b5f1ed22dd5e" title="Scene::set_camera" alt="" coords="384,473,520,501"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_ga5102ec4e0cd297fb1e649f5dde3bd029_icgraph.png" border="0" usemap="#a00052_ga5102ec4e0cd297fb1e649f5dde3bd029_icgraph" alt=""/></div>
+<map name="a00052_ga5102ec4e0cd297fb1e649f5dde3bd029_icgraph" id="a00052_ga5102ec4e0cd297fb1e649f5dde3bd029_icgraph">
+<area shape="rect" id="node3" href="a00032.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="198,5,248,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga16d4353577e7adc824650320333c7245"></a><!-- doxytag: member="raytracing.h::nb_lights" ref="ga16d4353577e7adc824650320333c7245" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int nb_lights </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>the number of lights in the scene </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="a00040_source.html#l00271">271</a> du fichier <a class="el" href="a00040_source.html">raytracing.cpp</a>.</p>
+
+<p>Références <a class="el" href="a00042_source.html#l00052">Scene::p_lights()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_ga16d4353577e7adc824650320333c7245_cgraph.png" border="0" usemap="#a00052_ga16d4353577e7adc824650320333c7245_cgraph" alt=""/></div>
+<map name="a00052_ga16d4353577e7adc824650320333c7245_cgraph" id="a00052_ga16d4353577e7adc824650320333c7245_cgraph">
+<area shape="rect" id="node3" href="a00019.html#adce64c848c70c77a5ffb822f11a78aae" title="Scene::p_lights" alt="" coords="128,5,240,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="gad67f595be55be0bc50b4ec08a9c74192"></a><!-- doxytag: member="raytracing.h::set_camera" ref="gad67f595be55be0bc50b4ec08a9c74192" args="(float pos_x_, float pos_y_, float pos_z_, float aim_x_, float aim_y_, float aim_z_, float up_x_, float up_y_, float up_z_, float fov_, int x_res_, int y_res_)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_camera </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_x_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_y_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pos_z_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>aim_x_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>aim_y_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>aim_z_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>up_x_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>up_y_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>up_z_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fov_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x_res_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y_res_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>to set the parameters of the camera </p>
+<dl><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos_x_</td><td>position of the camera </td></tr>
+    <tr><td class="paramname">pos_y_</td><td></td></tr>
+    <tr><td class="paramname">pos_z_</td><td></td></tr>
+    <tr><td class="paramname">aim_x_</td><td>position of the point aimed </td></tr>
+    <tr><td class="paramname">aim_y_</td><td></td></tr>
+    <tr><td class="paramname">aim_z_</td><td></td></tr>
+    <tr><td class="paramname">up_x_</td><td>coordinates of the up vector </td></tr>
+    <tr><td class="paramname">up_y_</td><td></td></tr>
+    <tr><td class="paramname">up_z_</td><td></td></tr>
+    <tr><td class="paramname">fov_</td><td>the field of view, in degrees </td></tr>
+    <tr><td class="paramname">x_res_</td><td>resolution of the image </td></tr>
+    <tr><td class="paramname">y_res_</td><td></td></tr>
+    <tr><td class="paramname">pos_x_</td><td>position of the camera </td></tr>
+    <tr><td class="paramname">pos_y_</td><td></td></tr>
+    <tr><td class="paramname">pos_z_</td><td></td></tr>
+    <tr><td class="paramname">aim_x_</td><td>position of the point aimed </td></tr>
+    <tr><td class="paramname">aim_y_</td><td></td></tr>
+    <tr><td class="paramname">aim_z_</td><td></td></tr>
+    <tr><td class="paramname">up_x_</td><td>coordinates of the up vector </td></tr>
+    <tr><td class="paramname">up_y_</td><td></td></tr>
+    <tr><td class="paramname">up_z_</td><td></td></tr>
+    <tr><td class="paramname">x_res_</td><td>resolution of the image </td></tr>
+    <tr><td class="paramname">y_res_</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="a00040_source.html#l00046">46</a> du fichier <a class="el" href="a00040_source.html">raytracing.cpp</a>.</p>
+
+<p>Références <a class="el" href="a00040_source.html#l00026">g_p_img</a>, et <a class="el" href="a00042_source.html#l00036">Scene::set_camera()</a>.</p>
+
+<p>Référencé par <a class="el" href="a00040_source.html#l00204">make_default_scene()</a>, et <a class="el" href="a00043_source.html#l00070">make_platon_scene()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_gad67f595be55be0bc50b4ec08a9c74192_cgraph.png" border="0" usemap="#a00052_gad67f595be55be0bc50b4ec08a9c74192_cgraph" alt=""/></div>
+<map name="a00052_gad67f595be55be0bc50b4ec08a9c74192_cgraph" id="a00052_gad67f595be55be0bc50b4ec08a9c74192_cgraph">
+<area shape="rect" id="node3" href="a00019.html#a92e1b2344129de2618f3b5f1ed22dd5e" title="Scene::set_camera" alt="" coords="144,5,280,33"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00052_gad67f595be55be0bc50b4ec08a9c74192_icgraph.png" border="0" usemap="#a00052_gad67f595be55be0bc50b4ec08a9c74192_icgraph" alt=""/></div>
+<map name="a00052_gad67f595be55be0bc50b4ec08a9c74192_icgraph" id="a00052_gad67f595be55be0bc50b4ec08a9c74192_icgraph">
+<area shape="rect" id="node3" href="a00052.html#ga5102ec4e0cd297fb1e649f5dde3bd029" title="to initialize the scene with the default one." alt="" coords="144,5,288,33"/><area shape="rect" id="node7" href="a00044.html#a997362d3ed88ba880b0b7130a4ceb95b" title="Construit une scène représentant les solides de platon et visualisée dans une image de taille (xsize..." alt="" coords="146,57,286,85"/><area shape="rect" id="node5" href="a00032.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="336,5,386,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+    <li class="footer">Généré le Samedi Octobre 20 2012 11:25:22 pour M1 Informatique - OIM - mini raytracer par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00018.html#a44792845b5e6508be5959f21a3f26e9e" title="Ray::at" alt="" coords="204,5,268,33"/>
+<area shape="rect" id="node5" href="$a00018.html#a9bfb39f0ff5a7a2330ef9749b8e97e17" title="Ray::dir" alt="" coords="202,57,270,85"/>
+<area shape="rect" id="node7" href="$a00021.html#a293698c2fcdc50968fa63e125120bd61" title="Vector3D::dot" alt="" coords="185,109,287,137"/>
+<area shape="rect" id="node15" href="$a00018.html#a8cd07a7f52236e9a1f4c92fbf5c8786a" title="Ray::max_t" alt="" coords="192,161,280,189"/>
+<area shape="rect" id="node17" href="$a00018.html#aa0271e10968c04224e2986017abb67b3" title="Ray::ori" alt="" coords="202,213,270,241"/>
+<area shape="rect" id="node19" href="$a00018.html#a9484c8a3d4eeca6f9188d6ce2ca14b77" title="to avoid auto intersection" alt="" coords="176,265,296,293"/>
+<area shape="rect" id="node21" href="$a00018.html#a67bf1057835b4a923a50c82f31d46d0d" title="Ray::set_max_t" alt="" coords="179,317,293,345"/>
+<area shape="rect" id="node9" href="$a00021.html#a15a162a986b897ebd0bb74df056d99c5" title="Vector3D::x" alt="" coords="344,57,434,85"/>
+<area shape="rect" id="node11" href="$a00021.html#a1819fd51b78ece8de462d3a2c979111a" title="Vector3D::y" alt="" coords="344,109,434,137"/>
+<area shape="rect" id="node13" href="$a00021.html#a026531e883c967b7a7803a2f6b983d2c" title="Vector3D::z" alt="" coords="344,161,434,189"/>
+</map>

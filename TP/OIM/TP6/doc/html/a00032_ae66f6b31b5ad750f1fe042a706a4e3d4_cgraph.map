@@ -1,0 +1,19 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00032.html#ab1d1ac9ba4ad1639618cfd7613fee95f" title="compute_image" alt="" coords="118,213,234,241"/>
+<area shape="rect" id="node5" href="$a00052.html#ga5102ec4e0cd297fb1e649f5dde3bd029" title="to initialize the scene with the default one." alt="" coords="104,265,248,293"/>
+<area shape="rect" id="node33" href="$a00056.html#ga7952790dd850900c80616789d264b6b8" title="to save the image to a file" alt="" coords="129,421,223,449"/>
+<area shape="rect" id="node7" href="$a00052.html#gad67f595be55be0bc50b4ec08a9c74192" title="to set the parameters of the camera" alt="" coords="332,5,423,33"/>
+<area shape="rect" id="node11" href="$a00052.html#gad720b183f0a7c5b1d366a86fae48ff5e" title="to create a matte material" alt="" coords="313,57,442,85"/>
+<area shape="rect" id="node13" href="$a00052.html#ga5e9b1752bc3635d8e03aeedce96f1378" title="to create a plastic material" alt="" coords="311,109,444,137"/>
+<area shape="rect" id="node15" href="$a00052.html#ga7e84d93db3d16480aa51e9d9cc16d843" title="to create a metal&#45;like material" alt="" coords="313,161,441,189"/>
+<area shape="rect" id="node17" href="$a00052.html#ga064ee1f6da1924df4e37334c456ea18f" title="to create a glass&#45;like material" alt="" coords="314,213,441,241"/>
+<area shape="rect" id="node19" href="$a00052.html#ga2da051b943f32009496f94737261c248" title="to create a sphere" alt="" coords="324,265,431,293"/>
+<area shape="rect" id="node21" href="$a00052.html#gaf8b0ecdd64116491706ebede06c13b54" title="to create a plane" alt="" coords="328,317,427,345"/>
+<area shape="rect" id="node23" href="$a00052.html#gabd60bd9dfe9afb36b127decf9145287d" title="to create a cylinder" alt="" coords="321,369,433,397"/>
+<area shape="rect" id="node25" href="$a00052.html#gadf3f8ea1c8bf943db640af01230ed0f7" title="to add a new object to the scene, from its geometry and its material" alt="" coords="334,421,421,449"/>
+<area shape="rect" id="node29" href="$a00052.html#ga7338897b0e82076338fb7dd7cadeaddc" title="to add a light to the scene" alt="" coords="340,473,415,501"/>
+<area shape="rect" id="node9" href="$a00019.html#a92e1b2344129de2618f3b5f1ed22dd5e" title="Scene::set_camera" alt="" coords="512,5,648,33"/>
+<area shape="rect" id="node27" href="$a00019.html#aab20b59647f0f9ba5cc40e5943377a87" title="Scene::add_primitive" alt="" coords="507,421,653,449"/>
+<area shape="rect" id="node31" href="$a00019.html#a6403f0a1e1cb777d4b335a3eb093979d" title="Scene::add_light" alt="" coords="520,473,640,501"/>
+<area shape="rect" id="node35" href="$a00009.html#a4494a1ac16eb45ef862806694c8aa3d3" title="Image::write_to_exr_file" alt="" coords="296,525,459,553"/>
+</map>

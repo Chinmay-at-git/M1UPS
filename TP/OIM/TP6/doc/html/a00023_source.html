@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>M1 Informatique - OIM - mini raytracer:  Fichier source de camera.hpp</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">M1 Informatique - OIM - mini raytracer
+   &#160;<span id="projectnumber">2012-2013</span>
+   </div>
+   <div id="projectbrief">Interface de programmation pour un raytracer minimal</div>
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.5.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00023.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">camera.hpp</div>  </div>
+</div>
+<div class="contents">
+<a href="a00023.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &quot;<a class="code" href="a00046.html">vector3d.hpp</a>&quot;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="a00039.html">ray.hpp</a>&quot;</span>
+<a name="l00005"></a>00005 
+<a name="l00009"></a><a class="code" href="a00003.html">00009</a> <span class="keyword">class </span><a class="code" href="a00003.html" title="Viewpoint management.">Camera</a> {
+<a name="l00010"></a>00010 <span class="keyword">private</span>:
+<a name="l00011"></a>00011 
+<a name="l00013"></a><a class="code" href="a00003.html#ac9581d4497bc0ebe59fa081af1e8c51d">00013</a>         <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a> <a class="code" href="a00003.html#ac9581d4497bc0ebe59fa081af1e8c51d" title="position of the observator, starting point of the rays">m_pos</a>; 
+<a name="l00014"></a>00014         
+<a name="l00016"></a><a class="code" href="a00003.html#ae53d9660d1a67d909ef094224e86eda1">00016</a>         <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a> <a class="code" href="a00003.html#ae53d9660d1a67d909ef094224e86eda1" title="center of image plane">m_center</a>; 
+<a name="l00017"></a>00017 
+<a name="l00018"></a><a class="code" href="a00003.html#a1d0af41f1c7b99e6e79dd59ae3b2ea07">00018</a>         <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a> <a class="code" href="a00003.html#aa7bb54423b16f8840820a52dfa63e9e4">m_x</a>, <a class="code" href="a00003.html#a1d0af41f1c7b99e6e79dd59ae3b2ea07">m_y</a>;
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="a00003.html#ad51ce627ba998a910c8e17684695bc26">00020</a>         <span class="keywordtype">int</span> <a class="code" href="a00003.html#ad3c5b17fe3da619d7ee0ee19fc3b584a">m_x_res</a>, <a class="code" href="a00003.html#ad51ce627ba998a910c8e17684695bc26">m_y_res</a>;
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 <span class="keyword">public</span>:
+<a name="l00023"></a>00023 
+<a name="l00024"></a><a class="code" href="a00003.html#a01f94c3543f56ede7af49dc778f19331">00024</a>         <a class="code" href="a00003.html#a01f94c3543f56ede7af49dc778f19331">Camera</a> () : <a class="code" href="a00003.html#ad3c5b17fe3da619d7ee0ee19fc3b584a">m_x_res</a> (0), <a class="code" href="a00003.html#ad51ce627ba998a910c8e17684695bc26">m_y_res</a> (0) {
+<a name="l00025"></a>00025         }
+<a name="l00026"></a>00026 
+<a name="l00030"></a><a class="code" href="a00003.html#ab64d39987eeb083cae664ba62f761967">00030</a>         <a class="code" href="a00003.html#a01f94c3543f56ede7af49dc778f19331">Camera</a> (<span class="keyword">const</span> <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a>&amp; pos_, <span class="keyword">const</span> <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a>&amp; aim_, <span class="keyword">const</span> <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a>&amp; up_,
+<a name="l00031"></a>00031                         <span class="keywordtype">float</span> fov_, <span class="keywordtype">int</span> x_res_, <span class="keywordtype">int</span> y_res_) : <a class="code" href="a00003.html#ac9581d4497bc0ebe59fa081af1e8c51d" title="position of the observator, starting point of the rays">m_pos</a> (pos_), <a class="code" href="a00003.html#ad3c5b17fe3da619d7ee0ee19fc3b584a">m_x_res</a> (x_res_), <a class="code" href="a00003.html#ad51ce627ba998a910c8e17684695bc26">m_y_res</a> (y_res_) {
+<a name="l00032"></a>00032                 <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a> z = (aim_ - pos_).normalize();
+<a name="l00033"></a>00033                 <a class="code" href="a00003.html#aa7bb54423b16f8840820a52dfa63e9e4">m_x</a> = (z.<a class="code" href="a00021.html#abd36ddbe10a7981949ecde1d9d2f457a">cross_product</a> (up_)).normalize();
+<a name="l00034"></a>00034                 <a class="code" href="a00003.html#a1d0af41f1c7b99e6e79dd59ae3b2ea07">m_y</a> = (<a class="code" href="a00003.html#aa7bb54423b16f8840820a52dfa63e9e4">m_x</a>.<a class="code" href="a00021.html#abd36ddbe10a7981949ecde1d9d2f457a">cross_product</a> (z)) * (<span class="keywordtype">float</span>(y_res_) / float (x_res_)); <span class="comment">//aspect ratio</span>
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036                 <a class="code" href="a00003.html#ae53d9660d1a67d909ef094224e86eda1" title="center of image plane">m_center</a> = <a class="code" href="a00003.html#ac9581d4497bc0ebe59fa081af1e8c51d" title="position of the observator, starting point of the rays">m_pos</a> + z * (1.f / tanf ((fov_ * M_PI / 180.f) * 0.5f));
+<a name="l00037"></a>00037         }
+<a name="l00038"></a>00038 
+<a name="l00039"></a><a class="code" href="a00003.html#a98275b6232248a9c1691cd9500d8134d">00039</a>         <a class="code" href="a00018.html" title="Ray definition.">Ray</a> <a class="code" href="a00003.html#a98275b6232248a9c1691cd9500d8134d">ray_for_pixel</a> (<span class="keywordtype">int</span> x_, <span class="keywordtype">int</span> y_)<span class="keyword"> const </span>{
+<a name="l00040"></a>00040                 <span class="keywordtype">float</span> delta_x = float((x_ + 0.5f) - <a class="code" href="a00003.html#ad3c5b17fe3da619d7ee0ee19fc3b584a">m_x_res</a> * 0.5f) / (<a class="code" href="a00003.html#ad3c5b17fe3da619d7ee0ee19fc3b584a">m_x_res</a> * 0.5f);
+<a name="l00041"></a>00041                 <span class="keywordtype">float</span> delta_y = float((y_ + 0.5f) - <a class="code" href="a00003.html#ad51ce627ba998a910c8e17684695bc26">m_y_res</a> * 0.5f) / (<a class="code" href="a00003.html#ad51ce627ba998a910c8e17684695bc26">m_y_res</a> * 0.5f);
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043                 <span class="comment">//-delta_y to have the first row correspond to the top of the image</span>
+<a name="l00044"></a>00044                 <span class="keywordflow">return</span> <a class="code" href="a00018.html" title="Ray definition.">Ray</a> (<a class="code" href="a00003.html#ac9581d4497bc0ebe59fa081af1e8c51d" title="position of the observator, starting point of the rays">m_pos</a>, ((<a class="code" href="a00003.html#ae53d9660d1a67d909ef094224e86eda1" title="center of image plane">m_center</a> - (<a class="code" href="a00003.html#aa7bb54423b16f8840820a52dfa63e9e4">m_x</a> * delta_x) - (<a class="code" href="a00003.html#a1d0af41f1c7b99e6e79dd59ae3b2ea07">m_y</a> * delta_y)) - <a class="code" href="a00003.html#ac9581d4497bc0ebe59fa081af1e8c51d" title="position of the observator, starting point of the rays">m_pos</a>).normalize());
+<a name="l00045"></a>00045         }
+<a name="l00046"></a>00046 
+<a name="l00047"></a><a class="code" href="a00003.html#a8ab26e4004e5c2a753eb8119b153a44d">00047</a>         <a class="code" href="a00018.html" title="Ray definition.">Ray</a> <a class="code" href="a00003.html#a8ab26e4004e5c2a753eb8119b153a44d">ray_for_screen_coords</a> (<span class="keywordtype">float</span> x_, <span class="keywordtype">float</span> y_)<span class="keyword"> const </span>{
+<a name="l00048"></a>00048                 <span class="keywordtype">float</span> delta_x = (x_ - <a class="code" href="a00003.html#ad3c5b17fe3da619d7ee0ee19fc3b584a">m_x_res</a> * 0.5f) / (<a class="code" href="a00003.html#ad3c5b17fe3da619d7ee0ee19fc3b584a">m_x_res</a> * 0.5f);
+<a name="l00049"></a>00049                 <span class="keywordtype">float</span> delta_y = (y_ - <a class="code" href="a00003.html#ad51ce627ba998a910c8e17684695bc26">m_y_res</a> * 0.5f) / (<a class="code" href="a00003.html#ad51ce627ba998a910c8e17684695bc26">m_y_res</a> * 0.5f);
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051                 <span class="comment">//-delta_y to have the first row correspond to the top of the image</span>
+<a name="l00052"></a>00052                 <span class="keywordflow">return</span> <a class="code" href="a00018.html" title="Ray definition.">Ray</a> (<a class="code" href="a00003.html#ac9581d4497bc0ebe59fa081af1e8c51d" title="position of the observator, starting point of the rays">m_pos</a>, ((<a class="code" href="a00003.html#ae53d9660d1a67d909ef094224e86eda1" title="center of image plane">m_center</a> - (<a class="code" href="a00003.html#aa7bb54423b16f8840820a52dfa63e9e4">m_x</a> * delta_x) - (<a class="code" href="a00003.html#a1d0af41f1c7b99e6e79dd59ae3b2ea07">m_y</a> * delta_y)) - <a class="code" href="a00003.html#ac9581d4497bc0ebe59fa081af1e8c51d" title="position of the observator, starting point of the rays">m_pos</a>).normalize());
+<a name="l00053"></a>00053         }
+<a name="l00054"></a>00054 
+<a name="l00055"></a><a class="code" href="a00003.html#afb6742de1f5a9bcbd80041485b5917eb">00055</a>         <span class="keywordtype">int</span> <a class="code" href="a00003.html#afb6742de1f5a9bcbd80041485b5917eb">x_res</a> ()<span class="keyword"> const </span>{
+<a name="l00056"></a>00056                 <span class="keywordflow">return</span> <a class="code" href="a00003.html#ad3c5b17fe3da619d7ee0ee19fc3b584a">m_x_res</a>;
+<a name="l00057"></a>00057         }
+<a name="l00058"></a>00058 
+<a name="l00059"></a><a class="code" href="a00003.html#a8206d3f96cc607fbd43037ef017defc2">00059</a>         <span class="keywordtype">int</span> <a class="code" href="a00003.html#a8206d3f96cc607fbd43037ef017defc2">y_res</a> ()<span class="keyword"> const </span>{
+<a name="l00060"></a>00060                 <span class="keywordflow">return</span> <a class="code" href="a00003.html#ad51ce627ba998a910c8e17684695bc26">m_y_res</a>;
+<a name="l00061"></a>00061         }
+<a name="l00062"></a>00062 };
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064         
+</pre></div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="a00023.html">camera.hpp</a>      </li>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+    <li class="footer">Généré le Samedi Octobre 20 2012 11:25:21 pour M1 Informatique - OIM - mini raytracer par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

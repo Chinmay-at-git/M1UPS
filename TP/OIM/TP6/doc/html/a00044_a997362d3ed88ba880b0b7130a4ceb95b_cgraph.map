@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00043.html#ac7f87cc4a750fa0e621a8e0534b95e23" title="Ajoute à la scene un dodecaèdre en position (x,y,z) et de rayon r." alt="" coords="195,5,331,33"/>
+<area shape="rect" id="node5" href="$a00043.html#ab216d3029907d1036b91ff58b26390a6" title="Ajoute à la scene un hexaèdre en position (x,y,z) et de rayon r." alt="" coords="202,57,323,85"/>
+<area shape="rect" id="node7" href="$a00043.html#a48fd18993617dcbe9e1f455dad2c63f8" title="Ajoute à la scene un icosaèdre en position (x,y,z) et de rayon r." alt="" coords="201,109,324,137"/>
+<area shape="rect" id="node9" href="$a00052.html#ga7338897b0e82076338fb7dd7cadeaddc" title="to add a light to the scene" alt="" coords="225,161,300,189"/>
+<area shape="rect" id="node13" href="$a00052.html#gadf3f8ea1c8bf943db640af01230ed0f7" title="to add a new object to the scene, from its geometry and its material" alt="" coords="219,213,306,241"/>
+<area shape="rect" id="node17" href="$a00043.html#a7920fe62dfa811de423ca9020a512943" title="Ajoute à la scene un octaèdre en position (x,y,z) et de rayon r." alt="" coords="204,265,322,293"/>
+<area shape="rect" id="node19" href="$a00043.html#a620256d333c0c50ace716e5f2744535b" title="Ajoute à la scene un tetraèdre en position (x,y,z) et de rayon r." alt="" coords="203,317,322,345"/>
+<area shape="rect" id="node21" href="$a00052.html#ga7e84d93db3d16480aa51e9d9cc16d843" title="to create a metal&#45;like material" alt="" coords="199,369,327,397"/>
+<area shape="rect" id="node23" href="$a00052.html#ga5e9b1752bc3635d8e03aeedce96f1378" title="to create a plastic material" alt="" coords="196,421,329,449"/>
+<area shape="rect" id="node25" href="$a00052.html#ga2da051b943f32009496f94737261c248" title="to create a sphere" alt="" coords="209,473,316,501"/>
+<area shape="rect" id="node27" href="$a00052.html#gad67f595be55be0bc50b4ec08a9c74192" title="to set the parameters of the camera" alt="" coords="217,525,308,553"/>
+<area shape="rect" id="node11" href="$a00019.html#a6403f0a1e1cb777d4b335a3eb093979d" title="Scene::add_light" alt="" coords="392,161,512,189"/>
+<area shape="rect" id="node15" href="$a00019.html#aab20b59647f0f9ba5cc40e5943377a87" title="Scene::add_primitive" alt="" coords="379,213,525,241"/>
+<area shape="rect" id="node29" href="$a00019.html#a92e1b2344129de2618f3b5f1ed22dd5e" title="Scene::set_camera" alt="" coords="384,525,520,553"/>
+</map>

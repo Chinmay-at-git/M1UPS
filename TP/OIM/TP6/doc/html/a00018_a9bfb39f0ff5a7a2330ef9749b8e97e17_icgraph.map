@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00055.html#ga3a215078ec8db08fc79e0a491bc61b59" title="compute the amount of color scattered at the intersection to the ray from the given light..." alt="" coords="130,5,233,33"/>
+<area shape="rect" id="node5" href="$a00015.html#a8972d45fdd4d58cc736ce779da8e000a" title="modifies the ray_.max_t() value, intersect only if the intersection is before ray_.max_t()" alt="" coords="125,57,238,85"/>
+<area shape="rect" id="node7" href="$a00005.html#aaf9bb0e9f800879eaa31070c9f7eb687" title="modifies the ray_.max_t() value, intersect only if the intersection is before ray_.max_t()" alt="" coords="291,83,419,111"/>
+<area shape="rect" id="node9" href="$a00020.html#acb1c5b063489f881872e6faf155c4c18" title="modifies the ray_.max_t() value, intersect only if the intersection is before ray_.max_t()" alt="" coords="120,161,242,189"/>
+<area shape="rect" id="node12" href="$a00055.html#ga397536f562058dee83e3be0813324e82" title="compute the reflected ray from the intersection data and the ray to the intersection" alt="" coords="153,213,210,241"/>
+<area shape="rect" id="node14" href="$a00055.html#ga1c7e1aae0ca65e600b252447bc817038" title="compute the refracted ray from the intersection data and the ray to the intersection" alt="" coords="152,265,211,293"/>
+</map>

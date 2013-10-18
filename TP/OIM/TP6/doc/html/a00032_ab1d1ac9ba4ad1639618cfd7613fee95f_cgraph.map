@@ -1,0 +1,49 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00053.html#ga8cb8aef586b50a39b449ebb804acee60" title="compute the ray for the given pixel" alt="" coords="199,137,291,165"/>
+<area shape="rect" id="node7" href="$a00056.html#ga0a694e21c663d5c72182c15e34118f23" title="to get the resolution of the image" alt="" coords="171,214,320,242"/>
+<area shape="rect" id="node13" href="$a00056.html#gacf909032cf0b1ef56a88bdfc416ac4ea" title="to set the color of the given pixel" alt="" coords="190,266,300,294"/>
+<area shape="rect" id="node17" href="$a00032.html#a0bb032ac4d4d1b49ce014a54feed764a" title="trace_ray" alt="" coords="207,577,284,605"/>
+<area shape="rect" id="node5" href="$a00003.html#a98275b6232248a9c1691cd9500d8134d" title="Camera::ray_for_pixel" alt="" coords="373,110,526,138"/>
+<area shape="rect" id="node9" href="$a00003.html#afb6742de1f5a9bcbd80041485b5917eb" title="Camera::x_res" alt="" coords="395,162,504,190"/>
+<area shape="rect" id="node11" href="$a00003.html#a8206d3f96cc607fbd43037ef017defc2" title="Camera::y_res" alt="" coords="395,214,504,242"/>
+<area shape="rect" id="node15" href="$a00009.html#a21a63d2b2768bab69266ca3dab6fb85d" title="Image::pixel" alt="" coords="403,266,496,294"/>
+<area shape="rect" id="node19" href="$a00054.html#ga8442f299f5a4fad5e1ffe8b54ce3a852" title="init a color" alt="" coords="616,421,691,449"/>
+<area shape="rect" id="node21" href="$a00053.html#gaa971dcbc0062c359e8464f84662b0bd4" title="intersect a given ray with the scene." alt="" coords="392,577,507,605"/>
+<area shape="rect" id="node25" href="$a00054.html#gaef9b6318d003356d86ac547b6bc2f57b" title="add two colors" alt="" coords="595,369,711,397"/>
+<area shape="rect" id="node27" href="$a00032.html#a9f1daa433c3bc9891cb1202a4e89080f" title="compute_direct_lighting" alt="" coords="368,318,530,346"/>
+<area shape="rect" id="node72" href="$a00053.html#gac588aae49805e61713de3d50ce6f04cd" title="the depth of the ray in the ray tree" alt="" coords="409,790,490,818"/>
+<area shape="rect" id="node76" href="$a00053.html#ga69e5c6dd970eec59a78918a79badfbc8" title="the importance of the ray" alt="" coords="393,855,506,883"/>
+<area shape="rect" id="node82" href="$a00055.html#gaf4ff7bddd9b295164491d5126289cd83" title="isect_has_reflection" alt="" coords="380,629,519,657"/>
+<area shape="rect" id="node87" href="$a00055.html#ga397536f562058dee83e3be0813324e82" title="compute the reflected ray from the intersection data and the ray to the intersection" alt="" coords="625,525,682,553"/>
+<area shape="rect" id="node98" href="$a00054.html#ga2360109ceed6102f17ff17c573743395" title="multiply colors component&#45;wise" alt="" coords="380,907,519,935"/>
+<area shape="rect" id="node100" href="$a00055.html#gaba7d4545b2466ae21efe827026358eec" title="isect_has_refraction" alt="" coords="379,731,520,759"/>
+<area shape="rect" id="node105" href="$a00055.html#ga1c7e1aae0ca65e600b252447bc817038" title="compute the refracted ray from the intersection data and the ray to the intersection" alt="" coords="624,473,683,501"/>
+<area shape="rect" id="node116" href="$a00054.html#ga8a9950fd49c3927a6b247f20c0f584cf" title="color_is_black" alt="" coords="396,985,502,1013"/>
+<area shape="rect" id="node23" href="$a00019.html#a0f1778fd9c133a40977e6e33f6a75b61" title="Scene::intersect" alt="" coords="595,577,712,605"/>
+<area shape="rect" id="node30" href="$a00055.html#ga3a215078ec8db08fc79e0a491bc61b59" title="compute the amount of color scattered at the intersection to the ray from the given light..." alt="" coords="602,317,705,345"/>
+<area shape="rect" id="node57" href="$a00052.html#gade62171a2f3b305905e5b0ada32357ff" title="get_light" alt="" coords="617,135,689,163"/>
+<area shape="rect" id="node62" href="$a00052.html#ga16d4353577e7adc824650320333c7245" title="nb_lights" alt="" coords="616,45,691,73"/>
+<area shape="rect" id="node65" href="$a00053.html#gafdd7145eb904844de4296af68d315e39" title="test the visibility between an intersection and a light" alt="" coords="605,265,701,293"/>
+<area shape="rect" id="node32" href="$a00011.html#a305715f1db3acf3dbd9dbd54baaa804e" title="Light::pos" alt="" coords="978,109,1057,137"/>
+<area shape="rect" id="node34" href="$a00010.html#a6709cddc48c0c8e2631c7b23437bd6ef" title="Isect::dg" alt="" coords="811,369,883,397"/>
+<area shape="rect" id="node36" href="$a00006.html#a5fa6ab4c50cd785ab124fcc4b4c1247a" title="Diff_Geom::pos" alt="" coords="790,317,904,345"/>
+<area shape="rect" id="node38" href="$a00010.html#ad175c0c1162ae8050132013c4578d4fe" title="Isect::bsdf" alt="" coords="806,733,888,761"/>
+<area shape="rect" id="node40" href="$a00002.html#a89754b621acdd482f06a0b11c0ecdf3a" title="directions leave from the point" alt="" coords="789,213,904,241"/>
+<area shape="rect" id="node42" href="$a00021.html#a293698c2fcdc50968fa63e125120bd61" title="Vector3D::dot" alt="" coords="966,499,1068,527"/>
+<area shape="rect" id="node50" href="$a00018.html#a9bfb39f0ff5a7a2330ef9749b8e97e17" title="Ray::dir" alt="" coords="813,525,880,553"/>
+<area shape="rect" id="node52" href="$a00011.html#a67501efbaeb33e1392fedb8b0d768ac8" title="Light::le" alt="" coords="813,109,881,137"/>
+<area shape="rect" id="node54" href="$a00006.html#a5032f917f066531ab12142806d5cb023" title="Diff_Geom::normal" alt="" coords="780,473,913,501"/>
+<area shape="rect" id="node44" href="$a00021.html#a15a162a986b897ebd0bb74df056d99c5" title="Vector3D::x" alt="" coords="1118,447,1208,475"/>
+<area shape="rect" id="node46" href="$a00021.html#a1819fd51b78ece8de462d3a2c979111a" title="Vector3D::y" alt="" coords="1118,499,1208,527"/>
+<area shape="rect" id="node48" href="$a00021.html#a026531e883c967b7a7803a2f6b983d2c" title="Vector3D::z" alt="" coords="1118,551,1208,579"/>
+<area shape="rect" id="node59" href="$a00019.html#adce64c848c70c77a5ffb822f11a78aae" title="Scene::p_lights" alt="" coords="790,5,903,33"/>
+<area shape="rect" id="node67" href="$a00019.html#aac2848f8a3c18972e5d5f077ab682f30" title="test the visibility between a point and a light" alt="" coords="776,57,917,85"/>
+<area shape="rect" id="node74" href="$a00018.html#a5aca258edd0f8365436fbe2ff5305cd2" title="Ray::depth" alt="" coords="610,835,696,863"/>
+<area shape="rect" id="node78" href="$a00018.html#af8e83498490cec0ce58b715533910bb5" title="Ray::importance" alt="" coords="594,939,713,967"/>
+<area shape="rect" id="node80" href="$a00004.html#ab43c458dc1c46ffc762b7e9cb726ef3e" title="Color::avg" alt="" coords="612,887,694,915"/>
+<area shape="rect" id="node85" href="$a00002.html#a770df55c2f2ba844764b341e93ea41f7" title="BSDF::has_reflection" alt="" coords="580,629,727,657"/>
+<area shape="rect" id="node90" href="$a00002.html#a0c1293b4a879f5797f9befcaef2c4c99" title="BSDF::reflect_dir" alt="" coords="785,629,908,657"/>
+<area shape="rect" id="node103" href="$a00002.html#aca1d179bc6d6a06b395f8768019cc4f0" title="BSDF::has_refraction" alt="" coords="579,783,728,811"/>
+<area shape="rect" id="node108" href="$a00002.html#a072b04d8fc38b94911e023dcb3a0c28f" title="BSDF::refract_dir" alt="" coords="785,421,909,449"/>
+<area shape="rect" id="node118" href="$a00004.html#addd9a00e50cad82c55c405c9683da443" title="Color::is_zero" alt="" coords="602,991,705,1019"/>
+</map>

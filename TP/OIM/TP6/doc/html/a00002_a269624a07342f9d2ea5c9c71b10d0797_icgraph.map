@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00002.html#aaa834a440a78af61ef56984c3fcc79f8" title="BSDF::init_blinn_phong" alt="" coords="155,5,317,33"/>
+<area shape="rect" id="node7" href="$a00002.html#a9dd8bf6529b8cc159f570600bbee872c" title="BSDF::init_diffuse" alt="" coords="172,57,300,85"/>
+<area shape="rect" id="node11" href="$a00002.html#a654638fb3e8f649825aea76416fe5a6d" title="BSDF::init_fresnel" alt="" coords="172,109,300,137"/>
+<area shape="rect" id="node15" href="$a00002.html#a5721ae7c30efb1e90beb7ea6b49d9ca4" title="BSDF::init_pure_refl" alt="" coords="165,161,307,189"/>
+<area shape="rect" id="node5" href="$a00016.html#a60041caca9b6f55483874f5b379c6598" title="Plastic::evaluate" alt="" coords="366,5,485,33"/>
+<area shape="rect" id="node9" href="$a00013.html#af0a76a90f66c8a28fa00c4006835419b" title="Matte::evaluate" alt="" coords="369,57,482,85"/>
+<area shape="rect" id="node13" href="$a00008.html#a11ebe65c2156443f435645d4bba4f8d5" title="Glass::evaluate" alt="" coords="369,109,482,137"/>
+<area shape="rect" id="node17" href="$a00014.html#a22590d1bdff3889b53e83cc7aa9731aa" title="Metal::evaluate" alt="" coords="369,161,481,189"/>
+</map>

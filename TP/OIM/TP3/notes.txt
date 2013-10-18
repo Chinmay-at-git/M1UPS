@@ -1,0 +1,4 @@
+commande pour lancer une video gst-launch filesrc location=trailer_400p.ogg ! oggdemux ! theoradec ! xvimagesink
+lancer une video(image + audio : gst-launch filesrc location=trailer_400p.ogg ! oggdemux name=demux demux. ! queue ! vorbisdec ! audioconvert ! audioresample ! autoaudiosink demux. ! queue ! theoradec  ! autovideosink
+
+commande pour lancer un fichier mp3, mad est la meilleure option : 

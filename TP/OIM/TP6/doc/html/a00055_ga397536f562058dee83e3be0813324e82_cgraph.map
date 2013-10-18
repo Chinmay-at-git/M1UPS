@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00010.html#ad175c0c1162ae8050132013c4578d4fe" title="Isect::bsdf" alt="" coords="138,5,220,33"/>
+<area shape="rect" id="node5" href="$a00010.html#a6709cddc48c0c8e2631c7b23437bd6ef" title="Isect::dg" alt="" coords="143,57,215,85"/>
+<area shape="rect" id="node7" href="$a00018.html#a9bfb39f0ff5a7a2330ef9749b8e97e17" title="Ray::dir" alt="" coords="145,109,212,137"/>
+<area shape="rect" id="node9" href="$a00021.html#a293698c2fcdc50968fa63e125120bd61" title="Vector3D::dot" alt="" coords="294,239,396,267"/>
+<area shape="rect" id="node17" href="$a00006.html#a5032f917f066531ab12142806d5cb023" title="Diff_Geom::normal" alt="" coords="112,213,245,241"/>
+<area shape="rect" id="node19" href="$a00006.html#a5fa6ab4c50cd785ab124fcc4b4c1247a" title="Diff_Geom::pos" alt="" coords="122,265,236,293"/>
+<area shape="rect" id="node21" href="$a00002.html#a0c1293b4a879f5797f9befcaef2c4c99" title="BSDF::reflect_dir" alt="" coords="117,317,240,345"/>
+<area shape="rect" id="node11" href="$a00021.html#a15a162a986b897ebd0bb74df056d99c5" title="Vector3D::x" alt="" coords="446,187,536,215"/>
+<area shape="rect" id="node13" href="$a00021.html#a1819fd51b78ece8de462d3a2c979111a" title="Vector3D::y" alt="" coords="446,239,536,267"/>
+<area shape="rect" id="node15" href="$a00021.html#a026531e883c967b7a7803a2f6b983d2c" title="Vector3D::z" alt="" coords="446,291,536,319"/>
+</map>

@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>M1 Informatique - OIM - mini raytracer:  Fichier source de plastic.hpp</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">M1 Informatique - OIM - mini raytracer
+   &#160;<span id="projectnumber">2012-2013</span>
+   </div>
+   <div id="projectbrief">Interface de programmation pour un raytracer minimal</div>
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.5.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00037.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">plastic.hpp</div>  </div>
+</div>
+<div class="contents">
+<a href="a00037.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &quot;<a class="code" href="a00033.html">material.hpp</a>&quot;</span>
+<a name="l00004"></a>00004 
+<a name="l00008"></a><a class="code" href="a00016.html">00008</a> <span class="keyword">class </span><a class="code" href="a00016.html" title="Plastic material.">Plastic</a> : <span class="keyword">public</span> <a class="code" href="a00012.html" title="Abstract class for material.">Material</a> {
+<a name="l00009"></a>00009 <span class="keyword">private</span>:
+<a name="l00010"></a>00010 
+<a name="l00011"></a><a class="code" href="a00016.html#a6be31f8d2b046819d566e38d287540a1">00011</a>         <a class="code" href="a00004.html" title="Color management.">Color</a> <a class="code" href="a00016.html#a6be31f8d2b046819d566e38d287540a1">m_kd</a>;
+<a name="l00012"></a><a class="code" href="a00016.html#a891ed62ed59f677887bd7515308cca2e">00012</a>         <a class="code" href="a00004.html" title="Color management.">Color</a> <a class="code" href="a00016.html#a891ed62ed59f677887bd7515308cca2e">m_ks</a>;
+<a name="l00013"></a><a class="code" href="a00016.html#a2de0658ce109791e5a0b85dc0ff3dcdf">00013</a>         <span class="keywordtype">float</span> <a class="code" href="a00016.html#a2de0658ce109791e5a0b85dc0ff3dcdf">m_shininess</a>;
+<a name="l00014"></a>00014         
+<a name="l00015"></a>00015 <span class="keyword">public</span>:
+<a name="l00016"></a>00016 
+<a name="l00017"></a><a class="code" href="a00016.html#a277334a36838a4f095280ce928841821">00017</a>         <a class="code" href="a00016.html#a277334a36838a4f095280ce928841821">Plastic</a> (<span class="keyword">const</span> <a class="code" href="a00004.html" title="Color management.">Color</a>&amp; kd_, <span class="keyword">const</span> <a class="code" href="a00004.html" title="Color management.">Color</a>&amp; ks_, <span class="keywordtype">float</span> shininess_) : <a class="code" href="a00016.html#a6be31f8d2b046819d566e38d287540a1">m_kd</a> (kd_), <a class="code" href="a00016.html#a891ed62ed59f677887bd7515308cca2e">m_ks</a> (ks_), <a class="code" href="a00016.html#a2de0658ce109791e5a0b85dc0ff3dcdf">m_shininess</a> (shininess_) {
+<a name="l00018"></a>00018         }
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="a00016.html#a60041caca9b6f55483874f5b379c6598">00020</a>         <a class="code" href="a00002.html" title="Reflectance representation and evaluation.">BSDF</a> <a class="code" href="a00016.html#a60041caca9b6f55483874f5b379c6598">evaluate</a> (<span class="keyword">const</span> <a class="code" href="a00006.html" title="Geometrical information.">Diff_Geom</a>&amp; diff_geom_)<span class="keyword"> const </span>{
+<a name="l00021"></a>00021                 <span class="keywordflow">return</span> <a class="code" href="a00002.html#aaa834a440a78af61ef56984c3fcc79f8">BSDF::init_blinn_phong</a> (diff_geom_.<a class="code" href="a00006.html#a5032f917f066531ab12142806d5cb023">normal</a>(), <a class="code" href="a00016.html#a6be31f8d2b046819d566e38d287540a1">m_kd</a>, <a class="code" href="a00016.html#a891ed62ed59f677887bd7515308cca2e">m_ks</a>, <a class="code" href="a00016.html#a2de0658ce109791e5a0b85dc0ff3dcdf">m_shininess</a>);
+<a name="l00022"></a>00022         }
+<a name="l00023"></a>00023 };
+</pre></div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="a00037.html">plastic.hpp</a>      </li>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+    <li class="footer">Généré le Samedi Octobre 20 2012 11:25:22 pour M1 Informatique - OIM - mini raytracer par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

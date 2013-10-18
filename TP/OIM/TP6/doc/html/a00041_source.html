@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>M1 Informatique - OIM - mini raytracer:  Fichier source de raytracing.h</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">M1 Informatique - OIM - mini raytracer
+   &#160;<span id="projectnumber">2012-2013</span>
+   </div>
+   <div id="projectbrief">Interface de programmation pour un raytracer minimal</div>
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.5.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00041.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">raytracing.h</div>  </div>
+</div>
+<div class="contents">
+<a href="a00041.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span>
+<a name="l00003"></a>00003 <span class="keyword">struct </span><a class="code" href="a00007.html" title="Abstract class for geometric object.">Geometry</a>;
+<a name="l00004"></a>00004 <span class="keyword">struct </span><a class="code" href="a00012.html" title="Abstract class for material.">Material</a>;
+<a name="l00005"></a>00005 <span class="keyword">struct </span><a class="code" href="a00011.html" title="Light source definition.">Light</a>;
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;../coreraytracer/ray.hpp&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;../coreraytracer/isect.hpp&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;../coreraytracer/color.hpp&quot;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {
+<a name="l00012"></a>00012         
+<a name="l00022"></a>00022         <span class="comment">//====================</span>
+<a name="l00023"></a>00023   <span class="comment">//scene description</span>
+<a name="l00024"></a>00024 
+<a name="l00040"></a>00040   <span class="keywordtype">void</span> <a class="code" href="a00052.html#gad67f595be55be0bc50b4ec08a9c74192" title="to set the parameters of the camera">set_camera</a> (<span class="keywordtype">float</span> pos_x_, <span class="keywordtype">float</span> pos_y_, <span class="keywordtype">float</span> pos_z_,
+<a name="l00041"></a>00041                                    <span class="keywordtype">float</span> aim_x_, <span class="keywordtype">float</span> aim_y_, <span class="keywordtype">float</span> aim_z_,
+<a name="l00042"></a>00042                                    <span class="keywordtype">float</span> up_x_, <span class="keywordtype">float</span> up_y_, <span class="keywordtype">float</span> up_z_,
+<a name="l00043"></a>00043                                    <span class="keywordtype">float</span> fov_, <span class="keywordtype">int</span> x_res_, <span class="keywordtype">int</span> y_res_);
+<a name="l00044"></a>00044 
+<a name="l00054"></a>00054   <span class="keywordtype">void</span> <a class="code" href="a00052.html#ga7338897b0e82076338fb7dd7cadeaddc" title="to add a light to the scene">add_light</a> (<span class="keywordtype">float</span> pos_x_, <span class="keywordtype">float</span> pos_y_, <span class="keywordtype">float</span> pos_z_,
+<a name="l00055"></a>00055                                   <span class="keywordtype">float</span> r_, <span class="keywordtype">float</span> g_, <span class="keywordtype">float</span> b_);
+<a name="l00056"></a>00056 
+<a name="l00067"></a>00067   <a class="code" href="a00007.html" title="Abstract class for geometric object.">Geometry</a> * <a class="code" href="a00052.html#gaf8b0ecdd64116491706ebede06c13b54" title="to create a plane">create_plane</a> (<span class="keywordtype">float</span> pos_x_, <span class="keywordtype">float</span> pos_y_, <span class="keywordtype">float</span> pos_z_,
+<a name="l00068"></a>00068                                                    <span class="keywordtype">float</span> normal_x_, <span class="keywordtype">float</span> normal_y_, <span class="keywordtype">float</span> normal_z_);
+<a name="l00069"></a>00069 
+<a name="l00078"></a>00078   <a class="code" href="a00007.html" title="Abstract class for geometric object.">Geometry</a> * <a class="code" href="a00052.html#ga2da051b943f32009496f94737261c248" title="to create a sphere">create_sphere</a> (<span class="keywordtype">float</span> pos_x_, <span class="keywordtype">float</span> pos_y_, <span class="keywordtype">float</span> pos_z_,
+<a name="l00079"></a>00079                                                         <span class="keywordtype">float</span> radius_);
+<a name="l00080"></a>00080 
+<a name="l00093"></a>00093   <a class="code" href="a00007.html" title="Abstract class for geometric object.">Geometry</a> * <a class="code" href="a00052.html#gabd60bd9dfe9afb36b127decf9145287d" title="to create a cylinder">create_cylinder</a> (<span class="keywordtype">float</span> pos_x_, <span class="keywordtype">float</span> pos_y_, <span class="keywordtype">float</span> pos_z_,
+<a name="l00094"></a>00094                               <span class="keywordtype">float</span> axis_x_, <span class="keywordtype">float</span> axis_y_, <span class="keywordtype">float</span> axis_z_,
+<a name="l00095"></a>00095                               <span class="keywordtype">float</span> radius_, <span class="keywordtype">float</span> length_);
+<a name="l00103"></a>00103   <a class="code" href="a00012.html" title="Abstract class for material.">Material</a> * <a class="code" href="a00052.html#gad720b183f0a7c5b1d366a86fae48ff5e" title="to create a matte material">create_matte_mat</a> (<span class="keywordtype">float</span> kd_r_, <span class="keywordtype">float</span> kd_g_, <span class="keywordtype">float</span> kd_b_);
+<a name="l00104"></a>00104 
+<a name="l00116"></a>00116   <a class="code" href="a00012.html" title="Abstract class for material.">Material</a> * <a class="code" href="a00052.html#ga5e9b1752bc3635d8e03aeedce96f1378" title="to create a plastic material">create_plastic_mat</a> (<span class="keywordtype">float</span> kd_r_, <span class="keywordtype">float</span> kd_g_, <span class="keywordtype">float</span> kd_b_,
+<a name="l00117"></a>00117                                                                  <span class="keywordtype">float</span> ks_r_, <span class="keywordtype">float</span> ks_g_, <span class="keywordtype">float</span> ks_b_,
+<a name="l00118"></a>00118                                                                  <span class="keywordtype">float</span> shininess_);
+<a name="l00119"></a>00119 
+<a name="l00130"></a>00130   <a class="code" href="a00012.html" title="Abstract class for material.">Material</a> * <a class="code" href="a00052.html#ga7e84d93db3d16480aa51e9d9cc16d843" title="to create a metal-like material">create_metal_mat</a> (<span class="keywordtype">float</span> kd_r_, <span class="keywordtype">float</span> kd_g_, <span class="keywordtype">float</span> kd_b_,
+<a name="l00131"></a>00131                                                            <span class="keywordtype">float</span> kr_r_, <span class="keywordtype">float</span> kr_g_, <span class="keywordtype">float</span> kr_b_);
+<a name="l00132"></a>00132 
+<a name="l00144"></a>00144   <a class="code" href="a00012.html" title="Abstract class for material.">Material</a> * <a class="code" href="a00052.html#ga064ee1f6da1924df4e37334c456ea18f" title="to create a glass-like material">create_glass_mat</a> (<span class="keywordtype">float</span> ks_r_, <span class="keywordtype">float</span> ks_g_, <span class="keywordtype">float</span> ks_b_,
+<a name="l00145"></a>00145                                                            <span class="keywordtype">float</span> kt_r_, <span class="keywordtype">float</span> kt_g_, <span class="keywordtype">float</span> kt_b_,
+<a name="l00146"></a>00146                                                            <span class="keywordtype">float</span> ior_);
+<a name="l00147"></a>00147 
+<a name="l00153"></a>00153   <span class="keywordtype">void</span> <a class="code" href="a00052.html#gadf3f8ea1c8bf943db640af01230ed0f7" title="to add a new object to the scene, from its geometry and its material">add_object</a> (<a class="code" href="a00007.html" title="Abstract class for geometric object.">Geometry</a> * geom_, <a class="code" href="a00012.html" title="Abstract class for material.">Material</a> * mat_);
+<a name="l00154"></a>00154 
+<a name="l00160"></a>00160   <span class="keywordtype">void</span> <a class="code" href="a00052.html#ga5102ec4e0cd297fb1e649f5dde3bd029" title="to initialize the scene with the default one.">make_default_scene</a> (<span class="keywordtype">int</span> xsize, <span class="keywordtype">int</span> ysize);
+<a name="l00161"></a>00161 
+<a name="l00162"></a>00162   <span class="comment">//====================</span>
+<a name="l00163"></a>00163   <span class="comment">//access to scene elements</span>
+<a name="l00164"></a>00164 
+<a name="l00168"></a>00168   <span class="keywordtype">int</span> <a class="code" href="a00052.html#ga16d4353577e7adc824650320333c7245">nb_lights</a> ();
+<a name="l00169"></a>00169 
+<a name="l00174"></a>00174   <a class="code" href="a00011.html" title="Light source definition.">Light</a> * <a class="code" href="a00052.html#gade62171a2f3b305905e5b0ada32357ff">get_light</a> (<span class="keywordtype">int</span> i_);
+<a name="l00175"></a>00175 
+<a name="l00176"></a>00176  <span class="comment">// end of SceneAPI group</span>
+<a name="l00178"></a>00178         
+<a name="l00184"></a>00184   <span class="comment">//====================</span>
+<a name="l00185"></a>00185   <span class="comment">//rays-related operations</span>
+<a name="l00186"></a>00186 
+<a name="l00193"></a>00193   <a class="code" href="a00018.html" title="Ray definition.">Ray</a> <a class="code" href="a00053.html#ga8cb8aef586b50a39b449ebb804acee60" title="compute the ray for the given pixel">camera_ray</a> (<span class="keywordtype">int</span> x_, <span class="keywordtype">int</span> y_);
+<a name="l00194"></a>00194 
+<a name="l00201"></a>00201   <span class="keywordtype">int</span> <a class="code" href="a00053.html#gaa971dcbc0062c359e8464f84662b0bd4" title="intersect a given ray with the scene.">intersect_scene</a> (<a class="code" href="a00018.html" title="Ray definition.">Ray</a> * p_ray_, <a class="code" href="a00010.html" title="Intersection point definition.">Isect</a> * p_isect_);
+<a name="l00202"></a>00202 
+<a name="l00210"></a>00210   <span class="keywordtype">int</span> <a class="code" href="a00053.html#gafdd7145eb904844de4296af68d315e39" title="test the visibility between an intersection and a light">test_visibility</a> (<a class="code" href="a00010.html" title="Intersection point definition.">Isect</a> isect_, <a class="code" href="a00011.html" title="Light source definition.">Light</a> * light_);
+<a name="l00211"></a>00211 
+<a name="l00217"></a>00217   <span class="keywordtype">int</span> <a class="code" href="a00053.html#gac588aae49805e61713de3d50ce6f04cd" title="the depth of the ray in the ray tree">ray_depth</a> (<a class="code" href="a00018.html" title="Ray definition.">Ray</a> ray_);
+<a name="l00218"></a>00218 
+<a name="l00224"></a>00224   <span class="keywordtype">float</span> <a class="code" href="a00053.html#ga69e5c6dd970eec59a78918a79badfbc8" title="the importance of the ray">ray_importance</a> (<a class="code" href="a00018.html" title="Ray definition.">Ray</a> ray_); <span class="comment">// end of RayAPI group</span>
+<a name="l00226"></a>00226 
+<a name="l00232"></a>00232   <span class="comment">//====================</span>
+<a name="l00233"></a>00233   <span class="comment">//color-related</span>
+<a name="l00234"></a>00234 
+<a name="l00238"></a>00238   <a class="code" href="a00004.html" title="Color management.">Color</a> <a class="code" href="a00054.html#gade20962f791f22292f6eb7f169d464e2" title="return a black color">black</a>();
+<a name="l00239"></a>00239 
+<a name="l00246"></a>00246   <a class="code" href="a00004.html" title="Color management.">Color</a> <a class="code" href="a00054.html#ga8442f299f5a4fad5e1ffe8b54ce3a852" title="init a color">init_color</a>(<span class="keywordtype">float</span> r_, <span class="keywordtype">float</span> g_, <span class="keywordtype">float</span> b_);
+<a name="l00247"></a>00247 
+<a name="l00254"></a>00254   <a class="code" href="a00004.html" title="Color management.">Color</a> <a class="code" href="a00054.html#ga2360109ceed6102f17ff17c573743395" title="multiply colors component-wise">multiply_color_color</a> (<a class="code" href="a00004.html" title="Color management.">Color</a> c1_, <a class="code" href="a00004.html" title="Color management.">Color</a> c2_);
+<a name="l00255"></a>00255   
+<a name="l00262"></a>00262   <a class="code" href="a00004.html" title="Color management.">Color</a> <a class="code" href="a00054.html#gaef9b6318d003356d86ac547b6bc2f57b" title="add two colors">add_color_color</a> (<a class="code" href="a00004.html" title="Color management.">Color</a> c1_, <a class="code" href="a00004.html" title="Color management.">Color</a> c2_);
+<a name="l00263"></a>00263 
+<a name="l00268"></a>00268   <span class="keywordtype">int</span> <a class="code" href="a00054.html#ga8a9950fd49c3927a6b247f20c0f584cf">color_is_black</a> (<a class="code" href="a00004.html" title="Color management.">Color</a> color_);
+<a name="l00269"></a>00269    <span class="comment">// end of ColorAPI group</span>
+<a name="l00271"></a>00271 
+<a name="l00278"></a>00278   <span class="comment">//====================</span>
+<a name="l00279"></a>00279   <span class="comment">//light-transport</span>
+<a name="l00280"></a>00280 
+<a name="l00286"></a>00286   <span class="keywordtype">int</span> <a class="code" href="a00055.html#gaf4ff7bddd9b295164491d5126289cd83">isect_has_reflection</a> (<a class="code" href="a00010.html" title="Intersection point definition.">Isect</a> isect_);
+<a name="l00287"></a>00287 
+<a name="l00293"></a>00293   <span class="keywordtype">int</span> <a class="code" href="a00055.html#gaba7d4545b2466ae21efe827026358eec">isect_has_refraction</a> (<a class="code" href="a00010.html" title="Intersection point definition.">Isect</a> isect_);
+<a name="l00294"></a>00294 
+<a name="l00302"></a>00302   <a class="code" href="a00004.html" title="Color management.">Color</a> <a class="code" href="a00055.html#ga397536f562058dee83e3be0813324e82" title="compute the reflected ray from the intersection data and the ray to the intersection">reflect</a> (<a class="code" href="a00018.html" title="Ray definition.">Ray</a> ray_, <a class="code" href="a00010.html" title="Intersection point definition.">Isect</a> isect_, <a class="code" href="a00018.html" title="Ray definition.">Ray</a> * p_ray_);
+<a name="l00303"></a>00303   
+<a name="l00311"></a>00311   <a class="code" href="a00004.html" title="Color management.">Color</a> <a class="code" href="a00055.html#ga1c7e1aae0ca65e600b252447bc817038" title="compute the refracted ray from the intersection data and the ray to the intersection">refract</a> (<a class="code" href="a00018.html" title="Ray definition.">Ray</a> ray_, <a class="code" href="a00010.html" title="Intersection point definition.">Isect</a> isect_, <a class="code" href="a00018.html" title="Ray definition.">Ray</a> * p_ray_);  
+<a name="l00312"></a>00312 
+<a name="l00320"></a>00320   <a class="code" href="a00004.html" title="Color management.">Color</a> <a class="code" href="a00055.html#ga3a215078ec8db08fc79e0a491bc61b59" title="compute the amount of color scattered at the intersection to the ray from the given light...">direct_lighting</a> (<a class="code" href="a00018.html" title="Ray definition.">Ray</a> ray_, <a class="code" href="a00010.html" title="Intersection point definition.">Isect</a> isect_, <a class="code" href="a00011.html" title="Light source definition.">Light</a> * light_);
+<a name="l00321"></a>00321  <span class="comment">// end of LightingAPI group</span>
+<a name="l00323"></a>00323 
+<a name="l00324"></a>00324 
+<a name="l00330"></a>00330         <span class="comment">//==============</span>
+<a name="l00331"></a>00331         <span class="comment">//======</span>
+<a name="l00332"></a>00332   <span class="comment">//Image management</span>
+<a name="l00338"></a>00338 <span class="comment"></span>        <span class="keywordtype">void</span> <a class="code" href="a00056.html#ga0a694e21c663d5c72182c15e34118f23" title="to get the resolution of the image">get_image_resolution</a> (<span class="keywordtype">int</span> * p_x_res_, <span class="keywordtype">int</span> * p_y_res_);
+<a name="l00339"></a>00339         
+<a name="l00346"></a>00346   <span class="keywordtype">void</span> <a class="code" href="a00056.html#gacf909032cf0b1ef56a88bdfc416ac4ea" title="to set the color of the given pixel">set_pixel_color</a> (<span class="keywordtype">int</span> x_, <span class="keywordtype">int</span> y_, <a class="code" href="a00004.html" title="Color management.">Color</a> color_);
+<a name="l00347"></a>00347 
+<a name="l00352"></a>00352   <span class="keywordtype">void</span> <a class="code" href="a00056.html#ga7952790dd850900c80616789d264b6b8" title="to save the image to a file">save_image</a> (<span class="keywordtype">char</span> * file_name_); <span class="comment">// end of ImageAPI group</span>
+<a name="l00354"></a>00354  <span class="comment">// end of RaytraceAPI group</span>
+<a name="l00356"></a>00356 
+<a name="l00357"></a>00357 }
+<a name="l00358"></a>00358 
+</pre></div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="a00041.html">raytracing.h</a>      </li>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+    <li class="footer">Généré le Samedi Octobre 20 2012 11:25:22 pour M1 Informatique - OIM - mini raytracer par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

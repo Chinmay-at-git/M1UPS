@@ -1,0 +1,18 @@
+Question 1-1) Contenu des variables obtenues
+    Signal
+    fs => fréquence d'echantillonage = 16000 Hz
+    q => bit de quantfication = 16
+    options
+    
+Question 1-2) ces valeurs correspondent au nombre de lignes et de colonnes. Representation matricielle
+
+Question 1-3) Intervalle de variation des échantillons du signal [-0.6806, 0.8351]
+vecteur (signal) à des valeurs entières : on multiplie l'intervalle par 2¹⁵ (q=16 bits de quantification => 2¹⁶ possibilités)
+
+Question 1-4) la durée du signal (en secondes)
+fs=16000 Hz, donc on a 16000 points/secondes, on a 31743 points (variable taille = size(signal)), donc : duree = 31743/16000
+
+Question 2.1)fréquence d'échantillonnage(44100) et le nombre de bits de quantification(16) de l'extrait musique
+
+Question 2.2) calcul de la fréquence: H=1/periode
+

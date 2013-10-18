@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00055.html#ga3a215078ec8db08fc79e0a491bc61b59" title="compute the amount of color scattered at the intersection to the ray from the given light..." alt="" coords="168,5,272,33"/>
+<area shape="rect" id="node5" href="$a00055.html#ga397536f562058dee83e3be0813324e82" title="compute the reflected ray from the intersection data and the ray to the intersection" alt="" coords="191,57,249,85"/>
+<area shape="rect" id="node7" href="$a00055.html#ga1c7e1aae0ca65e600b252447bc817038" title="compute the refracted ray from the intersection data and the ray to the intersection" alt="" coords="190,109,250,137"/>
+<area shape="rect" id="node9" href="$a00053.html#gafdd7145eb904844de4296af68d315e39" title="test the visibility between an intersection and a light" alt="" coords="172,161,268,189"/>
+</map>

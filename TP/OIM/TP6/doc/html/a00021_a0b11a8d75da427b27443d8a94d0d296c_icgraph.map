@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00021.html#abd36ddbe10a7981949ecde1d9d2f457a" title="Vector3D::cross_product" alt="" coords="192,30,360,58"/>
+<area shape="rect" id="node9" href="$a00021.html#a48aa43ece28de6866ca2114ef0e639bf" title="Vector3D::operator*" alt="" coords="207,82,345,110"/>
+<area shape="rect" id="node11" href="$a00021.html#aa93b9e07c52647bb14d495cd7cad3a28" title="Vector3D::operator+" alt="" coords="205,134,347,162"/>
+<area shape="rect" id="node13" href="$a00021.html#a03f189f8d45eda497772364d19d30c7d" title="Vector3D::operator&#45;" alt="" coords="207,186,345,214"/>
+<area shape="rect" id="node5" href="$a00003.html#ab64d39987eeb083cae664ba62f761967" title="fov in degrees" alt="" coords="410,5,534,33"/>
+<area shape="rect" id="node7" href="$a00005.html#aaf9bb0e9f800879eaa31070c9f7eb687" title="modifies the ray_.max_t() value, intersect only if the intersection is before ray_.max_t()" alt="" coords="408,57,536,85"/>
+</map>

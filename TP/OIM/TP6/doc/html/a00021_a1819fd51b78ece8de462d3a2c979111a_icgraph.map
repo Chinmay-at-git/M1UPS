@@ -1,0 +1,17 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00021.html#abd36ddbe10a7981949ecde1d9d2f457a" title="Vector3D::cross_product" alt="" coords="144,57,312,85"/>
+<area shape="rect" id="node9" href="$a00021.html#a293698c2fcdc50968fa63e125120bd61" title="Vector3D::dot" alt="" coords="177,419,279,447"/>
+<area shape="rect" id="node34" href="$a00021.html#ab58e6202e20f0fd74fc35133eb780254" title="Vector3D::norm" alt="" coords="171,134,285,162"/>
+<area shape="rect" id="node5" href="$a00003.html#ab64d39987eeb083cae664ba62f761967" title="fov in degrees" alt="" coords="369,5,492,33"/>
+<area shape="rect" id="node7" href="$a00005.html#aaf9bb0e9f800879eaa31070c9f7eb687" title="modifies the ray_.max_t() value, intersect only if the intersection is before ray_.max_t()" alt="" coords="549,159,677,187"/>
+<area shape="rect" id="node11" href="$a00055.html#ga3a215078ec8db08fc79e0a491bc61b59" title="compute the amount of color scattered at the intersection to the ray from the given light..." alt="" coords="562,446,665,474"/>
+<area shape="rect" id="node13" href="$a00002.html#a89754b621acdd482f06a0b11c0ecdf3a" title="directions leave from the point" alt="" coords="373,419,488,447"/>
+<area shape="rect" id="node16" href="$a00015.html#a8972d45fdd4d58cc736ce779da8e000a" title="modifies the ray_.max_t() value, intersect only if the intersection is before ray_.max_t()" alt="" coords="374,263,487,291"/>
+<area shape="rect" id="node19" href="$a00020.html#acb1c5b063489f881872e6faf155c4c18" title="modifies the ray_.max_t() value, intersect only if the intersection is before ray_.max_t()" alt="" coords="370,315,492,343"/>
+<area shape="rect" id="node22" href="$a00015.html#aa174951fb18c608b8d29cfede77cc0ba" title="Plane::Plane" alt="" coords="565,290,662,318"/>
+<area shape="rect" id="node24" href="$a00055.html#ga397536f562058dee83e3be0813324e82" title="compute the reflected ray from the intersection data and the ray to the intersection" alt="" coords="585,653,642,681"/>
+<area shape="rect" id="node26" href="$a00002.html#a0c1293b4a879f5797f9befcaef2c4c99" title="BSDF::reflect_dir" alt="" coords="369,678,492,706"/>
+<area shape="rect" id="node29" href="$a00055.html#ga1c7e1aae0ca65e600b252447bc817038" title="compute the refracted ray from the intersection data and the ray to the intersection" alt="" coords="584,550,643,578"/>
+<area shape="rect" id="node31" href="$a00002.html#a072b04d8fc38b94911e023dcb3a0c28f" title="BSDF::refract_dir" alt="" coords="369,523,493,551"/>
+<area shape="rect" id="node37" href="$a00021.html#a5b3059961eb8b4db3dc6b79f283dcac1" title="Vector3D::normalize" alt="" coords="360,159,501,187"/>
+</map>

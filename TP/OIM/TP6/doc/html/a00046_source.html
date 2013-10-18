@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>M1 Informatique - OIM - mini raytracer:  Fichier source de vector3d.hpp</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">M1 Informatique - OIM - mini raytracer
+   &#160;<span id="projectnumber">2012-2013</span>
+   </div>
+   <div id="projectbrief">Interface de programmation pour un raytracer minimal</div>
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.5.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00046.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">vector3d.hpp</div>  </div>
+</div>
+<div class="contents">
+<a href="a00046.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &lt;math.h&gt;</span>
+<a name="l00004"></a>00004 
+<a name="l00008"></a><a class="code" href="a00021.html">00008</a> <span class="keyword">class </span><a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a> {
+<a name="l00009"></a>00009 <span class="keyword">private</span>:
+<a name="l00010"></a>00010 
+<a name="l00012"></a><a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675">00012</a>         <span class="keywordtype">float</span> <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[3];
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="keyword">public</span>:
+<a name="l00015"></a>00015 
+<a name="l00016"></a><a class="code" href="a00021.html#a0b11a8d75da427b27443d8a94d0d296c">00016</a>         <a class="code" href="a00021.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> () {
+<a name="l00017"></a>00017                 <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[0] = 0.f;
+<a name="l00018"></a>00018                 <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[1] = 0.f;
+<a name="l00019"></a>00019                 <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[2] = 0.f;
+<a name="l00020"></a>00020         }
+<a name="l00021"></a>00021 
+<a name="l00022"></a><a class="code" href="a00021.html#a7edccd70a716e000c14d5f897df821f0">00022</a>         <a class="code" href="a00021.html#a7edccd70a716e000c14d5f897df821f0">Vector3D</a> (<span class="keywordtype">float</span> v_) {
+<a name="l00023"></a>00023                 <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[0] = v_;
+<a name="l00024"></a>00024                 <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[1] = v_;
+<a name="l00025"></a>00025                 <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[2] = v_;
+<a name="l00026"></a>00026         }
+<a name="l00027"></a>00027 
+<a name="l00028"></a><a class="code" href="a00021.html#ae360ecedd8ce9cdb9ac4852783552107">00028</a>         <a class="code" href="a00021.html#ae360ecedd8ce9cdb9ac4852783552107">Vector3D</a> (<span class="keywordtype">float</span> x_, <span class="keywordtype">float</span> y_, <span class="keywordtype">float</span> z_) {
+<a name="l00029"></a>00029                 <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[0] = x_;
+<a name="l00030"></a>00030                 <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[1] = y_;
+<a name="l00031"></a>00031                 <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[2] = z_;
+<a name="l00032"></a>00032         }
+<a name="l00033"></a>00033 
+<a name="l00034"></a><a class="code" href="a00021.html#a15a162a986b897ebd0bb74df056d99c5">00034</a>         <span class="keywordtype">float</span> <a class="code" href="a00021.html#a15a162a986b897ebd0bb74df056d99c5">x</a>()<span class="keyword"> const </span>{
+<a name="l00035"></a>00035                 <span class="keywordflow">return</span> <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[0];
+<a name="l00036"></a>00036         }
+<a name="l00037"></a>00037 
+<a name="l00038"></a><a class="code" href="a00021.html#a1819fd51b78ece8de462d3a2c979111a">00038</a>         <span class="keywordtype">float</span> <a class="code" href="a00021.html#a1819fd51b78ece8de462d3a2c979111a">y</a>()<span class="keyword"> const </span>{
+<a name="l00039"></a>00039                 <span class="keywordflow">return</span> <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[1];
+<a name="l00040"></a>00040         }
+<a name="l00041"></a>00041         
+<a name="l00042"></a><a class="code" href="a00021.html#a026531e883c967b7a7803a2f6b983d2c">00042</a>         <span class="keywordtype">float</span> <a class="code" href="a00021.html#a026531e883c967b7a7803a2f6b983d2c">z</a>()<span class="keyword"> const </span>{
+<a name="l00043"></a>00043                 <span class="keywordflow">return</span> <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[2];
+<a name="l00044"></a>00044         }
+<a name="l00045"></a>00045 
+<a name="l00046"></a><a class="code" href="a00021.html#a905e3b0a8224f9fb86498cadd3475258">00046</a>         <span class="keywordtype">float</span> <a class="code" href="a00021.html#a905e3b0a8224f9fb86498cadd3475258">operator[] </a>(<span class="keywordtype">int</span> i_)<span class="keyword"> const </span>{
+<a name="l00047"></a>00047                 <span class="keywordflow">return</span> <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[i_];
+<a name="l00048"></a>00048         }
+<a name="l00049"></a>00049 
+<a name="l00050"></a><a class="code" href="a00021.html#a8a2124a91503b56df56d482459351f7e">00050</a>         <span class="keywordtype">float</span> &amp;<a class="code" href="a00021.html#a905e3b0a8224f9fb86498cadd3475258">operator[] </a>(<span class="keywordtype">int</span> i_) {
+<a name="l00051"></a>00051                 <span class="keywordflow">return</span> <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[i_];
+<a name="l00052"></a>00052         }
+<a name="l00053"></a>00053 
+<a name="l00054"></a><a class="code" href="a00021.html#a03f189f8d45eda497772364d19d30c7d">00054</a>         <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a> <a class="code" href="a00021.html#a03f189f8d45eda497772364d19d30c7d">operator- </a>()<span class="keyword"> const </span>{
+<a name="l00055"></a>00055                 <span class="keywordflow">return</span> <a class="code" href="a00021.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> (-<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[0], -<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[1], -<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[2]);
+<a name="l00056"></a>00056         }
+<a name="l00057"></a>00057 
+<a name="l00058"></a><a class="code" href="a00021.html#aa93b9e07c52647bb14d495cd7cad3a28">00058</a>         <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a> <a class="code" href="a00021.html#aa93b9e07c52647bb14d495cd7cad3a28">operator+ </a>(<span class="keyword">const</span> <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a>&amp; other_)<span class="keyword"> const </span>{
+<a name="l00059"></a>00059                 <span class="keywordflow">return</span> <a class="code" href="a00021.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> (<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[0] + other_.<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[0],
+<a name="l00060"></a>00060                                                  <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[1] + other_.<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[1],
+<a name="l00061"></a>00061                                                  <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[2] + other_.<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[2]);
+<a name="l00062"></a>00062         }
+<a name="l00063"></a>00063 
+<a name="l00064"></a><a class="code" href="a00021.html#acc174b3241ced68135a9b21a701a2a21">00064</a>         <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a> <a class="code" href="a00021.html#a03f189f8d45eda497772364d19d30c7d">operator- </a>(<span class="keyword">const</span> <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a>&amp; other_)<span class="keyword"> const </span>{
+<a name="l00065"></a>00065                 <span class="keywordflow">return</span> <a class="code" href="a00021.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> (<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[0] - other_.<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[0],
+<a name="l00066"></a>00066                                                  <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[1] - other_.<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[1],
+<a name="l00067"></a>00067                                                  <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[2] - other_.<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[2]);
+<a name="l00068"></a>00068         }
+<a name="l00069"></a>00069 
+<a name="l00070"></a><a class="code" href="a00021.html#a48aa43ece28de6866ca2114ef0e639bf">00070</a>         <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a> <a class="code" href="a00021.html#a48aa43ece28de6866ca2114ef0e639bf">operator* </a>(<span class="keyword">const</span> <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a>&amp; other_)<span class="keyword"> const </span>{
+<a name="l00071"></a>00071                 <span class="keywordflow">return</span> <a class="code" href="a00021.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> (<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[0] * other_.<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[0],
+<a name="l00072"></a>00072                                                  <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[1] * other_.<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[1],
+<a name="l00073"></a>00073                                                  <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[2] * other_.<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[2]);               
+<a name="l00074"></a>00074         }
+<a name="l00075"></a>00075 
+<a name="l00076"></a><a class="code" href="a00021.html#aa092b158a5f7318bbf82bf6c49d169e6">00076</a>         <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a> <a class="code" href="a00021.html#a48aa43ece28de6866ca2114ef0e639bf">operator* </a>(<span class="keywordtype">float</span> v_)<span class="keyword"> const </span>{
+<a name="l00077"></a>00077                 <span class="keywordflow">return</span> <a class="code" href="a00021.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> (<a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[0] * v_,
+<a name="l00078"></a>00078                                                  <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[1] * v_,
+<a name="l00079"></a>00079                                                  <a class="code" href="a00021.html#a3fa2af0806fa62f62dd5835c26a0a675" title="0 = x, 1 = y, 2 = z">m_comps</a>[2] * v_);
+<a name="l00080"></a>00080         }
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 
+<a name="l00083"></a><a class="code" href="a00021.html#ab58e6202e20f0fd74fc35133eb780254">00083</a>         <span class="keywordtype">float</span> <a class="code" href="a00021.html#ab58e6202e20f0fd74fc35133eb780254">norm</a> ()<span class="keyword"> const </span>{
+<a name="l00084"></a>00084                 <span class="keywordflow">return</span> sqrtf (<a class="code" href="a00021.html#a15a162a986b897ebd0bb74df056d99c5">x</a>() * <a class="code" href="a00021.html#a15a162a986b897ebd0bb74df056d99c5">x</a>() + <a class="code" href="a00021.html#a1819fd51b78ece8de462d3a2c979111a">y</a>() * <a class="code" href="a00021.html#a1819fd51b78ece8de462d3a2c979111a">y</a>() + <a class="code" href="a00021.html#a026531e883c967b7a7803a2f6b983d2c">z</a>() * <a class="code" href="a00021.html#a026531e883c967b7a7803a2f6b983d2c">z</a>());
+<a name="l00085"></a>00085         }
+<a name="l00086"></a>00086 
+<a name="l00087"></a><a class="code" href="a00021.html#a293698c2fcdc50968fa63e125120bd61">00087</a>         <span class="keywordtype">float</span> <a class="code" href="a00021.html#a293698c2fcdc50968fa63e125120bd61">dot</a> (<span class="keyword">const</span> <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a>&amp; other_)<span class="keyword"> const </span>{
+<a name="l00088"></a>00088                 <span class="keywordflow">return</span> <a class="code" href="a00021.html#a15a162a986b897ebd0bb74df056d99c5">x</a>() * other_.<a class="code" href="a00021.html#a15a162a986b897ebd0bb74df056d99c5">x</a>() + <a class="code" href="a00021.html#a1819fd51b78ece8de462d3a2c979111a">y</a>() * other_.<a class="code" href="a00021.html#a1819fd51b78ece8de462d3a2c979111a">y</a>() + <a class="code" href="a00021.html#a026531e883c967b7a7803a2f6b983d2c">z</a>() * other_.<a class="code" href="a00021.html#a026531e883c967b7a7803a2f6b983d2c">z</a>();
+<a name="l00089"></a>00089         }
+<a name="l00090"></a>00090 
+<a name="l00091"></a><a class="code" href="a00021.html#a5b3059961eb8b4db3dc6b79f283dcac1">00091</a>         <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a> <a class="code" href="a00021.html#a5b3059961eb8b4db3dc6b79f283dcac1">normalize</a> ()<span class="keyword"> const </span>{
+<a name="l00092"></a>00092                 <span class="keywordflow">return</span> (*<span class="keyword">this</span>) * (1.f / <a class="code" href="a00021.html#ab58e6202e20f0fd74fc35133eb780254">norm</a>());
+<a name="l00093"></a>00093         }
+<a name="l00094"></a>00094 
+<a name="l00095"></a><a class="code" href="a00021.html#abd36ddbe10a7981949ecde1d9d2f457a">00095</a>         <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a> <a class="code" href="a00021.html#abd36ddbe10a7981949ecde1d9d2f457a">cross_product</a> (<span class="keyword">const</span> <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a>&amp; other_)<span class="keyword"> const </span>{
+<a name="l00096"></a>00096                 <span class="keywordflow">return</span> <a class="code" href="a00021.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a> (<a class="code" href="a00021.html#a1819fd51b78ece8de462d3a2c979111a">y</a>() * other_.<a class="code" href="a00021.html#a026531e883c967b7a7803a2f6b983d2c">z</a>() - <a class="code" href="a00021.html#a026531e883c967b7a7803a2f6b983d2c">z</a>() * other_.<a class="code" href="a00021.html#a1819fd51b78ece8de462d3a2c979111a">y</a>(),
+<a name="l00097"></a>00097                                                  <a class="code" href="a00021.html#a026531e883c967b7a7803a2f6b983d2c">z</a>() * other_.<a class="code" href="a00021.html#a15a162a986b897ebd0bb74df056d99c5">x</a>() - <a class="code" href="a00021.html#a15a162a986b897ebd0bb74df056d99c5">x</a>() * other_.<a class="code" href="a00021.html#a026531e883c967b7a7803a2f6b983d2c">z</a>(),
+<a name="l00098"></a>00098                                                  <a class="code" href="a00021.html#a15a162a986b897ebd0bb74df056d99c5">x</a>() * other_.<a class="code" href="a00021.html#a1819fd51b78ece8de462d3a2c979111a">y</a>() - <a class="code" href="a00021.html#a1819fd51b78ece8de462d3a2c979111a">y</a>() * other_.<a class="code" href="a00021.html#a15a162a986b897ebd0bb74df056d99c5">x</a>());
+<a name="l00099"></a>00099         }
+<a name="l00100"></a>00100 };
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102 
+</pre></div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="a00046.html">vector3d.hpp</a>      </li>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+    <li class="footer">Généré le Samedi Octobre 20 2012 11:25:22 pour M1 Informatique - OIM - mini raytracer par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

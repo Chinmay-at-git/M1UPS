@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>M1 Informatique - OIM - mini raytracer:  Fichier source de solidesplaton.cpp</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">M1 Informatique - OIM - mini raytracer
+   &#160;<span id="projectnumber">2012-2013</span>
+   </div>
+   <div id="projectbrief">Interface de programmation pour un raytracer minimal</div>
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.5.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00043.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">solidesplaton.cpp</div>  </div>
+</div>
+<div class="contents">
+<a href="a00043.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="a00044.html">solidesplaton.h</a>&quot;</span>
+<a name="l00002"></a>00002 
+<a name="l00003"></a>00003 <span class="preprocessor">#include &quot;../coreraytracer/scene.hpp&quot;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;../coreraytracer/image.hpp&quot;</span>
+<a name="l00005"></a>00005 
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;../coreraytracer/plane.hpp&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;../coreraytracer/sphere.hpp&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;../coreraytracer/cylinder.hpp&quot;</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;../coreraytracer/matte.hpp&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;../coreraytracer/plastic.hpp&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;../coreraytracer/metal.hpp&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;../coreraytracer/glass.hpp&quot;</span>
+<a name="l00014"></a>00014 
+<a name="l00015"></a><a class="code" href="a00043.html#a002b2f4894492820fe708b1b7e7c5e70">00015</a> <span class="preprocessor">#define EPSILON 1e-6</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span>
+<a name="l00017"></a>00017 <span class="comment">/* Nombre d&#39;or */</span>
+<a name="l00018"></a><a class="code" href="a00043.html#a2203853edabc3de5f785e54b55eb5e3c">00018</a> <span class="preprocessor">#define PHI ((1.f + sqrtf(5.f))/2.f)</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span>
+<a name="l00020"></a>00020 <span class="comment">/* Taille des géométries par rapport au rayon des solides */</span>
+<a name="l00021"></a><a class="code" href="a00043.html#a474c54ae548bcbee124ef9f669ab23f5">00021</a> <span class="preprocessor">#define SPHERERATIO 7.5f</span>
+<a name="l00022"></a><a class="code" href="a00043.html#a57c20b20520b46d31dca8a0ee5b8a981">00022</a> <span class="preprocessor"></span><span class="preprocessor">#define CYLINDERRATIO (2.f*SPHERERATIO*PHI)</span>
+<a name="l00023"></a>00023 <span class="preprocessor"></span>
+<a name="l00024"></a>00024 <span class="comment">/* Matériaux des sommets et aretes */</span>
+<a name="l00025"></a><a class="code" href="a00043.html#ad719b4f3e1bf356ea27fcba0566f5eca">00025</a> <a class="code" href="a00012.html" title="Abstract class for material.">Material</a> *<a class="code" href="a00043.html#ad719b4f3e1bf356ea27fcba0566f5eca">vertexMat</a>;
+<a name="l00026"></a><a class="code" href="a00043.html#a59b5f8339a4be4aff1367893f316794c">00026</a> <a class="code" href="a00012.html" title="Abstract class for material.">Material</a> *<a class="code" href="a00043.html#a59b5f8339a4be4aff1367893f316794c">edgeMat</a>;
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028 <span class="comment">/* Fonction de génération de la géométrie et de peuplement de la scène, indépendante du solide construit.</span>
+<a name="l00029"></a>00029 <span class="comment">    Cette fonction ajoute une sphere en chaque point du tableau tabPoints et un cylindre entre chaque points distants de edgeSize</span>
+<a name="l00030"></a>00030 <span class="comment">*/</span>
+<a name="l00031"></a><a class="code" href="a00043.html#a83149d93a314d6d27c1031ba643c95f1">00031</a> <span class="keywordtype">void</span> <a class="code" href="a00043.html#a83149d93a314d6d27c1031ba643c95f1">populateScene</a>(<a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a> center, <span class="keywordtype">float</span> sphereRadius, <span class="keywordtype">float</span> cylinderRadius,
+<a name="l00032"></a>00032                    <a class="code" href="a00021.html" title="3D vector manipulation">Vector3D</a> *tabPoints, <span class="keywordtype">int</span> nbVertex, <span class="keywordtype">float</span> edgeSize){
+<a name="l00033"></a>00033 }
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 <span class="comment">/* Construction tetraèdre :</span>
+<a name="l00037"></a>00037 <span class="comment">    http://www.mathcurve.com/polyedres/tetraedre/tetraedre.shtml</span>
+<a name="l00038"></a>00038 <span class="comment">*/</span>
+<a name="l00039"></a><a class="code" href="a00044.html#a620256d333c0c50ace716e5f2744535b">00039</a> <span class="keywordtype">void</span> <a class="code" href="a00043.html#a620256d333c0c50ace716e5f2744535b" title="Ajoute à la scene un tetraèdre en position (x,y,z) et de rayon r.">add_tetrahedron</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z, <span class="keywordtype">float</span> r){
+<a name="l00040"></a>00040 }
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042 <span class="comment">/* Construction hexaèdre:</span>
+<a name="l00043"></a>00043 <span class="comment">  http://www.mathcurve.com/polyedres/cube/cube.shtml</span>
+<a name="l00044"></a>00044 <span class="comment">*/</span>
+<a name="l00045"></a><a class="code" href="a00044.html#ab216d3029907d1036b91ff58b26390a6">00045</a> <span class="keywordtype">void</span> <a class="code" href="a00043.html#ab216d3029907d1036b91ff58b26390a6" title="Ajoute à la scene un hexaèdre en position (x,y,z) et de rayon r.">add_hexahedron</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z, <span class="keywordtype">float</span> r){
+<a name="l00046"></a>00046 }
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 <span class="comment">/* Construction octaèdre:</span>
+<a name="l00050"></a>00050 <span class="comment">  http://www.mathcurve.com/polyedres/octaedre/octaedre.shtml</span>
+<a name="l00051"></a>00051 <span class="comment">*/</span>
+<a name="l00052"></a><a class="code" href="a00044.html#a7920fe62dfa811de423ca9020a512943">00052</a> <span class="keywordtype">void</span> <a class="code" href="a00043.html#a7920fe62dfa811de423ca9020a512943" title="Ajoute à la scene un octaèdre en position (x,y,z) et de rayon r.">add_octahedron</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z, <span class="keywordtype">float</span> r){
+<a name="l00053"></a>00053 }
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="comment">/* Construction dodecaèdre:</span>
+<a name="l00056"></a>00056 <span class="comment">  http://www.mathcurve.com/polyedres/octaedre/octaedre.shtml</span>
+<a name="l00057"></a>00057 <span class="comment">*/</span>
+<a name="l00058"></a><a class="code" href="a00044.html#ac7f87cc4a750fa0e621a8e0534b95e23">00058</a> <span class="keywordtype">void</span> <a class="code" href="a00043.html#ac7f87cc4a750fa0e621a8e0534b95e23" title="Ajoute à la scene un dodecaèdre en position (x,y,z) et de rayon r.">add_dodecahedron</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z, <span class="keywordtype">float</span> r){
+<a name="l00059"></a>00059 }
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 <span class="comment">/* Construction icosaèdre :</span>
+<a name="l00062"></a>00062 <span class="comment">  http://www.mathcurve.com/polyedres/icosaedre/icosaedre.shtml</span>
+<a name="l00063"></a>00063 <span class="comment">*/</span>
+<a name="l00064"></a><a class="code" href="a00044.html#a48fd18993617dcbe9e1f455dad2c63f8">00064</a> <span class="keywordtype">void</span> <a class="code" href="a00043.html#a48fd18993617dcbe9e1f455dad2c63f8" title="Ajoute à la scene un icosaèdre en position (x,y,z) et de rayon r.">add_icosahedron</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z, <span class="keywordtype">float</span> r){
+<a name="l00065"></a>00065 }
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="comment">/* Constuction de la scène de démonstration des solides de Platon</span>
+<a name="l00069"></a>00069 <span class="comment">  */</span>
+<a name="l00070"></a><a class="code" href="a00044.html#a997362d3ed88ba880b0b7130a4ceb95b">00070</a> <span class="keywordtype">void</span> <a class="code" href="a00043.html#a997362d3ed88ba880b0b7130a4ceb95b" title="Construit une scène représentant les solides de platon et visualisée dans une image de taille (xsize...">make_platon_scene</a> (<span class="keywordtype">int</span> xsize, <span class="keywordtype">int</span> ysize) {
+<a name="l00071"></a>00071         <span class="comment">//camera</span>
+<a name="l00072"></a>00072         <a class="code" href="a00052.html#gad67f595be55be0bc50b4ec08a9c74192" title="to set the parameters of the camera">set_camera</a> (0.f, 0.f, -10.f,
+<a name="l00073"></a>00073                                 0.f, 0.f, 0.f,
+<a name="l00074"></a>00074                                 0.f, 1.f, 0.f,
+<a name="l00075"></a>00075                                62.f, xsize, ysize);
+<a name="l00076"></a>00076         <span class="comment">//lights</span>
+<a name="l00077"></a>00077         <span class="comment">// front light</span>
+<a name="l00078"></a>00078         <a class="code" href="a00052.html#ga7338897b0e82076338fb7dd7cadeaddc" title="to add a light to the scene">add_light</a> (0.f, 1.f, -4.f, 1.5f, 1.5f, 1.5f);
+<a name="l00079"></a>00079         <span class="comment">// side light</span>
+<a name="l00080"></a>00080         <a class="code" href="a00052.html#ga7338897b0e82076338fb7dd7cadeaddc" title="to add a light to the scene">add_light</a> (-3.f, 3.f, -4.f, 0.5f, 0.5f, 0.5f);
+<a name="l00081"></a>00081         <span class="comment">// back light</span>
+<a name="l00082"></a>00082         <a class="code" href="a00052.html#ga7338897b0e82076338fb7dd7cadeaddc" title="to add a light to the scene">add_light</a> (3.f, 0.f, 5.f, 1.5f, 1.5f, 1.5f);
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084         <span class="comment">//objects</span>
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086         vertexMat = <a class="code" href="a00052.html#ga5e9b1752bc3635d8e03aeedce96f1378" title="to create a plastic material">create_plastic_mat</a> (0.6f, 0.01f, 0.025f,
+<a name="l00087"></a>00087                                         0.25f, 0.25f, 0.25f,
+<a name="l00088"></a>00088                                         300.f);
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090         <span class="comment">/*vertexMat = create_metal_mat (0.8f, 0.2f, 0.2f,  1.f, 1.f, 1.f);*/</span>
+<a name="l00091"></a>00091         edgeMat = <a class="code" href="a00052.html#ga5e9b1752bc3635d8e03aeedce96f1378" title="to create a plastic material">create_plastic_mat</a> (0.01f, 0.6f, 0.0f,
+<a name="l00092"></a>00092                                       0.01f, 0.6f, 0.0f,
+<a name="l00093"></a>00093                                       100.f);
+<a name="l00094"></a>00094         <span class="comment">/* pour un reflet sur le fond */</span>
+<a name="l00095"></a>00095         <a class="code" href="a00007.html" title="Abstract class for geometric object.">Geometry</a> * sphere = <a class="code" href="a00052.html#ga2da051b943f32009496f94737261c248" title="to create a sphere">create_sphere</a> (0.f, 0.f, 30.f, 24.f);
+<a name="l00096"></a>00096         <a class="code" href="a00012.html" title="Abstract class for material.">Material</a> * transp = <a class="code" href="a00052.html#ga7e84d93db3d16480aa51e9d9cc16d843" title="to create a metal-like material">create_metal_mat</a> (0.01f, 0.01f, 0.01f,
+<a name="l00097"></a>00097                                               5.f, 5.f, 5.f );
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099         <a class="code" href="a00052.html#gadf3f8ea1c8bf943db640af01230ed0f7" title="to add a new object to the scene, from its geometry and its material">add_object</a>(sphere, transp);
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 <span class="preprocessor">#if 0</span>
+<a name="l00102"></a>00102 <span class="preprocessor"></span>        <a class="code" href="a00043.html#ac7f87cc4a750fa0e621a8e0534b95e23" title="Ajoute à la scene un dodecaèdre en position (x,y,z) et de rayon r.">add_dodecahedron</a>(0.f, 0.f, 0.f, 3.f);
+<a name="l00103"></a>00103 <span class="preprocessor">#else</span>
+<a name="l00104"></a>00104 <span class="preprocessor"></span>
+<a name="l00105"></a>00105         <span class="keywordtype">float</span> radius=3.f;
+<a name="l00106"></a>00106         <span class="keywordtype">float</span> solidRadius = 1.5f;
+<a name="l00107"></a>00107         <span class="keywordtype">float</span> angle = 2.f*M_PI/10.f;
+<a name="l00108"></a>00108         <span class="keywordtype">float</span> x, y, z;
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110         x = radius*cos(angle);
+<a name="l00111"></a>00111         y = radius*sin(angle);
+<a name="l00112"></a>00112         z = 0;
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114         <a class="code" href="a00043.html#a620256d333c0c50ace716e5f2744535b" title="Ajoute à la scene un tetraèdre en position (x,y,z) et de rayon r.">add_tetrahedron</a>(x, y, z, solidRadius);
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116         angle += 2.f*M_PI/5.f;
+<a name="l00117"></a>00117         x = radius*cos(angle);
+<a name="l00118"></a>00118         y = radius*sin(angle);
+<a name="l00119"></a>00119         z = 0;
+<a name="l00120"></a>00120         <a class="code" href="a00043.html#ab216d3029907d1036b91ff58b26390a6" title="Ajoute à la scene un hexaèdre en position (x,y,z) et de rayon r.">add_hexahedron</a>(x, y, z, solidRadius);
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122         angle += 2.f*M_PI/5.f;
+<a name="l00123"></a>00123         x = radius*cos(angle);
+<a name="l00124"></a>00124         y = radius*sin(angle);
+<a name="l00125"></a>00125         z = 0;
+<a name="l00126"></a>00126         <a class="code" href="a00043.html#a7920fe62dfa811de423ca9020a512943" title="Ajoute à la scene un octaèdre en position (x,y,z) et de rayon r.">add_octahedron</a>(x, y, z, solidRadius);
+<a name="l00127"></a>00127 
+<a name="l00128"></a>00128         angle += 2.f*M_PI/5.f;
+<a name="l00129"></a>00129         x = radius*cos(angle);
+<a name="l00130"></a>00130         y = radius*sin(angle);
+<a name="l00131"></a>00131         z = 0;
+<a name="l00132"></a>00132         <a class="code" href="a00043.html#ac7f87cc4a750fa0e621a8e0534b95e23" title="Ajoute à la scene un dodecaèdre en position (x,y,z) et de rayon r.">add_dodecahedron</a>(x, y, z, solidRadius);
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134         angle += 2.f*M_PI/5.f;
+<a name="l00135"></a>00135         x = radius*cos(angle);
+<a name="l00136"></a>00136         y = radius*sin(angle);
+<a name="l00137"></a>00137         z = 0;
+<a name="l00138"></a>00138         <a class="code" href="a00043.html#a48fd18993617dcbe9e1f455dad2c63f8" title="Ajoute à la scene un icosaèdre en position (x,y,z) et de rayon r.">add_icosahedron</a>(x, y, z, solidRadius);
+<a name="l00139"></a>00139 <span class="preprocessor">#endif</span>
+<a name="l00140"></a>00140 <span class="preprocessor"></span>}
+<a name="l00141"></a>00141 
+<a name="l00142"></a>00142 <span class="comment">/*</span>
+<a name="l00143"></a>00143 <span class="comment">  Voir aussi:</span>
+<a name="l00144"></a>00144 <span class="comment">http://www.math.ens.fr/culturemath/video/Dupas-polyedres/patrons/Construction.html</span>
+<a name="l00145"></a>00145 <span class="comment">*/</span>
+</pre></div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="a00043.html">solidesplaton.cpp</a>      </li>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+    <li class="footer">Généré le Samedi Octobre 20 2012 11:25:22 pour M1 Informatique - OIM - mini raytracer par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

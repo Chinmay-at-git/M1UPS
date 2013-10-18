@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>M1 Informatique - OIM - mini raytracer: DEVOIR : Construction et visualisation des solides de Platons</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">M1 Informatique - OIM - mini raytracer
+   &#160;<span id="projectnumber">2012-2013</span>
+   </div>
+   <div id="projectbrief">Interface de programmation pour un raytracer minimal</div>
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.5.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00001.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">DEVOIR : Construction et visualisation des solides de Platons </div>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><p>L'objectif de ce devoir est de construire et de visualiser les cinq polyèdres réguliers convexes nommés solides de Platon.</p>
+<p>Ces cinq solides sont : </p>
+<ul>
+<li>
+le Tétraèdre,</li>
+<li>
+l'Hexaèdre (ou cube),</li>
+<li>
+l'Octaèdre,</li>
+<li>
+le Dodécaèdre,</li>
+<li>
+l'Icosaèdre. </li>
+</ul>
+<p>La page wikipédia sur les <a href="http://fr.wikipedia.org/wiki/Solide_de_Platon">solides de Platon</a>, dont sont extraites les images suivantes donne une définition complète de ces solides. Les pages associées à chaque solides fournissent des informations spécifiques qui seront très utiles pour votre programmation.</p>
+<table  border="1" style="margin: 1em auto; text-align: center; border-collapse: collapse; border-color: #aaa;">
+<tr>
+<th align="center" colspan="5">Les cinq polyèdres réguliers convexes (solides de Platon)  </th></tr>
+<tr>
+<td><a href="http://fr.wikipedia.org/wiki/T%C3%A9tra%C3%A8dre" title="Tétraèdre">Tétraèdre</a> </td><td><a href="http://fr.wikipedia.org/wiki/Hexa%C3%A8dre" title="Hexaèdre">Hexaèdre</a><br/>
+ ou <a href="http://fr.wikipedia.org/wiki/Cube" title="Cube">Cube</a> </td><td><a href="http://fr.wikipedia.org/wiki/Octa%C3%A8dre" title="Octaèdre">Octaèdre</a> </td><td><a href="http://fr.wikipedia.org/wiki/Dod%C3%A9ca%C3%A8dre_r%C3%A9gulier" title="Dodécaèdre régulier">Dodécaèdre</a> </td><td><a href="http://fr.wikipedia.org/wiki/Icosa%C3%A8dre" title="Icosaèdre">Icosaèdre</a>  </td></tr>
+<tr style="vertical-align: bottom;">
+<td width="120"><div class="image">
+<img src="../images/120px-Tetrahedron.gif" alt="120px-Tetrahedron.gif" alt="Tétraèdre" width="120" height="120"/>
+</div>
+ </td><td width="120" style="padding-top: 4pt;"><div class="image">
+<img src="../images/120px-Hexahedron.gif" alt="120px-Hexahedron.gif" alt="Cube" width="120" height="120"/>
+</div>
+ </td><td width="120"><div class="image">
+<img src="../images/120px-Octahedron.gif" alt="120px-Octahedron.gif" alt="Octaèdre" width="120" height="120"/>
+</div>
+ </td><td width="120"><div class="image">
+<img src="../images/120px-Dodecahedron.gif" alt="120px-Dodecahedron.gif" alt="Dodécaèdre" width="120" height="120"/>
+</div>
+ </td><td width="120"><div class="image">
+<img src="../images/120px-Icosahedron.gif" alt="120px-Icosahedron.gif" alt="Icosaèdre" width="120" height="120"/>
+</div>
+  </td></tr>
+</table>
+<h2><a class="anchor" id="representation"></a>
+Représentation des solides</h2>
+<p>Les solides de Platons devront être représentés à l'aide de sphères et de cylindre : Chaque sommet d'un solide sera matérialisé par une sphère et chaque arête par un cylindre reliant les deux sommets. Afin d'assurer une représentation claire du solide, les sommets et les arêtes seront constitués de matériaux différents (couleurs différentes) et les cylindres auront un rayon deux fois plus petit que celui des sphères. Les sphères auront un rayon égal au cinquième de la longueur d'une arête. Ces proportions pourront être modifiées pour assurer une représentation esthétique des solides, en utilisant une relation construite sur le <a href="http://fr.wikipedia.org/wiki/Nombre_d%27or">nombre d'or</a> par exemple.</p>
+<h2><a class="anchor" id="travail"></a>
+Travail à réaliser</h2>
+<p>Pour chaque solide, une fonction de construction sera développée sur le même principe que la fonction <a class="el" href="a00052.html#ga5102ec4e0cd297fb1e649f5dde3bd029" title="to initialize the scene with the default one.">make_default_scene()</a> mais sans création de camera ni de sources de lumière. L'objectif de ces fonctions de construction des solides de Platon est d'ajouter à la scène les différents éléments les composants (sommets et arêtes) via la fonction <a class="el" href="a00052.html#gadf3f8ea1c8bf943db640af01230ed0f7" title="to add a new object to the scene, from its geometry and its material">add_object()</a>.</p>
+<p>Pour cela, le fichier <a class="el" href="a00040.html">raytracing.cpp</a> sera modifier pour intégrer les fonctions suivantes.</p>
+<h3><a class="anchor" id="terahedron"></a>
+Construction d'un tetrahèdre</h3>
+<p>programmer la fonction add_tetrahedron avec le profil est le suivant </p>
+<div class="fragment"><pre class="fragment">  <span class="keywordtype">void</span> <a class="code" href="a00043.html#a620256d333c0c50ace716e5f2744535b" title="Ajoute à la scene un tetraèdre en position (x,y,z) et de rayon r.">add_tetrahedron</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z, <span class="keywordtype">float</span> r);
+</pre></div><p> avec x,y,z la position du centre de gravité du solide et r le rayon de la sphère englobante du solide.</p>
+<h3><a class="anchor" id="hexaedron"></a>
+Construction d'un hexaèdre</h3>
+<p>programmer la fonction add_hexahedron avec le profil est le suivant </p>
+<div class="fragment"><pre class="fragment">  <span class="keywordtype">void</span> <a class="code" href="a00043.html#ab216d3029907d1036b91ff58b26390a6" title="Ajoute à la scene un hexaèdre en position (x,y,z) et de rayon r.">add_hexahedron</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z, <span class="keywordtype">float</span> r);
+</pre></div><p> avec x,y,z la position du centre de gravité du solide et r le rayon de la sphère englobante du solide.</p>
+<h3><a class="anchor" id="octahedron"></a>
+Construction d'un octaèdre</h3>
+<p>programmer la fonction add_octahedron avec le profil est le suivant </p>
+<div class="fragment"><pre class="fragment">  <span class="keywordtype">void</span> <a class="code" href="a00043.html#a7920fe62dfa811de423ca9020a512943" title="Ajoute à la scene un octaèdre en position (x,y,z) et de rayon r.">add_octahedron</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z, <span class="keywordtype">float</span> r);
+</pre></div><p> avec x,y,z la position du centre de gravité du solide et r le rayon de la sphère englobante du solide.</p>
+<h3><a class="anchor" id="dodecahedron"></a>
+Construction d'un dodécaèdre</h3>
+<p>programmer la fonction add_dodecahedron avec le profil est le suivant </p>
+<div class="fragment"><pre class="fragment">  <span class="keywordtype">void</span> <a class="code" href="a00043.html#ac7f87cc4a750fa0e621a8e0534b95e23" title="Ajoute à la scene un dodecaèdre en position (x,y,z) et de rayon r.">add_dodecahedron</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z, <span class="keywordtype">float</span> r);
+</pre></div><p> avec x,y,z la position du centre de gravité du solide et r le rayon de la sphère englobante du solide.</p>
+<h3><a class="anchor" id="icosahedron"></a>
+Construction d'un icosaèdre</h3>
+<p>programmer la fonction add_icosahedron avec le profil est le suivant </p>
+<div class="fragment"><pre class="fragment">  <span class="keywordtype">void</span> <a class="code" href="a00043.html#a48fd18993617dcbe9e1f455dad2c63f8" title="Ajoute à la scene un icosaèdre en position (x,y,z) et de rayon r.">add_icosahedron</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z, <span class="keywordtype">float</span> r);
+</pre></div><p> avec x,y,z la position du centre de gravité du solide et r le rayon de la sphère englobante du solide.</p>
+<p>Lorsque ces différentes fonctions auront été calculées, remplacer dans la fonction <a class="el" href="a00032.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a> (fichier le fichier <a class="el" href="a00032.html">main.cpp</a>) l'appel à la fonction <a class="el" href="a00052.html#ga5102ec4e0cd297fb1e649f5dde3bd029" title="to initialize the scene with the default one.">make_default_scene()</a> par un appel à la fonction <a class="el" href="a00043.html#a997362d3ed88ba880b0b7130a4ceb95b" title="Construit une scène représentant les solides de platon et visualisée dans une image de taille (xsize...">make_platon_scene()</a>.</p>
+<p>Votre devoir sera évalué par le code que vous aurez fourni et validé par le calcul de l'image suivante :</p>
+<div class="image">
+<img src="solidesplaton800-600.png" alt="solidesplaton800-600.png"/>
+</div>
+ </div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+    <li class="footer">Généré le Samedi Octobre 20 2012 11:25:22 pour M1 Informatique - OIM - mini raytracer par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

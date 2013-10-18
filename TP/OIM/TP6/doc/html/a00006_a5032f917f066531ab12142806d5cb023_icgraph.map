@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00055.html#ga3a215078ec8db08fc79e0a491bc61b59" title="compute the amount of color scattered at the intersection to the ray from the given light..." alt="" coords="195,5,298,33"/>
+<area shape="rect" id="node5" href="$a00014.html#a22590d1bdff3889b53e83cc7aa9731aa" title="Metal::evaluate" alt="" coords="191,57,303,85"/>
+<area shape="rect" id="node7" href="$a00013.html#af0a76a90f66c8a28fa00c4006835419b" title="Matte::evaluate" alt="" coords="190,109,303,137"/>
+<area shape="rect" id="node9" href="$a00008.html#a11ebe65c2156443f435645d4bba4f8d5" title="Glass::evaluate" alt="" coords="190,161,303,189"/>
+<area shape="rect" id="node11" href="$a00016.html#a60041caca9b6f55483874f5b379c6598" title="Plastic::evaluate" alt="" coords="187,213,306,241"/>
+<area shape="rect" id="node13" href="$a00055.html#ga397536f562058dee83e3be0813324e82" title="compute the reflected ray from the intersection data and the ray to the intersection" alt="" coords="218,265,275,293"/>
+<area shape="rect" id="node15" href="$a00055.html#ga1c7e1aae0ca65e600b252447bc817038" title="compute the refracted ray from the intersection data and the ray to the intersection" alt="" coords="217,317,276,345"/>
+</map>

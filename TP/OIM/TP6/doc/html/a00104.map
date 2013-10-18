@@ -1,0 +1,19 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00023.html" title="camera.hpp" alt="" coords="790,161,881,189"/>
+<area shape="rect" id="node9" href="$a00039.html" title="ray.hpp" alt="" coords="724,83,788,111"/>
+<area shape="rect" id="node27" href="$a00026.html" title="diff_geom.hpp" alt="" coords="513,83,617,111"/>
+<area shape="rect" id="node49" href="$a00031.html" title="light.hpp" alt="" coords="879,83,949,111"/>
+<area shape="rect" id="node5" href="$a00042.html" title="scene.hpp" alt="" coords="695,315,777,343"/>
+<area shape="rect" id="node7" href="$a00040.html" title="raytracing.cpp" alt="" coords="265,393,369,421"/>
+<area shape="rect" id="node12" href="$a00027.html" title="geometry.hpp" alt="" coords="460,161,561,189"/>
+<area shape="rect" id="node14" href="$a00025.html" title="cylinder.hpp" alt="" coords="382,315,473,343"/>
+<area shape="rect" id="node17" href="$a00036.html" title="plane.hpp" alt="" coords="361,238,440,266"/>
+<area shape="rect" id="node20" href="$a00038.html" title="primitive.hpp" alt="" coords="577,238,673,266"/>
+<area shape="rect" id="node23" href="$a00045.html" title="sphere.hpp" alt="" coords="465,238,553,266"/>
+<area shape="rect" id="node30" href="$a00033.html" title="material.hpp" alt="" coords="198,161,292,189"/>
+<area shape="rect" id="node45" href="$a00030.html" title="isect.hpp" alt="" coords="588,161,663,189"/>
+<area shape="rect" id="node32" href="$a00028.html" title="glass.hpp" alt="" coords="70,315,148,343"/>
+<area shape="rect" id="node35" href="$a00034.html" title="matte.hpp" alt="" coords="173,315,253,343"/>
+<area shape="rect" id="node38" href="$a00035.html" title="metal.hpp" alt="" coords="277,315,356,343"/>
+<area shape="rect" id="node41" href="$a00037.html" title="plastic.hpp" alt="" coords="4,238,88,266"/>
+</map>
