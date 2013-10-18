@@ -22,7 +22,7 @@ void printVal(char *msg, int *val){
 }
 
 /*variante 3:
-Utilisons un segment de memoire paratge
+Utilisons un segment de memoire partage
 */
 int *cpt;
 void incrementeV1(int nbre){
