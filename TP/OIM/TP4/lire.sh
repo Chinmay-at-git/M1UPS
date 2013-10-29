@@ -37,7 +37,7 @@ function fluxVideo
 {
   echo 'Flux video à partir de l''image'
   #gst-launch filesrc location=$1 ! decodebin2 ! imagefreeze ! autovideosink
-  gst-launch filesrc location=$1 ! decodebin2 ! imagefreeze ! videobalance saturation=0.0  ! autovideosink
+  gst-launch-0.10 filesrc location=$1 ! decodebin2 ! imagefreeze ! videobalance saturation=0.0  ! autovideosink
 }
 
 #exo2-2 flux video 
@@ -85,7 +85,7 @@ function videoFlip
 #exo5
 #suppressionVoix 'extrait.wav'
 #exo2-1
-#fluxVideo '2CV.jpg'
+fluxVideo '2CV.jpg'
 #exo2-2
 #fluxVideotestsrc
 #exo2-3
@@ -97,4 +97,4 @@ function videoFlip
 #exo2-6
 #videoContrast 'trailer_400p.ogg'
 #exo2-7
-videoFlip 'trailer_400p.ogg'
+#videoFlip 'trailer_400p.ogg'

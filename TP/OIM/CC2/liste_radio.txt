@@ -1,0 +1,8 @@
+RMC	http://vipicecast.yacast.net/rmc	http://www.logotheque.fr/6396-2/logo+RMC+INFO.jpg
+Radio FG	http://radiofg.impek.com/fg6.mp3	http://upload.wikimedia.org/wikipedia/commons/1/14/Ectac.FG-Dj-Radio-logo.03.jpeg
+France Info	http://mp3.live.tv-radio.com/franceinfo/all/franceinfo.mp3	http://upload.wikimedia.org/wikipedia/commons/thumb/6/64/France_Info.png/120px-France_Info.png
+Nostalgie	http://mp3.live.tv-radio.com/nostalgie/all/nos_113812.mp3	http://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Nostalgie_logo_simple.png/120px-Nostalgie_logo_simple.png
+Le Mouv'	http://mp3.live.tv-radio.com/lemouv/all/lemouvhautdebit.mp3	http://upload.wikimedia.org/wikipedia/commons/0/04/France_Le_Mouv%27_logo.png	 
+Rire et Chansons	http://mp3.live.tv-radio.com/rire_et_chansons/all/rir_124629.mp3	http://media.nrj.fr/webradio_logo/100x100/2013/03/rire-default-120-120-tr_player72034.png
+Vibration	http://broadcast.infomaniak.ch/vibration-high.mp3	http://upload.wikimedia.org/wikipedia/fr/1/14/Logo_vibration.JPG
+France Inter	http://mp3.live.tv-radio.com/franceinter/all/franceinterhautdebit.mp3	http://upload.wikimedia.org/wikipedia/commons/b/b4/France_Inter.png
