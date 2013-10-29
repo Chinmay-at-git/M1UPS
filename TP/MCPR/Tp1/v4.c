@@ -5,93 +5,108 @@
 #include <unistd.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
+#include "constante.h"
 
-
-#define EXIT_FILS 1
-#define ERR_CREAT_FILS -1
-#define ERR_SEG -2
-#define ERR_ATT -3
-#define ERR_DET -4
-
-typedef struct{
-    int cpt; //compteur
-    double valeur; //valeur reelle partage
-}ValPartage;
-
-void error(char *msg, int status){
-    perror(msg);
-    exit(status);
-}
-void printVal(char *msg, int *val){
-    fprintf(stdout, msg, *val);
-}
+/*
+    Diallo Alpha Oumar Binta
+    21007631
+    Tp MCPR
+    Universite Paul Sabatier
+    Toulouse III
+*/ 
 
 /*variante 4:
-Les processus partagent deux informations
+    Les processus partagent maintenant deux informations : le compteur entier 
+    (sur lequel les memes operations sont faites) et une valeur reelle qui sera 
+    modifiee par un processus et affichee par l’autre (pour verifier que le
+    partage se fait bien).
+    Conclusion:
+        Ce code ne fait pas ce qu'on lui demande, il peut arriver que le pere
+        affiche le contenu de la memoire avant que le fils n'ait place sa valeur.
+        Il faut se servir d'un sémaphore pour gérer l'ordonnancement des tâches.
 */
-ValPartage *valeurP;
-void initValeurPartage(ValPartage* val){
-    val->cpt = 0;
-    val->valeur = 0;
-}
-void incrementeV(int nbre){
+
+void incremente(int nbre, int shmid){
     int i=0;
-    for(i=0; i < nbre; i++){
-       valeurP->cpt+=1;
-       printVal("incrementeV % d\n", &(valeurP->cpt));
+    ValPartage* valSon=NULL;
+    printf("Salut, je suis le fils %d, j'incremente le compteur\n"
+        "Je commence par m'attacher le segment de memoire\n",getpid());
+
+    if((valSon=(ValPartage*)shmat(shmid, NULL, 0)) < 0){
+        error("Attache segment memoire partage", ERR_ATT);
     }
-    printf("Valeur double partage modifie par le fils +5.5 % f\n", valeurP->valeur);
-    valeurP->valeur += 5.5;
+    for(i=0; i < nbre; i++){
+        valSon->cpt+=1;
+        printVal("incremente % d\n", valSon->cpt);
+    }
+    printf("je vais ecrire un reel 125.5 que mon pere va afficher\n") ;
+    valSon->valeur = 125.5;
     /* on arrete le fils pour ne pas qu'il execute le code du pere,
      car ce code est duplique a la creation du fils */
+    printf("Bon, proc_fils il est temps de mourrir\n"
+        "avant tout detachons le segment partagee\n");
+    if(shmdt(valSon) < 0){
+        error("detachement impossible", ERR_DET);
+    }
+    printf("Le fils se suicide\n");
     exit(EXIT_FILS);
 }
 
-void decrementeV(int nbre){
+void decremente(int nbre, int shmid){
     int i=0;
-    for(i=0;i < nbre; i++){
-        valeurP->cpt-=1;
-        printVal("decrementeV % d\n", &(valeurP->cpt));
+    ValPartage* valFather=NULL;
+    printf("Je suis le pere, je decremente le compteur\n"
+        "Je commence par m'attacher le segment de memoire\n");
+
+    if((valFather=(ValPartage*)shmat(shmid, NULL, 0)) < 0){
+        error("Attache segment memoire partage", ERR_ATT);
     }
-    printf("Valeur double partage affiche par le pere % f\n", valeurP->valeur);
+    for(i=0;i < nbre; i++){
+        valFather->cpt-=1;
+        printVal("decremente % d\n", valFather->cpt);
+    }
+
+    printf("je vais afficher un reel que mon fils a ecrit\n"
+        "valeur lut par le pere = %f\n"
+        "Bon, proc_pere il est temps de mourrir\n"
+        "avant tout detachons le segment partagee\n", valFather->valeur);
+
+    if(shmdt(valFather) < 0){
+        error("detachement impossible", ERR_DET);
+    }
 }
 
 int main(int argc, char *argv[]){
-    int iter=0;
+    int iter = 0;
     /* identifiant du segment de memoire partage */
-    int id_seg;
+    int shmid;
     if(argc != 2){
-        error("Le nombre d'iteration n'est pas renseigne", EXIT_FAILURE);
+        printf("Error :\t ./v4 nber_iteration\n");
+        exit(EXIT_FAILURE);
     }
     iter = atoi(argv[1]);
-    /* creation zone memoire 
-    (id_seg = shmget(IPC_PRIVATE, sizeof(int), IPC_CREAT | 0666)
-    */
-    /*creation d'une cle */
-    key_t cle = ftok("key", 0);
-    if((id_seg = shmget(cle, sizeof(ValPartage), IPC_CREAT | 0666)) < 0){
-        error("Creation segment memoire partage", ERR_SEG);
-    }
-    /* on attache le segement de memoire partage */
-    if((valeurP=(ValPartage*)shmat(id_seg, NULL, 0)) < 0){
-        error("Attache segment memoire partage", ERR_ATT);
-    }
-    initValeurPartage(valeurP);
+    /* creation zone memoire */
+    shmid = create_shm(100,"key",1);
 
     /* creation des processus */
     switch(fork()){
         case -1 : error("Creation fils", ERR_CREAT_FILS);
         case 0 :
             /* on est dans le fils */
-            incrementeV(iter);
+            incremente(iter, shmid);
         default : break;
     }
-    decrementeV(iter);
+    decremente(iter, shmid);
     /*on attends la fin des processus */
-    wait(NULL);
-    /* detacher le segment de memoire */
-    shmdt(valeurP);
+    printf("Le pere attend la mort de son fils\n") ;
+    wait(0);
+    printf("Bon, faisons le menage et supprimons le segment partagee\n") ;
     /*destruction du segment de memoire */
-    shmctl(id_seg, IPC_RMID, NULL);
+    delete_shm(shmid);
+    printf("Le pere se suicide\n") ;
     return 0;
 }
+
+/*
+
+*/

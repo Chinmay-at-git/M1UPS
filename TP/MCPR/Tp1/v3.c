@@ -5,77 +5,98 @@
 #include <unistd.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
+#include "constante.h"
 
 
-#define EXIT_FILS 1
-#define ERR_CREAT_FILS -1
-#define ERR_SEG -2
-#define ERR_ATT -3
-#define ERR_DET -4
+/*
+    Diallo Alpha Oumar Binta
+    21007631
+    Tp MCPR
+    Universite Paul Sabatier
+    Toulouse III
+*/ 
 
-void error(char *msg, int status){
-    perror(msg);
-    exit(status);
-}
-void printVal(char *msg, int *val){
-    fprintf(stdout, msg, *val);
-}
 
 /*variante 3:
-Utilisons un segment de memoire partage
+    Utilisons un segment de memoire partagee pour le compteur
+    Avant qu'un processus puisse utiliser un segment de memoire partagee,
+    ce dernier doit être attache au processus grâce à la primitive shmat().
+    La primitive shmdt() permet au processus de se detacher du segment.
+    La fonction shmat retourne l'adresse du segment de memoire partagee.
+    Il n'y a pas copie de zone memoire mais redirection de l'adressage 
+    vers le segment partage.
 */
-int *cpt;
-void incrementeV1(int nbre){
+void incremente(int nbre, int shmid){
     int i=0;
+    int* cptSon=NULL;
+    printf("Salut, je suis le fils %d, j'incremente le compteur\n"
+        "Je commence par m'attacher le segment de memoire\n",getpid());
+
+    if((cptSon=(int*)shmat(shmid, NULL, 0)) < 0){
+        error("Attache segment memoire partage", ERR_ATT);
+    }
     for(i=0; i < nbre; i++){
-       *cpt+=1;
-        printVal("incrementeV1 % d\n", cpt);
+       *cptSon+=1;
+        printVal("incremente % d\n", *cptSon);
     }
     /* on arrete le fils pour ne pas qu'il execute le code du pere,
      car ce code est duplique a la creation du fils */
+    printf("Bon, proc_fils il est temps de mourrir\n"
+        "avant tout detachons le segment partagee\n");
+    if(shmdt(cptSon) < 0){
+        error("detachement impossible", ERR_DET);
+    }
+    printf("Le fils se suicide\n");
     exit(EXIT_FILS);
 }
 
-void decrementeV1(int nbre){
+void decremente(int nbre, int shmid){
     int i=0;
+    int* cptFather=NULL;
+    printf("Je suis le pere, je decremente le compteur\n"
+        "Je commence par m'attacher le segment de memoire\n");
+
+    if((cptFather=(int*)shmat(shmid, NULL, 0)) < 0){
+        error("Attache segment memoire partage", ERR_ATT);
+    }
     for(i=0;i < nbre; i++){
-        *cpt-=1;
-        printVal("decrementeV1 % d\n", cpt);
+        *cptFather-=1;
+        printVal("decremente % d\n", *cptFather);
+    }
+    printf("Bon, proc_pere il est temps de mourrir\n"
+        "avant tout detachons le segment partagee\n");
+    if(shmdt(cptFather) < 0){
+        error("detachement impossible", ERR_DET);
     }
 }
 
 int main(int argc, char *argv[]){
-    int iter=0;
+    int iter = 0;
     /* identifiant du segment de memoire partage */
-    int id_seg;
+    int shmid;
     if(argc != 2){
-        error("Le nombre d'iteration n'est pas renseigne", EXIT_FAILURE);
+        printf("Error :\t ./v3 nber_iteration\n");
+        exit(EXIT_FAILURE);
     }
     iter = atoi(argv[1]);
     /* creation zone memoire */
-    if((id_seg = shmget(IPC_PRIVATE, sizeof(int), IPC_CREAT | 0666)) < 0){
-        error("Creation segment memoire partage", ERR_SEG);
-    }
-    /* on attache le segement de memoire partage */
-    if((cpt=(int*)shmat(id_seg, NULL, 0)) < 0){
-        error("Attache segment memoire partage", ERR_ATT);
-    }
-    *cpt =0;
+    shmid = create_shm(100,"key",1);
 
     /* creation des processus */
     switch(fork()){
         case -1 : error("Creation fils", ERR_CREAT_FILS);
         case 0 :
             /* on est dans le fils */
-            incrementeV1(iter);
+            incremente(iter, shmid);
         default : break;
     }
-    decrementeV1(iter);
+    decremente(iter, shmid);
     /*on attends la fin des processus */
-    wait(NULL);
-    /* detacher le segment de memoire */
-    shmdt(cpt);
+    printf("Le pere attend la mort de son fils\n") ;
+    wait(0);
+    printf("Bon, faisons le menage et supprimons le segment partagee\n") ;
     /*destruction du segment de memoire */
-    shmctl(id_seg, IPC_RMID, NULL);
+    delete_shm(shmid);
+    printf("Le pere se suicide\n") ;
     return 0;
 }

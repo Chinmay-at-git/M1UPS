@@ -7,31 +7,73 @@
 #include <sys/shm.h>
 #include "constante.h"
 
-/* valeur partage */
-ValPartage *valeurP;
-key_t cle;
+/*
+    Diallo Alpha Oumar Binta
+    21007631
+    Tp MCPR
+    Universite Paul Sabatier
+    Toulouse III
+*/ 
 
-void init_var(){
-    valeurP = malloc(sizeof(ValPartage));
+
+/**
+    Affiche le message d'erreur msg sur la sortie standard et 
+    sort du programme avec le code de retour status
+*/
+void error(char *msg, int status){
+    perror(msg);
+    exit(status);
 }
-void init_seg_partage(){
-    /* identifiant du segment de memoire partage */
-    int id_seg;
-    /* creation zone memoire */
-    /*creation d'une cle, la cle doit etre la meme pour les deux programmes. Les deux programmes utilisent le meme fichier ici key. Le segment de memoire paratage est cree s'il n'existe pas
-     */
-    cle = ftok("key", 0);
-    if((id_seg = shmget(cle, sizeof(ValPartage), IPC_CREAT | 0666)) >= 0){
-        init_var();
-    }else{
-        printf("Creation segment memoire partage");
-        exit(ERR_SEG);
-    }
-    /* on attache le segement de memoire partage */
-    if((valeurP=(ValPartage*)shmat(id_seg, NULL, 0)) < 0){
-        printf("Attache segment memoire partage");
-        exit(ERR_ATT);
-    }
+/**
+    Affiche le message msg et l'entier val sur la sortie standard
+*/
+void printVal(char *msg, int val){
+    fprintf(stdout, msg, val);
 }
 
+int create_shm(int size, char *name, int cle){
+ /* l'identificateur de la memoire partagee */
+  int shmid;
+  /*la clef associee au segment*/
+  key_t clef;
+  /* L'instruction ftok(name,(key_t) cle) permet de construire 
+     une cle identifiant le segment */
+  if((clef = ftok(name,(key_t) cle)) < 0){
+    error("La creation de la clef a echouee", ERR_KEY);
+  }
+  /* L'instruction IPC_CREAT|IPC_EXCL|SHM_R|SHM_W permet d'indiquer 
+     les droits d'acces de ce segment de memoire */
+  if((shmid = shmget( clef,
+                  size,
+                  IPC_CREAT|IPC_EXCL|SHM_R|SHM_W )) < 0){
+    error("La creation du segment de memoire partage a echouee", ERR_SEG);
+  }
+  printf("l'identificateur du segment est %d \n",shmid);
+  printf("ce segment est associe a la clef %d \n",clef);
+
+  return shmid ;
+}
+
+void info_shm(int shmid){
+
+  struct shmid_ds buf;
+
+  if (shmctl(shmid,IPC_STAT,&buf) == -1){
+    error("Erreur lors de l'utilsation de infoSegment", 1);
+  }
+
+  printf("Affichage des champs de controles\n") ;
+  printf("Identificateur du proprietaire : %d\n",buf.shm_perm.uid);
+  printf("Identificateur du groupe du proprietaire : %d\n",buf.shm_perm.gid);
+  printf("Identificateur du createur : %d\n",buf.shm_perm.cuid);
+  printf("Identificateur du groupe du createur : %d\n",buf.shm_perm.cgid);
+  printf("Mode d'acces : %d\n",buf.shm_perm.mode);
+  printf("Taille du segment : %d\n",buf.shm_segsz);
+}
+
+void delete_shm(int shmid){
+  if (shmctl(shmid,IPC_RMID,NULL) == -1){
+    error("Erreur lors de la destruction", 1);
+  }
+}
 

@@ -7,57 +7,90 @@
 #include <sys/shm.h>
 #include "constante.h"
 
-extern ValPartage *valeurP;
-extern key_t cle;
-
-void error(char *msg, int status){
-    perror(msg);
-    exit(status);
-}
-void printVal(char *msg, int *val){
-    fprintf(stdout, msg, *val);
-}
+/*
+    Diallo Alpha Oumar Binta
+    21007631
+    Tp MCPR
+    Universite Paul Sabatier
+    Toulouse III
+*/ 
 
 /*variante 5:
-Les processus n'ont aucun lien de parente et partagent deux informations contenu dans valeurP
+    Ce code ne fait pas ce qu'on lui demande, il peut arriver que le pere affiche
+    le contenu de la memoire avant que le fils n'ait place sa valeur dedans.
+    Il faut se servir d'un sémaphore pour gérer l'ordonnancement des tâches.
+    Ne pas oublier de supprimer le segment apres avoir excuter le programme
+    (commande ipcrm -m shmid) cmd ipcs==>shmid
 */
-void incrementeV(int nbre){
+
+void incremente(int nbre, int shmid){
     int i=0;
-    init_seg_partage();
-    for(i=0; i < nbre; i++){
-       valeurP->cpt+=1;
-       printVal("incrementeV % d\n", &(valeurP->cpt));
+    ValPartage* p1=NULL;
+    printf("Salut, je suis le programme p1, j'incremente le compteur\n"
+        "Je commence par m'attacher le segment de memoire\n");
+    if((p1=(ValPartage*)shmat(shmid, NULL, 0)) < 0){
+        error("Attache segment memoire partage", ERR_ATT);
     }
-    printf("Valeur double partage fils avant % f\n", valeurP->valeur);
-    valeurP->valeur += 5.5;
-    printf("Valeur double partage modifie fils apres +5.5 % f\n", valeurP->valeur);
+    
+    for(i=0; i < nbre; i++){
+        p1->cpt+=1;
+        printVal("incremente % d\n", p1->cpt);
+    }
+    printf("valeur avant= %f\n"
+        "je vais ecrire un reel 125.5 que le programme p2 va afficher\n", p1->valeur);
+    p1->valeur = 125.5;
+    printf("Bon, Detachons le segment partagee p1\n");
+    if(shmdt(p1) < 0){
+       error("detachement impossible", ERR_DET);
+    }
 }
 
-void decrementeV(int nbre){
+void decremente(int nbre, int shmid){
     int i=0;
-    init_seg_partage();
-    for(i=0;i < nbre; i++){
-        valeurP->cpt-=1;
-        printVal("decrementeV % d\n", &(valeurP->cpt));
+    ValPartage* p2=NULL;
+    printf("Je suis le programme p2, je decremente le compteur\n"
+        "Je commence par m'attacher le segment de memoire\n");
+    if((p2=(ValPartage*)shmat(shmid, NULL, 0)) < 0){
+        error("Attache segment memoire partage", ERR_ATT);
     }
-    printf("Valeur double partage affiche par le pere % f\n", valeurP->valeur);
+    
+    for(i=0;i < nbre; i++){
+        p2->cpt-=1;
+        printVal("decremente % d\n", p2->cpt);
+    }
+    printf("je vais afficher un reel que le programme p2 a ecrit\n"
+        "valeur lut= %f\n"
+        "Bon, detachons le segment partagee p2\n", p2->valeur);
+    if(shmdt(p2) < 0){
+        error("detachement impossible", ERR_DET);
+    }
 }
 
 int main(int argc, char *argv[]){
-    int iter=0;
+    int iter = 0;
     int choice;
+    key_t clef;
+    /* identifiant du segment de memoire partage */
+    int shmid = -1;
     if(argc != 3){
-        error("V4 nbre_iter [0-1 (0=fils, 1=pere)]", EXIT_FAILURE);
+        printf("Error :\t ./v5 nber_iteration [0-1 (0=p1, 1=p2)] end\n");
+        exit(EXIT_FAILURE);
     }
     iter = atoi(argv[1]);
+    /* creation zone memoire */
+    clef = ftok("key",1);
+    shmid = shmget( clef,
+                  100,
+                  0644|IPC_CREAT);
+    
     /* Qui fait quoi */
     choice = atoi(argv[2]);
     switch(choice){
         case 0 :
-            incrementeV(iter);
+            incremente(iter, shmid);
             break;
         case 1 : 
-            decrementeV(iter);
+            decremente(iter, shmid);
             break;
     }
     return 0;
