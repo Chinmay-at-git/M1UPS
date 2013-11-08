@@ -1,0 +1,23 @@
+
+    Diallo Alpha Oumar Binta
+    21007631
+    CC2 OIM
+    Groupe 3.1
+    Universite Paul Sabatier
+    Toulouse III 
+
+CC2 OIM
+
+======================================================================================
+
+Notes :
+  Utiliser le makefile pour creer l'executable
+  Lancer : ./radio liste_radio.txt 5 (5 etant le nombre de radio a afficher)
+  Pour enregister un flux, appuyer sur R ou r
+  Pour marquer la fin de l'enregistrement appuyer sur S ou s
+  La gestion du clavier et des touches directionnelles est faites grace a la 
+  bibliotheque ncurses
+  L'affichage peut retarder si la connection est lente
+
+  Questions 1 a 5 achevees
+======================================================================================
