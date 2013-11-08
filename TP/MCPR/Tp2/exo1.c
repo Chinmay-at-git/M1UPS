@@ -30,7 +30,11 @@
  * Exercice 1
 */
 
-
+/* Structure utilise pour la variable partage entre les processus*/
+typedef struct{
+    int cpt; /*compteur*/
+    double valeur; /*valeur reelle partage*/
+}ValPartage;
 
 int main(int argc, char *argv[]){
     int nb_iter, pid; /*nbre  d'iterattion */
@@ -42,9 +46,9 @@ int main(int argc, char *argv[]){
     struct sembuf p;
     struct sembuf v;
     /* variable */
-    int *cpt = NULL;
-    int *cptFils = NULL;
-    int *cptPere = NULL;
+    ValPartage *varOr = NULL;
+    ValPartage *varFils = NULL;
+    ValPartage *varPere = NULL;
     int i,j;
 
     /*test des parametres en entree*/
@@ -74,16 +78,18 @@ int main(int argc, char *argv[]){
         perror("La creation du semaphore a echoue");
         exit(ERR_SEM);
     }
-    if((cpt = shmat(shmid, NULL, 0)) < 0){
-        perror("Attache segment memoire partage cpt");
+    if((varOr = shmat(shmid, NULL, 0)) < 0){
+        perror("Attache segment memoire partage varOr");
         exit(ERR_ATT);
     }
-    *cpt = 0;
+    
     printf("############### INITIALISATION #############\n");
     printf("Identificateur du segment %d \n", shmid);
     printf("Identificateur du semaphore %d \n", semid);
     printf("Segment associe a la clef %d \n", clef);
-    printf("Compteur initial %d \n", *cpt);
+    printf("Compteur initial varOr\n");
+    printf("** varOr->cpt = %d\n", varOr->cpt);
+    printf("** varOr->valeur = %f\n", varOr->valeur);
     /*initialisation du semaphore,
      0 ==> Numéro de notre sémaphore: le premier et le seul
      1 ==> mutex un seul programme a acces a la section critique
@@ -98,17 +104,18 @@ int main(int argc, char *argv[]){
     if((pid = fork()) == 0){
         /* on est dans le fils */
         printf("########### FILS ###########\n");
-        if((cptFils = shmat(shmid, NULL, 0)) < 0){
-            perror("Attache segment memoire partage cptFils");
+        if((varFils = shmat(shmid, NULL, 0)) < 0){
+            perror("Attache segment memoire partage varFils");
             exit(ERR_ATT);
         }
         for(i = 0; i < nb_iter; i++){
             semop(semid, &p, 1);
-            *cptFils += 1;
+            varFils->cpt += 1;
             semop(semid, &v, 1);
         }
-        printf("** cptFils = %d\n", *cptFils);
-        if(shmdt(cptFils) < 0){
+        printf("** varFils->cpt = %d\n", varFils->cpt);
+        printf("\tLe fils affiche %f\n", varFils->valeur);
+        if(shmdt(varFils) < 0){
             perror("Fils detachement impossible");
             exit(ERR_DET);
         }
@@ -116,17 +123,19 @@ int main(int argc, char *argv[]){
     }else{
         /*on est dans le pere */
         printf("########### PERE ###########\n");
-        if((cptPere = shmat(shmid, NULL, 0)) < 0){
-            perror("Attache segment memoire partage cptPere");
+        if((varPere = shmat(shmid, NULL, 0)) < 0){
+            perror("Attache segment memoire partage varPere");
             exit(ERR_ATT);
         }
         for(j = 0; j < nb_iter; j++){
             semop(semid, &p, 1);
-            *cptPere -= 1;
+            varPere->cpt -= 1;
+            varPere->valeur += 2.5;
             semop(semid, &v, 1);
         }
-        printf("** cptPere = %d\n", *cptPere);
-        if(shmdt(cptPere) < 0){
+        printf("** varPere->cpt = %d\n", varPere->cpt);
+        printf("\tLe pere ecrit %f\n", varPere->valeur);
+        if(shmdt(varPere) < 0){
             perror("Pere detachement impossible");
             exit(ERR_DET);
         }
@@ -135,9 +144,10 @@ int main(int argc, char *argv[]){
     printf("Le pere attend la mort de son fils\n") ;
     wait(0);
     printf("########### FINAL ###########\n");
-    printf("** cpt = %d\n", *cpt);
-    if(shmdt(cpt) < 0){
-        perror("cpt initial detachement impossible");
+    printf("** varOr->cpt = %d\n", varOr->cpt);
+    printf("** varOr->valeur = %f\n", varOr->valeur);
+    if(shmdt(varOr) < 0){
+        perror("varOr initial detachement impossible");
         exit(ERR_DET);
     }
     printf("Bon, faisons le menage et supprimons le segment partagee\n") ;
