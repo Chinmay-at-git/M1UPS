@@ -1,0 +1,673 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>M1 Informatique - OIM - mini raytracer: Référence de la classe Cone</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">M1 Informatique - OIM - mini raytracer
+   &#160;<span id="projectnumber">2013-2014</span>
+   </div>
+   <div id="projectbrief">Interface de programmation pour un raytracer minimal</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.4 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
+      <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('a00007.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pri-methods">Fonctions membres privées</a> &#124;
+<a href="#pri-attribs">Attributs privés</a> &#124;
+<a href="a00147.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence de la classe Cone<div class="ingroups"><a class="el" href="a00075.html">Simple Raytracer</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="a00007.html" title="Cone geometric object. ">Cone</a> geometric object.  
+ <a href="a00007.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00035_source.html">cone.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Graphe d'héritage de Cone:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00148.png" border="0" usemap="#_cone_inherit__map" alt="Inheritance graph"/></div>
+<map name="_cone_inherit__map" id="_cone_inherit__map">
+<area shape="rect" id="node2" href="a00015.html" title="Abstract class for geometric object. " alt="" coords="19,6,127,119"/></map>
+</div>
+<div class="dynheader">
+Graphe de collaboration de Cone:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00149.png" border="0" usemap="#_cone_coll__map" alt="Collaboration graph"/></div>
+<map name="_cone_coll__map" id="_cone_coll__map">
+<area shape="rect" id="node2" href="a00015.html" title="Abstract class for geometric object. " alt="" coords="5,78,112,191"/><area shape="rect" id="node3" href="a00030.html" title="3D vector manipulation " alt="" coords="137,6,249,263"/></map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:aec709e915b3271a750d420b14b215bfb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#aec709e915b3271a750d420b14b215bfb">Cone</a> ()</td></tr>
+<tr class="separator:aec709e915b3271a750d420b14b215bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e25255d6de2ec3662eeafe88d50eee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#a13e25255d6de2ec3662eeafe88d50eee">Cone</a> (const <a class="el" href="a00030.html">Vector3D</a> &amp;center_, const <a class="el" href="a00030.html">Vector3D</a> &amp;vertex_, float radius_)</td></tr>
+<tr class="separator:a13e25255d6de2ec3662eeafe88d50eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a525bf376cea933bf1fb4dd47ec77c3c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#a525bf376cea933bf1fb4dd47ec77c3c1">intersect</a> (<a class="el" href="a00027.html">Ray</a> &amp;ray_, <a class="el" href="a00013.html">Diff_Geom</a> *p_diff_geom_) const </td></tr>
+<tr class="memdesc:a525bf376cea933bf1fb4dd47ec77c3c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">intersect a ray and a cone.  <a href="#a525bf376cea933bf1fb4dd47ec77c3c1">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a525bf376cea933bf1fb4dd47ec77c3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ddf59f2bc68bc7d862fc915b2983702"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#a7ddf59f2bc68bc7d862fc915b2983702">clip</a> (<a class="el" href="a00027.html">Ray</a> &amp;ray_, <a class="el" href="a00018.html">IntervalSet</a> &amp;bounds) const </td></tr>
+<tr class="memdesc:a7ddf59f2bc68bc7d862fc915b2983702"><td class="mdescLeft">&#160;</td><td class="mdescRight">clip a ray by a <a class="el" href="a00007.html" title="Cone geometric object. ">Cone</a>.  <a href="#a7ddf59f2bc68bc7d862fc915b2983702">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a7ddf59f2bc68bc7d862fc915b2983702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00015"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00015')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques inherited from <a class="el" href="a00015.html">Geometry</a></td></tr>
+<tr class="memitem:aedd2e92f79197c6f0671c5d14cf72578 inherit pub_methods_a00015"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00015.html#aedd2e92f79197c6f0671c5d14cf72578">~Geometry</a> ()</td></tr>
+<tr class="separator:aedd2e92f79197c6f0671c5d14cf72578 inherit pub_methods_a00015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Fonctions membres privées</h2></td></tr>
+<tr class="memitem:abfc6b31cd86ed95003711a77d613e0a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00030.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#abfc6b31cd86ed95003711a77d613e0a2">compute_normal</a> (const <a class="el" href="a00030.html">Vector3D</a> &amp;p_) const </td></tr>
+<tr class="memdesc:abfc6b31cd86ed95003711a77d613e0a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute_normal  <a href="#abfc6b31cd86ed95003711a77d613e0a2">Plus de détails...</a><br/></td></tr>
+<tr class="separator:abfc6b31cd86ed95003711a77d613e0a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa000dbdde858b3eb9078fe90d3ec71b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#aa000dbdde858b3eb9078fe90d3ec71b2">get_clip_points</a> (<a class="el" href="a00027.html">Ray</a> &amp;ray_, <a class="el" href="a00013.html">Diff_Geom</a> ipoints[2], float t[2]) const </td></tr>
+<tr class="memdesc:aa000dbdde858b3eb9078fe90d3ec71b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_clip_points  <a href="#aa000dbdde858b3eb9078fe90d3ec71b2">Plus de détails...</a><br/></td></tr>
+<tr class="separator:aa000dbdde858b3eb9078fe90d3ec71b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Attributs privés</h2></td></tr>
+<tr class="memitem:a20440c809c796b5e6b0a240437b3bb63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00030.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#a20440c809c796b5e6b0a240437b3bb63">m_vertex</a></td></tr>
+<tr class="memdesc:a20440c809c796b5e6b0a240437b3bb63"><td class="mdescLeft">&#160;</td><td class="mdescRight">The position of the vertex.  <a href="#a20440c809c796b5e6b0a240437b3bb63">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a20440c809c796b5e6b0a240437b3bb63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99103331141ac3645b66c7572e1a5886"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00030.html">Vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#a99103331141ac3645b66c7572e1a5886">m_axis</a></td></tr>
+<tr class="memdesc:a99103331141ac3645b66c7572e1a5886"><td class="mdescLeft">&#160;</td><td class="mdescRight">The axis of the cone.  <a href="#a99103331141ac3645b66c7572e1a5886">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a99103331141ac3645b66c7572e1a5886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ccdfd00ae21176969a097c73af849c4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#a8ccdfd00ae21176969a097c73af849c4">m_radius</a></td></tr>
+<tr class="memdesc:a8ccdfd00ae21176969a097c73af849c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The radius at the base.  <a href="#a8ccdfd00ae21176969a097c73af849c4">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a8ccdfd00ae21176969a097c73af849c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a052f0cb10dcc25342c7b89407af0c635"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#a052f0cb10dcc25342c7b89407af0c635">m_height</a></td></tr>
+<tr class="memdesc:a052f0cb10dcc25342c7b89407af0c635"><td class="mdescLeft">&#160;</td><td class="mdescRight">The height of the cone.  <a href="#a052f0cb10dcc25342c7b89407af0c635">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a052f0cb10dcc25342c7b89407af0c635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa53742ae8463a93b873ff8ccc41f0deb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00007.html#aa53742ae8463a93b873ff8ccc41f0deb">m_costheta</a></td></tr>
+<tr class="memdesc:aa53742ae8463a93b873ff8ccc41f0deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The cos(angle) of the cone.  <a href="#aa53742ae8463a93b873ff8ccc41f0deb">Plus de détails...</a><br/></td></tr>
+<tr class="separator:aa53742ae8463a93b873ff8ccc41f0deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_static_attribs_a00015"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_a00015')"><img src="closed.png" alt="-"/>&#160;Attributs protégés statiques inherited from <a class="el" href="a00015.html">Geometry</a></td></tr>
+<tr class="memitem:a1b7caac32d27a55620cd630ab8c8bde9 inherit pro_static_attribs_a00015"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="a00013.html">Diff_Geom</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00015.html#a1b7caac32d27a55620cd630ab8c8bde9">garbage</a></td></tr>
+<tr class="memdesc:a1b7caac32d27a55620cd630ab8c8bde9 inherit pro_static_attribs_a00015"><td class="mdescLeft">&#160;</td><td class="mdescRight">garbage for easy memory management  <a href="#a1b7caac32d27a55620cd630ab8c8bde9">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a1b7caac32d27a55620cd630ab8c8bde9 inherit pro_static_attribs_a00015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p><a class="el" href="a00007.html" title="Cone geometric object. ">Cone</a> geometric object. </p>
+
+<p>Définition à la ligne <a class="el" href="a00035_source.html#l00011">11</a> du fichier <a class="el" href="a00035_source.html">cone.hpp</a>.</p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a class="anchor" id="aec709e915b3271a750d420b14b215bfb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Cone::Cone </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="a00035_source.html#l00149">149</a> du fichier <a class="el" href="a00035_source.html">cone.hpp</a>.</p>
+
+<p>Références <a class="el" href="a00035_source.html#l00023">m_costheta</a>, <a class="el" href="a00035_source.html#l00020">m_height</a>, et <a class="el" href="a00035_source.html#l00018">m_radius</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a13e25255d6de2ec3662eeafe88d50eee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Cone::Cone </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00030.html">Vector3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>center_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00030.html">Vector3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>vertex_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="a00035_source.html#l00154">154</a> du fichier <a class="el" href="a00035_source.html">cone.hpp</a>.</p>
+
+<p>Références <a class="el" href="a00035_source.html#l00016">m_axis</a>, <a class="el" href="a00035_source.html#l00023">m_costheta</a>, <a class="el" href="a00035_source.html#l00020">m_height</a>, <a class="el" href="a00035_source.html#l00018">m_radius</a>, <a class="el" href="a00035_source.html#l00014">m_vertex</a>, <a class="el" href="a00064_source.html#l00083">Vector3D::norm()</a>, et <a class="el" href="a00064_source.html#l00091">Vector3D::normalize()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00007_a13e25255d6de2ec3662eeafe88d50eee_cgraph.png" border="0" usemap="#a00007_a13e25255d6de2ec3662eeafe88d50eee_cgraph" alt=""/></div>
+<map name="a00007_a13e25255d6de2ec3662eeafe88d50eee_cgraph" id="a00007_a13e25255d6de2ec3662eeafe88d50eee_cgraph">
+<area shape="rect" id="node2" href="a00030.html#ab58e6202e20f0fd74fc35133eb780254" title="Vector3D::norm" alt="" coords="336,57,450,85"/><area shape="rect" id="node6" href="a00030.html#a5b3059961eb8b4db3dc6b79f283dcac1" title="Vector3D::normalize" alt="" coords="147,82,288,110"/><area shape="rect" id="node3" href="a00030.html#a15a162a986b897ebd0bb74df056d99c5" title="Vector3D::x" alt="" coords="499,5,589,33"/><area shape="rect" id="node4" href="a00030.html#a1819fd51b78ece8de462d3a2c979111a" title="Vector3D::y" alt="" coords="499,57,589,85"/><area shape="rect" id="node5" href="a00030.html#a026531e883c967b7a7803a2f6b983d2c" title="Vector3D::z" alt="" coords="499,109,589,137"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a class="anchor" id="a7ddf59f2bc68bc7d862fc915b2983702"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Cone::clip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00027.html">Ray</a> &amp;&#160;</td>
+          <td class="paramname"><em>ray_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00018.html">IntervalSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>clip a ray by a <a class="el" href="a00007.html" title="Cone geometric object. ">Cone</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ray_</td><td>the ray to clip </td></tr>
+    <tr><td class="paramname">bounds</td><td>ray sorted bounds of the resulting clipping segment. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true if ray was clipped. bounds parameter is filld by this method</dd></dl>
+<p>For simple convex objects, there is two values in bounds that represent in and out events. An in event is whe the ray enters the geometry, an out is when the ray leaves the geometry.</p>
+<p>Adapted from <a href="http://www.geometrictools.com/LibMathematics/Intersection/Wm5IntrLine3Cone3.cpp">http://www.geometrictools.com/LibMathematics/Intersection/Wm5IntrLine3Cone3.cpp</a> </p>
+
+<p>Implémente <a class="el" href="a00015.html#a767321b776e8662e39aa32347e8918ee">Geometry</a>.</p>
+
+<p>Définition à la ligne <a class="el" href="a00035_source.html#l00230">230</a> du fichier <a class="el" href="a00035_source.html">cone.hpp</a>.</p>
+
+<p>Références <a class="el" href="a00049_source.html#l00039">IntervalSet::add()</a>, <a class="el" href="a00049_source.html#l00052">IntervalSet::bounds()</a>, <a class="el" href="a00056_source.html#l00057">Plane::clip()</a>, <a class="el" href="a00035_source.html#l00045">get_clip_points()</a>, <a class="el" href="a00035_source.html#l00016">m_axis</a>, <a class="el" href="a00035_source.html#l00020">m_height</a>, <a class="el" href="a00035_source.html#l00014">m_vertex</a>, et <a class="el" href="a00041_source.html#l00043">Diff_Geom::t()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00007_a7ddf59f2bc68bc7d862fc915b2983702_cgraph.png" border="0" usemap="#a00007_a7ddf59f2bc68bc7d862fc915b2983702_cgraph" alt=""/></div>
+<map name="a00007_a7ddf59f2bc68bc7d862fc915b2983702_cgraph" id="a00007_a7ddf59f2bc68bc7d862fc915b2983702_cgraph">
+<area shape="rect" id="node2" href="a00018.html#a5875b7222430d9be92a654db194d0d60" title="IntervalSet::add" alt="" coords="552,577,667,605"/><area shape="rect" id="node4" href="a00018.html#a071811cdb02ba0cf2c05140bcf466927" title="IntervalSet::bounds" alt="" coords="343,6,479,34"/><area shape="rect" id="node5" href="a00024.html#ab07fd72491019dfdce875eaa677ba18f" title="clip a ray by a plane. " alt="" coords="369,421,452,449"/><area shape="rect" id="node14" href="a00007.html#aa000dbdde858b3eb9078fe90d3ec71b2" title="get_clip_points " alt="" coords="133,291,283,319"/><area shape="rect" id="node3" href="a00013.html#ae931001b67b43308e984fee80902a17b" title="Diff_Geom::t" alt="" coords="764,577,860,605"/><area shape="rect" id="node6" href="a00027.html#a9bfb39f0ff5a7a2330ef9749b8e97e17" title="Ray::dir" alt="" coords="576,473,643,501"/><area shape="rect" id="node7" href="a00030.html#a293698c2fcdc50968fa63e125120bd61" title="Vector3D::dot" alt="" coords="761,162,863,190"/><area shape="rect" id="node11" href="a00027.html#a9484c8a3d4eeca6f9188d6ce2ca14b77" title="to avoid auto intersection " alt="" coords="549,421,670,449"/><area shape="rect" id="node12" href="a00027.html#aa0271e10968c04224e2986017abb67b3" title="Ray::ori" alt="" coords="576,265,643,293"/><area shape="rect" id="node13" href="a00027.html#a44792845b5e6508be5959f21a3f26e9e" title="Ray::at" alt="" coords="578,317,641,345"/><area shape="rect" id="node8" href="a00030.html#a15a162a986b897ebd0bb74df056d99c5" title="Vector3D::x" alt="" coords="968,110,1058,138"/><area shape="rect" id="node9" href="a00030.html#a1819fd51b78ece8de462d3a2c979111a" title="Vector3D::y" alt="" coords="968,162,1058,190"/><area shape="rect" id="node10" href="a00030.html#a026531e883c967b7a7803a2f6b983d2c" title="Vector3D::z" alt="" coords="968,58,1058,86"/><area shape="rect" id="node15" href="a00013.html#aa3099cd741f8252c6d846f72bcc6a250" title="Diff_Geom::set_pos" alt="" coords="341,369,480,397"/><area shape="rect" id="node16" href="a00013.html#a5fa6ab4c50cd785ab124fcc4b4c1247a" title="Diff_Geom::pos" alt="" coords="354,110,468,138"/><area shape="rect" id="node17" href="a00007.html#abfc6b31cd86ed95003711a77d613e0a2" title="compute_normal " alt="" coords="331,58,491,86"/><area shape="rect" id="node22" href="a00013.html#a4f2c6b1f7c0699590b06378b238d7667" title="Diff_Geom::set_normal" alt="" coords="332,214,490,242"/><area shape="rect" id="node23" href="a00013.html#a3e7b5cdcdacacd9af56797a4634ddf4a" title="Diff_Geom::set_t" alt="" coords="549,525,670,553"/><area shape="rect" id="node18" href="a00030.html#abd36ddbe10a7981949ecde1d9d2f457a" title="Vector3D::cross_product" alt="" coords="728,58,896,86"/><area shape="rect" id="node20" href="a00030.html#a5b3059961eb8b4db3dc6b79f283dcac1" title="Vector3D::normalize" alt="" coords="539,110,680,138"/><area shape="rect" id="node19" href="a00030.html#a0b11a8d75da427b27443d8a94d0d296c" title="Vector3D::Vector3D" alt="" coords="944,6,1083,34"/><area shape="rect" id="node21" href="a00030.html#ab58e6202e20f0fd74fc35133eb780254" title="Vector3D::norm" alt="" coords="755,110,869,138"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abfc6b31cd86ed95003711a77d613e0a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00030.html">Vector3D</a> Cone::compute_normal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00030.html">Vector3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>p_</em>)</td><td></td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>compute_normal </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>The normal of the cone at point p_ </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="a00035_source.html#l00030">30</a> du fichier <a class="el" href="a00035_source.html">cone.hpp</a>.</p>
+
+<p>Références <a class="el" href="a00064_source.html#l00095">Vector3D::cross_product()</a>, <a class="el" href="a00035_source.html#l00016">m_axis</a>, <a class="el" href="a00035_source.html#l00014">m_vertex</a>, et <a class="el" href="a00064_source.html#l00091">Vector3D::normalize()</a>.</p>
+
+<p>Référencé par <a class="el" href="a00035_source.html#l00045">get_clip_points()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00007_abfc6b31cd86ed95003711a77d613e0a2_cgraph.png" border="0" usemap="#a00007_abfc6b31cd86ed95003711a77d613e0a2_cgraph" alt=""/></div>
+<map name="a00007_abfc6b31cd86ed95003711a77d613e0a2_cgraph" id="a00007_abfc6b31cd86ed95003711a77d613e0a2_cgraph">
+<area shape="rect" id="node2" href="a00030.html#abd36ddbe10a7981949ecde1d9d2f457a" title="Vector3D::cross_product" alt="" coords="403,57,570,85"/><area shape="rect" id="node7" href="a00030.html#a5b3059961eb8b4db3dc6b79f283dcac1" title="Vector3D::normalize" alt="" coords="213,109,355,137"/><area shape="rect" id="node3" href="a00030.html#a0b11a8d75da427b27443d8a94d0d296c" title="Vector3D::Vector3D" alt="" coords="619,5,757,33"/><area shape="rect" id="node4" href="a00030.html#a1819fd51b78ece8de462d3a2c979111a" title="Vector3D::y" alt="" coords="643,57,733,85"/><area shape="rect" id="node5" href="a00030.html#a026531e883c967b7a7803a2f6b983d2c" title="Vector3D::z" alt="" coords="643,161,733,189"/><area shape="rect" id="node6" href="a00030.html#a15a162a986b897ebd0bb74df056d99c5" title="Vector3D::x" alt="" coords="643,109,733,137"/><area shape="rect" id="node8" href="a00030.html#ab58e6202e20f0fd74fc35133eb780254" title="Vector3D::norm" alt="" coords="430,109,544,137"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00007_abfc6b31cd86ed95003711a77d613e0a2_icgraph.png" border="0" usemap="#a00007_abfc6b31cd86ed95003711a77d613e0a2_icgraph" alt=""/></div>
+<map name="a00007_abfc6b31cd86ed95003711a77d613e0a2_icgraph" id="a00007_abfc6b31cd86ed95003711a77d613e0a2_icgraph">
+<area shape="rect" id="node2" href="a00007.html#aa000dbdde858b3eb9078fe90d3ec71b2" title="get_clip_points " alt="" coords="213,31,363,59"/><area shape="rect" id="node3" href="a00007.html#a525bf376cea933bf1fb4dd47ec77c3c1" title="intersect a ray and a cone. " alt="" coords="411,5,522,33"/><area shape="rect" id="node4" href="a00007.html#a7ddf59f2bc68bc7d862fc915b2983702" title="clip a ray by a Cone. " alt="" coords="426,57,507,85"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa000dbdde858b3eb9078fe90d3ec71b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Cone::get_clip_points </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00027.html">Ray</a> &amp;&#160;</td>
+          <td class="paramname"><em>ray_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00013.html">Diff_Geom</a>&#160;</td>
+          <td class="paramname"><em>ipoints</em>[2], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>t</em>[2]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get_clip_points </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ray_</td><td></td></tr>
+    <tr><td class="paramname">ipoints</td><td></td></tr>
+    <tr><td class="paramname">t</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>the number of clipping position on the ray (0 to 2) </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="a00035_source.html#l00045">45</a> du fichier <a class="el" href="a00035_source.html">cone.hpp</a>.</p>
+
+<p>Références <a class="el" href="a00059_source.html#l00076">Ray::at()</a>, <a class="el" href="a00049_source.html#l00052">IntervalSet::bounds()</a>, <a class="el" href="a00056_source.html#l00057">Plane::clip()</a>, <a class="el" href="a00035_source.html#l00030">compute_normal()</a>, <a class="el" href="a00059_source.html#l00056">Ray::dir()</a>, <a class="el" href="a00064_source.html#l00087">Vector3D::dot()</a>, <a class="el" href="a00035_source.html#l00016">m_axis</a>, <a class="el" href="a00035_source.html#l00023">m_costheta</a>, <a class="el" href="a00035_source.html#l00020">m_height</a>, <a class="el" href="a00035_source.html#l00014">m_vertex</a>, <a class="el" href="a00059_source.html#l00052">Ray::ori()</a>, <a class="el" href="a00041_source.html#l00035">Diff_Geom::pos()</a>, <a class="el" href="a00041_source.html#l00051">Diff_Geom::set_normal()</a>, <a class="el" href="a00041_source.html#l00047">Diff_Geom::set_pos()</a>, et <a class="el" href="a00041_source.html#l00055">Diff_Geom::set_t()</a>.</p>
+
+<p>Référencé par <a class="el" href="a00035_source.html#l00230">clip()</a>, et <a class="el" href="a00035_source.html#l00172">intersect()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00007_aa000dbdde858b3eb9078fe90d3ec71b2_cgraph.png" border="0" usemap="#a00007_aa000dbdde858b3eb9078fe90d3ec71b2_cgraph" alt=""/></div>
+<map name="a00007_aa000dbdde858b3eb9078fe90d3ec71b2_cgraph" id="a00007_aa000dbdde858b3eb9078fe90d3ec71b2_cgraph">
+<area shape="rect" id="node2" href="a00027.html#a44792845b5e6508be5959f21a3f26e9e" title="Ray::at" alt="" coords="450,57,513,85"/><area shape="rect" id="node3" href="a00018.html#a071811cdb02ba0cf2c05140bcf466927" title="IntervalSet::bounds" alt="" coords="215,473,351,501"/><area shape="rect" id="node4" href="a00024.html#ab07fd72491019dfdce875eaa677ba18f" title="clip a ray by a plane. " alt="" coords="241,213,324,241"/><area shape="rect" id="node14" href="a00007.html#abfc6b31cd86ed95003711a77d613e0a2" title="compute_normal " alt="" coords="203,421,363,449"/><area shape="rect" id="node5" href="a00027.html#a9bfb39f0ff5a7a2330ef9749b8e97e17" title="Ray::dir" alt="" coords="448,109,515,137"/><area shape="rect" id="node6" href="a00030.html#a293698c2fcdc50968fa63e125120bd61" title="Vector3D::dot" alt="" coords="633,369,735,397"/><area shape="rect" id="node11" href="a00027.html#aa0271e10968c04224e2986017abb67b3" title="Ray::ori" alt="" coords="448,317,515,345"/><area shape="rect" id="node19" href="a00013.html#a5fa6ab4c50cd785ab124fcc4b4c1247a" title="Diff_Geom::pos" alt="" coords="226,525,340,553"/><area shape="rect" id="node20" href="a00013.html#a4f2c6b1f7c0699590b06378b238d7667" title="Diff_Geom::set_normal" alt="" coords="204,577,362,605"/><area shape="rect" id="node21" href="a00013.html#aa3099cd741f8252c6d846f72bcc6a250" title="Diff_Geom::set_pos" alt="" coords="213,629,352,657"/><area shape="rect" id="node22" href="a00013.html#a3e7b5cdcdacacd9af56797a4634ddf4a" title="Diff_Geom::set_t" alt="" coords="421,5,542,33"/><area shape="rect" id="node10" href="a00027.html#a9484c8a3d4eeca6f9188d6ce2ca14b77" title="to avoid auto intersection " alt="" coords="421,161,542,189"/><area shape="rect" id="node12" href="a00018.html#a5875b7222430d9be92a654db194d0d60" title="IntervalSet::add" alt="" coords="424,213,539,241"/><area shape="rect" id="node7" href="a00030.html#a15a162a986b897ebd0bb74df056d99c5" title="Vector3D::x" alt="" coords="840,369,930,397"/><area shape="rect" id="node8" href="a00030.html#a1819fd51b78ece8de462d3a2c979111a" title="Vector3D::y" alt="" coords="840,421,930,449"/><area shape="rect" id="node9" href="a00030.html#a026531e883c967b7a7803a2f6b983d2c" title="Vector3D::z" alt="" coords="840,473,930,501"/><area shape="rect" id="node13" href="a00013.html#ae931001b67b43308e984fee80902a17b" title="Diff_Geom::t" alt="" coords="636,109,732,137"/><area shape="rect" id="node15" href="a00030.html#abd36ddbe10a7981949ecde1d9d2f457a" title="Vector3D::cross_product" alt="" coords="600,473,768,501"/><area shape="rect" id="node17" href="a00030.html#a5b3059961eb8b4db3dc6b79f283dcac1" title="Vector3D::normalize" alt="" coords="411,421,552,449"/><area shape="rect" id="node16" href="a00030.html#a0b11a8d75da427b27443d8a94d0d296c" title="Vector3D::Vector3D" alt="" coords="816,525,955,553"/><area shape="rect" id="node18" href="a00030.html#ab58e6202e20f0fd74fc35133eb780254" title="Vector3D::norm" alt="" coords="627,421,741,449"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00007_aa000dbdde858b3eb9078fe90d3ec71b2_icgraph.png" border="0" usemap="#a00007_aa000dbdde858b3eb9078fe90d3ec71b2_icgraph" alt=""/></div>
+<map name="a00007_aa000dbdde858b3eb9078fe90d3ec71b2_icgraph" id="a00007_aa000dbdde858b3eb9078fe90d3ec71b2_icgraph">
+<area shape="rect" id="node2" href="a00007.html#a7ddf59f2bc68bc7d862fc915b2983702" title="clip a ray by a Cone. " alt="" coords="218,5,299,33"/><area shape="rect" id="node3" href="a00007.html#a525bf376cea933bf1fb4dd47ec77c3c1" title="intersect a ray and a cone. " alt="" coords="203,57,314,85"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a525bf376cea933bf1fb4dd47ec77c3c1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Cone::intersect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00027.html">Ray</a> &amp;&#160;</td>
+          <td class="paramname"><em>ray_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00013.html">Diff_Geom</a> *&#160;</td>
+          <td class="paramname"><em>p_diff_geom_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>intersect a ray and a cone. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ray_</td><td>the ray </td></tr>
+    <tr><td class="paramname">p_diff_geom_</td><td>the result of the intersection </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true if the ray intersects the cone Modifies the ray_.max_t() value, intersect only if the intersection is before ray_.max_t()</dd></dl>
+<p>Adapted from <a href="http://www.geometrictools.com/LibMathematics/Intersection/Wm5IntrLine3Cone3.cpp">http://www.geometrictools.com/LibMathematics/Intersection/Wm5IntrLine3Cone3.cpp</a> </p>
+
+<p>Implémente <a class="el" href="a00015.html#ae992633602643893bbd1e286e2ca98f9">Geometry</a>.</p>
+
+<p>Définition à la ligne <a class="el" href="a00035_source.html#l00172">172</a> du fichier <a class="el" href="a00035_source.html">cone.hpp</a>.</p>
+
+<p>Références <a class="el" href="a00035_source.html#l00045">get_clip_points()</a>, <a class="el" href="a00056_source.html#l00030">Plane::intersect()</a>, <a class="el" href="a00035_source.html#l00016">m_axis</a>, <a class="el" href="a00035_source.html#l00020">m_height</a>, <a class="el" href="a00035_source.html#l00014">m_vertex</a>, <a class="el" href="a00059_source.html#l00068">Ray::max_t()</a>, <a class="el" href="a00059_source.html#l00081">Ray::ray_epsilon()</a>, et <a class="el" href="a00059_source.html#l00072">Ray::set_max_t()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00007_a525bf376cea933bf1fb4dd47ec77c3c1_cgraph.png" border="0" usemap="#a00007_a525bf376cea933bf1fb4dd47ec77c3c1_cgraph" alt=""/></div>
+<map name="a00007_a525bf376cea933bf1fb4dd47ec77c3c1_cgraph" id="a00007_a525bf376cea933bf1fb4dd47ec77c3c1_cgraph">
+<area shape="rect" id="node2" href="a00007.html#aa000dbdde858b3eb9078fe90d3ec71b2" title="get_clip_points " alt="" coords="165,366,315,394"/><area shape="rect" id="node24" href="a00024.html#a8972d45fdd4d58cc736ce779da8e000a" title="intersect a plan. " alt="" coords="386,651,499,679"/><area shape="rect" id="node25" href="a00027.html#a8cd07a7f52236e9a1f4c92fbf5c8786a" title="Ray::max_t" alt="" coords="597,734,686,762"/><area shape="rect" id="node11" href="a00027.html#a9484c8a3d4eeca6f9188d6ce2ca14b77" title="to avoid auto intersection " alt="" coords="581,675,702,703"/><area shape="rect" id="node26" href="a00027.html#a67bf1057835b4a923a50c82f31d46d0d" title="Ray::set_max_t" alt="" coords="584,798,698,826"/><area shape="rect" id="node3" href="a00027.html#a44792845b5e6508be5959f21a3f26e9e" title="Ray::at" alt="" coords="610,571,673,599"/><area shape="rect" id="node4" href="a00018.html#a071811cdb02ba0cf2c05140bcf466927" title="IntervalSet::bounds" alt="" coords="375,547,511,575"/><area shape="rect" id="node5" href="a00024.html#ab07fd72491019dfdce875eaa677ba18f" title="clip a ray by a plane. " alt="" coords="401,443,484,471"/><area shape="rect" id="node15" href="a00007.html#abfc6b31cd86ed95003711a77d613e0a2" title="compute_normal " alt="" coords="363,81,523,109"/><area shape="rect" id="node6" href="a00027.html#a9bfb39f0ff5a7a2330ef9749b8e97e17" title="Ray::dir" alt="" coords="608,391,675,419"/><area shape="rect" id="node7" href="a00030.html#a293698c2fcdc50968fa63e125120bd61" title="Vector3D::dot" alt="" coords="793,186,895,214"/><area shape="rect" id="node12" href="a00027.html#aa0271e10968c04224e2986017abb67b3" title="Ray::ori" alt="" coords="608,495,675,523"/><area shape="rect" id="node20" href="a00013.html#a5fa6ab4c50cd785ab124fcc4b4c1247a" title="Diff_Geom::pos" alt="" coords="386,287,500,315"/><area shape="rect" id="node21" href="a00013.html#a4f2c6b1f7c0699590b06378b238d7667" title="Diff_Geom::set_normal" alt="" coords="364,339,522,367"/><area shape="rect" id="node22" href="a00013.html#aa3099cd741f8252c6d846f72bcc6a250" title="Diff_Geom::set_pos" alt="" coords="373,391,512,419"/><area shape="rect" id="node23" href="a00013.html#a3e7b5cdcdacacd9af56797a4634ddf4a" title="Diff_Geom::set_t" alt="" coords="382,133,503,161"/><area shape="rect" id="node13" href="a00018.html#a5875b7222430d9be92a654db194d0d60" title="IntervalSet::add" alt="" coords="584,287,699,315"/><area shape="rect" id="node8" href="a00030.html#a15a162a986b897ebd0bb74df056d99c5" title="Vector3D::x" alt="" coords="1000,109,1090,137"/><area shape="rect" id="node9" href="a00030.html#a1819fd51b78ece8de462d3a2c979111a" title="Vector3D::y" alt="" coords="1000,161,1090,189"/><area shape="rect" id="node10" href="a00030.html#a026531e883c967b7a7803a2f6b983d2c" title="Vector3D::z" alt="" coords="1000,57,1090,85"/><area shape="rect" id="node14" href="a00013.html#ae931001b67b43308e984fee80902a17b" title="Diff_Geom::t" alt="" coords="796,134,892,162"/><area shape="rect" id="node16" href="a00030.html#abd36ddbe10a7981949ecde1d9d2f457a" title="Vector3D::cross_product" alt="" coords="760,30,928,58"/><area shape="rect" id="node18" href="a00030.html#a5b3059961eb8b4db3dc6b79f283dcac1" title="Vector3D::normalize" alt="" coords="571,82,712,110"/><area shape="rect" id="node17" href="a00030.html#a0b11a8d75da427b27443d8a94d0d296c" title="Vector3D::Vector3D" alt="" coords="976,5,1115,33"/><area shape="rect" id="node19" href="a00030.html#ab58e6202e20f0fd74fc35133eb780254" title="Vector3D::norm" alt="" coords="787,82,901,110"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a class="anchor" id="a99103331141ac3645b66c7572e1a5886"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00030.html">Vector3D</a> Cone::m_axis</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The axis of the cone. </p>
+
+<p>Définition à la ligne <a class="el" href="a00035_source.html#l00016">16</a> du fichier <a class="el" href="a00035_source.html">cone.hpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00035_source.html#l00230">clip()</a>, <a class="el" href="a00035_source.html#l00030">compute_normal()</a>, <a class="el" href="a00035_source.html#l00154">Cone()</a>, <a class="el" href="a00035_source.html#l00045">get_clip_points()</a>, et <a class="el" href="a00035_source.html#l00172">intersect()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa53742ae8463a93b873ff8ccc41f0deb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Cone::m_costheta</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The cos(angle) of the cone. </p>
+
+<p>Définition à la ligne <a class="el" href="a00035_source.html#l00023">23</a> du fichier <a class="el" href="a00035_source.html">cone.hpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00035_source.html#l00149">Cone()</a>, et <a class="el" href="a00035_source.html#l00045">get_clip_points()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a052f0cb10dcc25342c7b89407af0c635"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Cone::m_height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The height of the cone. </p>
+
+<p>Définition à la ligne <a class="el" href="a00035_source.html#l00020">20</a> du fichier <a class="el" href="a00035_source.html">cone.hpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00035_source.html#l00230">clip()</a>, <a class="el" href="a00035_source.html#l00149">Cone()</a>, <a class="el" href="a00035_source.html#l00045">get_clip_points()</a>, et <a class="el" href="a00035_source.html#l00172">intersect()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8ccdfd00ae21176969a097c73af849c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Cone::m_radius</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The radius at the base. </p>
+
+<p>Définition à la ligne <a class="el" href="a00035_source.html#l00018">18</a> du fichier <a class="el" href="a00035_source.html">cone.hpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00035_source.html#l00149">Cone()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a20440c809c796b5e6b0a240437b3bb63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00030.html">Vector3D</a> Cone::m_vertex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The position of the vertex. </p>
+
+<p>Définition à la ligne <a class="el" href="a00035_source.html#l00014">14</a> du fichier <a class="el" href="a00035_source.html">cone.hpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00035_source.html#l00230">clip()</a>, <a class="el" href="a00035_source.html#l00030">compute_normal()</a>, <a class="el" href="a00035_source.html#l00154">Cone()</a>, <a class="el" href="a00035_source.html#l00045">get_clip_points()</a>, et <a class="el" href="a00035_source.html#l00172">intersect()</a>.</p>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<li><a class="el" href="a00035_source.html">cone.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="a00007.html">Cone</a></li>
+    <li class="footer">Généré le Lundi Novembre 4 2013 17:01:57 pour M1 Informatique - OIM - mini raytracer par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<map id="make_test_scene" name="make_test_scene">
+<area shape="rect" id="node2" href="$a00070.html#ga7338897b0e82076338fb7dd7cadeaddc" title="to add a light to the scene " alt="" coords="222,5,298,33"/>
+<area shape="rect" id="node4" href="$a00070.html#gadf3f8ea1c8bf943db640af01230ed0f7" title="to add a new object to the scene, from its geometry and its material " alt="" coords="217,57,303,85"/>
+<area shape="rect" id="node6" href="$a00070.html#ga97f60add9f9b7177df6c8f2f2372561a" title="to create a box " alt="" coords="216,109,304,137"/>
+<area shape="rect" id="node7" href="$a00070.html#ga27c1a3eeb2869e55865f2cc6d3e717f1" title="to create a cone " alt="" coords="213,161,307,189"/>
+<area shape="rect" id="node8" href="$a00070.html#gabca30508a9802f1a60bc67185dcaa8fb" title="to create a difference CSG Node. " alt="" coords="184,213,336,241"/>
+<area shape="rect" id="node9" href="$a00070.html#ga6eda5cac4c7d6203bf2e1798c0b4f124" title="to create an intersection CSG Node. " alt="" coords="179,265,341,293"/>
+<area shape="rect" id="node10" href="$a00070.html#ga4d0d7fc79bead2d9745acc2d10c506bf" title="to create an union CSG Node. " alt="" coords="197,317,323,345"/>
+<area shape="rect" id="node11" href="$a00070.html#gabd60bd9dfe9afb36b127decf9145287d" title="to create a cylinder " alt="" coords="204,369,316,397"/>
+<area shape="rect" id="node12" href="$a00070.html#gaf8b0ecdd64116491706ebede06c13b54" title="to create a plane " alt="" coords="211,421,309,449"/>
+<area shape="rect" id="node13" href="$a00070.html#ga5e9b1752bc3635d8e03aeedce96f1378" title="to create a plastic material " alt="" coords="193,473,327,501"/>
+<area shape="rect" id="node14" href="$a00070.html#ga2da051b943f32009496f94737261c248" title="to create a sphere " alt="" coords="207,525,313,553"/>
+<area shape="rect" id="node15" href="$a00037.html#af96e58a2ddc9ee2ae0caf5bdccd11a65" title="csg_parse : analyse la chaine str et construit l&#39;arbre CSG résultant " alt="" coords="219,577,301,605"/>
+<area shape="rect" id="node16" href="$a00070.html#gad67f595be55be0bc50b4ec08a9c74192" title="to set the parameters of the camera " alt="" coords="215,629,305,657"/>
+<area shape="rect" id="node3" href="$a00028.html#a6403f0a1e1cb777d4b335a3eb093979d" title="Scene::add_light" alt="" coords="402,5,523,33"/>
+<area shape="rect" id="node5" href="$a00028.html#aab20b59647f0f9ba5cc40e5943377a87" title="Scene::add_primitive" alt="" coords="390,57,536,85"/>
+<area shape="rect" id="node17" href="$a00028.html#a92e1b2344129de2618f3b5f1ed22dd5e" title="Scene::set_camera" alt="" coords="395,629,531,657"/>
+</map>

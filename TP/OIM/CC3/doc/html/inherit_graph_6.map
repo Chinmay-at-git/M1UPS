@@ -1,0 +1,12 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="node1" href="$a00015.html" title="Abstract class for geometric object. " alt="" coords="5,135,85,163"/>
+<area shape="rect" id="node2" href="$a00003.html" title="Box geometric object. " alt="" coords="144,5,205,33"/>
+<area shape="rect" id="node3" href="$a00007.html" title="Cone geometric object. " alt="" coords="148,57,201,85"/>
+<area shape="rect" id="node4" href="$a00010.html" title="The CSGNode class. " alt="" coords="134,109,216,137"/>
+<area shape="rect" id="node8" href="$a00012.html" title="Cylinder geometric object. " alt="" coords="140,161,210,189"/>
+<area shape="rect" id="node9" href="$a00024.html" title="Plane geometric object. " alt="" coords="147,213,202,241"/>
+<area shape="rect" id="node10" href="$a00029.html" title="Sphere geometric object. " alt="" coords="143,265,207,293"/>
+<area shape="rect" id="node5" href="$a00008.html" title="The CSGDifference class. " alt="" coords="269,57,379,85"/>
+<area shape="rect" id="node6" href="$a00009.html" title="The CSGIntersection class. " alt="" coords="264,109,384,137"/>
+<area shape="rect" id="node7" href="$a00011.html" title="The CSGUnion class. " alt="" coords="281,161,367,189"/>
+</map>

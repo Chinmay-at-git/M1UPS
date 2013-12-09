@@ -1,0 +1,8 @@
+<map id="Ray::max_t" name="Ray::max_t">
+<area shape="rect" id="node2" href="$a00024.html#a8972d45fdd4d58cc736ce779da8e000a" title="intersect a plan. " alt="" coords="158,5,271,33"/>
+<area shape="rect" id="node4" href="$a00029.html#acb1c5b063489f881872e6faf155c4c18" title="intersect a sphere. " alt="" coords="154,57,276,85"/>
+<area shape="rect" id="node5" href="$a00010.html#ac96afa010d5587e244a75e0af2da6444" title="intersect a geometric object. " alt="" coords="145,109,285,137"/>
+<area shape="rect" id="node6" href="$a00003.html#ad5a9451718d7e98f7425aee8e00dcfbf" title="intersect a geometric object. " alt="" coords="155,161,274,189"/>
+<area shape="rect" id="node3" href="$a00007.html#a525bf376cea933bf1fb4dd47ec77c3c1" title="intersect a ray and a cone. " alt="" coords="334,109,445,137"/>
+<area shape="rect" id="node7" href="$a00012.html#aaf9bb0e9f800879eaa31070c9f7eb687" title="intersect a cylinder . " alt="" coords="151,265,279,293"/>
+</map>

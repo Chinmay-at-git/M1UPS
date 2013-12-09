@@ -1,0 +1,2 @@
+/media/shared/Tp/DM3/build/main/CMakeFiles/main.dir
+/media/shared/Tp/DM3/build/coreraytracer/CMakeFiles/raytracing.dir

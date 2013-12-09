@@ -1,0 +1,5 @@
+<map id="Geometry::clip" name="Geometry::clip">
+<area shape="rect" id="node2" href="$a00009.html#ab037a625412ab7566ceb204d869917d6" title="clip a ray by a CSGIntersection. " alt="" coords="160,5,307,33"/>
+<area shape="rect" id="node3" href="$a00011.html#af10ef9b38d6f02403ccc1586bfd042ef" title="clip a ray by a CSGUnion. " alt="" coords="177,57,290,85"/>
+<area shape="rect" id="node4" href="$a00008.html#abb5077f37138af94f364e00810f83955" title="clip a ray by a CSGDifference. " alt="" coords="164,109,302,137"/>
+</map>

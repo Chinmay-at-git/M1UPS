@@ -1,0 +1,565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>M1 Informatique - OIM - mini raytracer: Référence de la classe IntervalSet</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">M1 Informatique - OIM - mini raytracer
+   &#160;<span id="projectnumber">2013-2014</span>
+   </div>
+   <div id="projectbrief">Interface de programmation pour un raytracer minimal</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.4 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
+      <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('a00018.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pub-static-methods">Fonctions membres publiques statiques</a> &#124;
+<a href="#pri-attribs">Attributs privés</a> &#124;
+<a href="#pri-static-attribs">Attributs privés statiques</a> &#124;
+<a href="a00177.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence de la classe IntervalSet<div class="ingroups"><a class="el" href="a00068.html">Interval operators API</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="a00018.html" title="The IntervalSet class. ">IntervalSet</a> class.  
+ <a href="a00018.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00049_source.html">intervalset.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Graphe de collaboration de IntervalSet:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00178.png" border="0" usemap="#_interval_set_coll__map" alt="Collaboration graph"/></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:af81849627d07e0ccb903789545403ae6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#af81849627d07e0ccb903789545403ae6">IntervalSet</a> ()</td></tr>
+<tr class="separator:af81849627d07e0ccb903789545403ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5875b7222430d9be92a654db194d0d60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#a5875b7222430d9be92a654db194d0d60">add</a> (<a class="el" href="a00013.html">Diff_Geom</a> *in, <a class="el" href="a00013.html">Diff_Geom</a> *out)</td></tr>
+<tr class="separator:a5875b7222430d9be92a654db194d0d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071811cdb02ba0cf2c05140bcf466927"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="a00002.html">Bound</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#a071811cdb02ba0cf2c05140bcf466927">bounds</a> ()</td></tr>
+<tr class="separator:a071811cdb02ba0cf2c05140bcf466927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a877e525fbd78f4a34d51d3e22ea4ad87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#a877e525fbd78f4a34d51d3e22ea4ad87">union_operator</a> (const <a class="el" href="a00018.html">IntervalSet</a> &amp;other, <a class="el" href="a00018.html">IntervalSet</a> &amp;res)</td></tr>
+<tr class="separator:a877e525fbd78f4a34d51d3e22ea4ad87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab397d8b7684c651fb4e219b5586369"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#afab397d8b7684c651fb4e219b5586369">intersection_operator</a> (const <a class="el" href="a00018.html">IntervalSet</a> &amp;other, <a class="el" href="a00018.html">IntervalSet</a> &amp;res)</td></tr>
+<tr class="separator:afab397d8b7684c651fb4e219b5586369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9198fef85524577881942cf644e4d6b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#a9198fef85524577881942cf644e4d6b9">difference_operator</a> (const <a class="el" href="a00018.html">IntervalSet</a> &amp;other, <a class="el" href="a00018.html">IntervalSet</a> &amp;res)</td></tr>
+<tr class="separator:a9198fef85524577881942cf644e4d6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Fonctions membres publiques statiques</h2></td></tr>
+<tr class="memitem:a65b6f9cd4209012b0b0f88ab17f0f03f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#a65b6f9cd4209012b0b0f88ab17f0f03f">free_memory</a> ()</td></tr>
+<tr class="separator:a65b6f9cd4209012b0b0f88ab17f0f03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Attributs privés</h2></td></tr>
+<tr class="memitem:abeb31a403c3612613edd990c8a674bde"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="a00002.html">Bound</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#abeb31a403c3612613edd990c8a674bde">m_bounds</a></td></tr>
+<tr class="separator:abeb31a403c3612613edd990c8a674bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Attributs privés statiques</h2></td></tr>
+<tr class="memitem:aa86c66c4cca313d6d2d726225d8371b4"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="a00013.html">Diff_Geom</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#aa86c66c4cca313d6d2d726225d8371b4">m_garbage</a></td></tr>
+<tr class="separator:aa86c66c4cca313d6d2d726225d8371b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>The <a class="el" href="a00018.html" title="The IntervalSet class. ">IntervalSet</a> class. </p>
+<p>Un ensemble d'intervalle est un tableau de bornes contenant n éléments permettant de définir n/2 intervalles Les fonctions <a class="el" href="a00068.html#gac6b53e72e199766315087879f7d015e5" title="Chaque évènements est de type Bound et le champs data doit être manipulé de façon opaque...">union_of_intervals()</a>, <a class="el" href="a00068.html#ga26806eb167bb645a89e1b39f01dd5bca" title="Chaque évènements est de type Bound et le champs data doit être manipulé de façon opaque...">intersection_of_intervals()</a> et <a class="el" href="a00068.html#ga405c977f6831f22f9b822f0a1a2a4bb7" title="Chaque évènements est de type Bound et le champs data doit être manipulé de façon opaque...">difference_of_intervals()</a> doivent être écrites par les étudiants. Voir <a class="el" href="a00001.html">DEVOIR : Arbres CSG en lancer de rayons</a> pour les précisions. </p>
+
+<p>Définition à la ligne <a class="el" href="a00049_source.html#l00031">31</a> du fichier <a class="el" href="a00049_source.html">intervalset.hpp</a>.</p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a class="anchor" id="af81849627d07e0ccb903789545403ae6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IntervalSet::IntervalSet </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="a00049_source.html#l00037">37</a> du fichier <a class="el" href="a00049_source.html">intervalset.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a class="anchor" id="a5875b7222430d9be92a654db194d0d60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntervalSet::add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00013.html">Diff_Geom</a> *&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00013.html">Diff_Geom</a> *&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="a00049_source.html#l00039">39</a> du fichier <a class="el" href="a00049_source.html">intervalset.hpp</a>.</p>
+
+<p>Références <a class="el" href="a00047_source.html#l00014">Bound::data</a>, <a class="el" href="a00049_source.html#l00032">m_bounds</a>, <a class="el" href="a00049_source.html#l00033">m_garbage</a>, <a class="el" href="a00047_source.html#l00013">Bound::t</a>, et <a class="el" href="a00041_source.html#l00043">Diff_Geom::t()</a>.</p>
+
+<p>Référencé par <a class="el" href="a00056_source.html#l00057">Plane::clip()</a>, <a class="el" href="a00063_source.html#l00084">Sphere::clip()</a>, <a class="el" href="a00031_source.html#l00190">Box3D::clip()</a>, <a class="el" href="a00035_source.html#l00230">Cone::clip()</a>, et <a class="el" href="a00039_source.html#l00330">Cylinder::clip()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00018_a5875b7222430d9be92a654db194d0d60_cgraph.png" border="0" usemap="#a00018_a5875b7222430d9be92a654db194d0d60_cgraph" alt=""/></div>
+<map name="a00018_a5875b7222430d9be92a654db194d0d60_cgraph" id="a00018_a5875b7222430d9be92a654db194d0d60_cgraph">
+<area shape="rect" id="node2" href="a00013.html#ae931001b67b43308e984fee80902a17b" title="Diff_Geom::t" alt="" coords="168,5,264,33"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00018_a5875b7222430d9be92a654db194d0d60_icgraph.png" border="0" usemap="#a00018_a5875b7222430d9be92a654db194d0d60_icgraph" alt=""/></div>
+<map name="a00018_a5875b7222430d9be92a654db194d0d60_icgraph" id="a00018_a5875b7222430d9be92a654db194d0d60_icgraph">
+<area shape="rect" id="node2" href="a00024.html#ab07fd72491019dfdce875eaa677ba18f" title="clip a ray by a plane. " alt="" coords="176,5,259,33"/><area shape="rect" id="node6" href="a00029.html#ac78e1c4b2d124b9df40f3688231f5b45" title="clip a ray by a sphere. " alt="" coords="171,57,263,85"/><area shape="rect" id="node7" href="a00003.html#ae9726a96fc8d4b778bcfd9ba8fd693a1" title="clip a ray by a Box3D. " alt="" coords="173,109,262,137"/><area shape="rect" id="node4" href="a00007.html#a7ddf59f2bc68bc7d862fc915b2983702" title="clip a ray by a Cone. " alt="" coords="528,57,608,85"/><area shape="rect" id="node8" href="a00012.html#a39e9a7ebf491149b58fc079e250f18bb" title="clip a ray by a cylinder. " alt="" coords="169,213,266,241"/><area shape="rect" id="node3" href="a00007.html#aa000dbdde858b3eb9078fe90d3ec71b2" title="get_clip_points " alt="" coords="315,5,464,33"/><area shape="rect" id="node5" href="a00007.html#a525bf376cea933bf1fb4dd47ec77c3c1" title="intersect a ray and a cone. " alt="" coords="512,5,624,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a071811cdb02ba0cf2c05140bcf466927"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="a00002.html">Bound</a>&gt;&amp; IntervalSet::bounds </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="a00049_source.html#l00052">52</a> du fichier <a class="el" href="a00049_source.html">intervalset.hpp</a>.</p>
+
+<p>Références <a class="el" href="a00049_source.html#l00032">m_bounds</a>.</p>
+
+<p>Référencé par <a class="el" href="a00036_source.html#l00099">CSGIntersection::clip()</a>, <a class="el" href="a00036_source.html#l00131">CSGUnion::clip()</a>, <a class="el" href="a00036_source.html#l00160">CSGDifference::clip()</a>, <a class="el" href="a00035_source.html#l00230">Cone::clip()</a>, <a class="el" href="a00035_source.html#l00045">Cone::get_clip_points()</a>, et <a class="el" href="a00036_source.html#l00037">CSGNode::intersect()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00018_a071811cdb02ba0cf2c05140bcf466927_icgraph.png" border="0" usemap="#a00018_a071811cdb02ba0cf2c05140bcf466927_icgraph" alt=""/></div>
+<map name="a00018_a071811cdb02ba0cf2c05140bcf466927_icgraph" id="a00018_a071811cdb02ba0cf2c05140bcf466927_icgraph">
+<area shape="rect" id="node2" href="a00009.html#ab037a625412ab7566ceb204d869917d6" title="clip a ray by a CSGIntersection. " alt="" coords="191,5,337,33"/><area shape="rect" id="node3" href="a00011.html#af10ef9b38d6f02403ccc1586bfd042ef" title="clip a ray by a CSGUnion. " alt="" coords="208,57,320,85"/><area shape="rect" id="node4" href="a00008.html#abb5077f37138af94f364e00810f83955" title="clip a ray by a CSGDifference. " alt="" coords="195,109,333,137"/><area shape="rect" id="node5" href="a00007.html#a7ddf59f2bc68bc7d862fc915b2983702" title="clip a ray by a Cone. " alt="" coords="402,161,483,189"/><area shape="rect" id="node6" href="a00007.html#aa000dbdde858b3eb9078fe90d3ec71b2" title="get_clip_points " alt="" coords="189,213,339,241"/><area shape="rect" id="node8" href="a00010.html#ac96afa010d5587e244a75e0af2da6444" title="intersect a geometric object. " alt="" coords="194,265,334,293"/><area shape="rect" id="node7" href="a00007.html#a525bf376cea933bf1fb4dd47ec77c3c1" title="intersect a ray and a cone. " alt="" coords="387,213,498,241"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9198fef85524577881942cf644e4d6b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntervalSet::difference_operator </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00018.html">IntervalSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00018.html">IntervalSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="a00049_source.html#l00070">70</a> du fichier <a class="el" href="a00049_source.html">intervalset.hpp</a>.</p>
+
+<p>Références <a class="el" href="a00046_source.html#l00036">difference_of_intervals()</a>, et <a class="el" href="a00049_source.html#l00032">m_bounds</a>.</p>
+
+<p>Référencé par <a class="el" href="a00036_source.html#l00160">CSGDifference::clip()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00018_a9198fef85524577881942cf644e4d6b9_cgraph.png" border="0" usemap="#a00018_a9198fef85524577881942cf644e4d6b9_cgraph" alt=""/></div>
+<map name="a00018_a9198fef85524577881942cf644e4d6b9_cgraph" id="a00018_a9198fef85524577881942cf644e4d6b9_cgraph">
+<area shape="rect" id="node2" href="a00068.html#ga405c977f6831f22f9b822f0a1a2a4bb7" title="Chaque évènements est de type Bound et le champs data doit être manipulé de façon opaque..." alt="" coords="205,13,360,41"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00018_a9198fef85524577881942cf644e4d6b9_icgraph.png" border="0" usemap="#a00018_a9198fef85524577881942cf644e4d6b9_icgraph" alt=""/></div>
+<map name="a00018_a9198fef85524577881942cf644e4d6b9_icgraph" id="a00018_a9198fef85524577881942cf644e4d6b9_icgraph">
+<area shape="rect" id="node2" href="a00008.html#abb5077f37138af94f364e00810f83955" title="clip a ray by a CSGDifference. " alt="" coords="206,13,344,41"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a65b6f9cd4209012b0b0f88ab17f0f03f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void IntervalSet::free_memory </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="a00049_source.html#l00077">77</a> du fichier <a class="el" href="a00049_source.html">intervalset.hpp</a>.</p>
+
+<p>Références <a class="el" href="a00049_source.html#l00033">m_garbage</a>.</p>
+
+<p>Référencé par <a class="el" href="a00036_source.html#l00037">CSGNode::intersect()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00018_a65b6f9cd4209012b0b0f88ab17f0f03f_icgraph.png" border="0" usemap="#a00018_a65b6f9cd4209012b0b0f88ab17f0f03f_icgraph" alt=""/></div>
+<map name="a00018_a65b6f9cd4209012b0b0f88ab17f0f03f_icgraph" id="a00018_a65b6f9cd4209012b0b0f88ab17f0f03f_icgraph">
+<area shape="rect" id="node2" href="a00010.html#ac96afa010d5587e244a75e0af2da6444" title="intersect a geometric object. " alt="" coords="225,5,365,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afab397d8b7684c651fb4e219b5586369"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntervalSet::intersection_operator </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00018.html">IntervalSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00018.html">IntervalSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="a00049_source.html#l00063">63</a> du fichier <a class="el" href="a00049_source.html">intervalset.hpp</a>.</p>
+
+<p>Références <a class="el" href="a00046_source.html#l00023">intersection_of_intervals()</a>, et <a class="el" href="a00049_source.html#l00032">m_bounds</a>.</p>
+
+<p>Référencé par <a class="el" href="a00036_source.html#l00099">CSGIntersection::clip()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00018_afab397d8b7684c651fb4e219b5586369_cgraph.png" border="0" usemap="#a00018_afab397d8b7684c651fb4e219b5586369_cgraph" alt=""/></div>
+<map name="a00018_afab397d8b7684c651fb4e219b5586369_cgraph" id="a00018_afab397d8b7684c651fb4e219b5586369_cgraph">
+<area shape="rect" id="node2" href="a00068.html#ga26806eb167bb645a89e1b39f01dd5bca" title="Chaque évènements est de type Bound et le champs data doit être manipulé de façon opaque..." alt="" coords="213,13,379,41"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00018_afab397d8b7684c651fb4e219b5586369_icgraph.png" border="0" usemap="#a00018_afab397d8b7684c651fb4e219b5586369_icgraph" alt=""/></div>
+<map name="a00018_afab397d8b7684c651fb4e219b5586369_icgraph" id="a00018_afab397d8b7684c651fb4e219b5586369_icgraph">
+<area shape="rect" id="node2" href="a00009.html#ab037a625412ab7566ceb204d869917d6" title="clip a ray by a CSGIntersection. " alt="" coords="213,13,360,41"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a877e525fbd78f4a34d51d3e22ea4ad87"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntervalSet::union_operator </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00018.html">IntervalSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00018.html">IntervalSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="a00049_source.html#l00056">56</a> du fichier <a class="el" href="a00049_source.html">intervalset.hpp</a>.</p>
+
+<p>Références <a class="el" href="a00049_source.html#l00032">m_bounds</a>, et <a class="el" href="a00046_source.html#l00010">union_of_intervals()</a>.</p>
+
+<p>Référencé par <a class="el" href="a00036_source.html#l00131">CSGUnion::clip()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00018_a877e525fbd78f4a34d51d3e22ea4ad87_cgraph.png" border="0" usemap="#a00018_a877e525fbd78f4a34d51d3e22ea4ad87_cgraph" alt=""/></div>
+<map name="a00018_a877e525fbd78f4a34d51d3e22ea4ad87_cgraph" id="a00018_a877e525fbd78f4a34d51d3e22ea4ad87_cgraph">
+<area shape="rect" id="node2" href="a00068.html#gac6b53e72e199766315087879f7d015e5" title="Chaque évènements est de type Bound et le champs data doit être manipulé de façon opaque..." alt="" coords="179,13,309,41"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00018_a877e525fbd78f4a34d51d3e22ea4ad87_icgraph.png" border="0" usemap="#a00018_a877e525fbd78f4a34d51d3e22ea4ad87_icgraph" alt=""/></div>
+<map name="a00018_a877e525fbd78f4a34d51d3e22ea4ad87_icgraph" id="a00018_a877e525fbd78f4a34d51d3e22ea4ad87_icgraph">
+<area shape="rect" id="node2" href="a00011.html#af10ef9b38d6f02403ccc1586bfd042ef" title="clip a ray by a CSGUnion. " alt="" coords="178,13,291,41"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a class="anchor" id="abeb31a403c3612613edd990c8a674bde"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="a00002.html">Bound</a>&gt; IntervalSet::m_bounds</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="a00049_source.html#l00032">32</a> du fichier <a class="el" href="a00049_source.html">intervalset.hpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00049_source.html#l00039">add()</a>, <a class="el" href="a00049_source.html#l00052">bounds()</a>, <a class="el" href="a00049_source.html#l00070">difference_operator()</a>, <a class="el" href="a00049_source.html#l00063">intersection_operator()</a>, et <a class="el" href="a00049_source.html#l00056">union_operator()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa86c66c4cca313d6d2d726225d8371b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="a00013.html">Diff_Geom</a> * &gt; IntervalSet::m_garbage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="a00049_source.html#l00033">33</a> du fichier <a class="el" href="a00049_source.html">intervalset.hpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00049_source.html#l00039">add()</a>, et <a class="el" href="a00049_source.html#l00077">free_memory()</a>.</p>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<li><a class="el" href="a00049_source.html">intervalset.hpp</a></li>
+<li><a class="el" href="a00048_source.html">intervalset.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="a00018.html">IntervalSet</a></li>
+    <li class="footer">Généré le Lundi Novembre 4 2013 17:01:57 pour M1 Informatique - OIM - mini raytracer par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
+  </ul>
+</div>
+</body>
+</html>

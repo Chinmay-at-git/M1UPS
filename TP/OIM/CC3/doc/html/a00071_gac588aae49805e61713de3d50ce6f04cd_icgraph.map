@@ -1,0 +1,5 @@
+<map id="ray_depth" name="ray_depth">
+<area shape="rect" id="node2" href="$a00052.html#a0bb032ac4d4d1b49ce014a54feed764a" title="trace_ray" alt="" coords="134,5,210,33"/>
+<area shape="rect" id="node3" href="$a00052.html#ab1d1ac9ba4ad1639618cfd7613fee95f" title="compute_image" alt="" coords="259,5,375,33"/>
+<area shape="rect" id="node4" href="$a00052.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="424,5,474,33"/>
+</map>

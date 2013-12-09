@@ -1,0 +1,12 @@
+<map id="Diff_Geom::pos" name="Diff_Geom::pos">
+<area shape="rect" id="node2" href="$a00073.html#ga3a215078ec8db08fc79e0a491bc61b59" title="compute the amount of color scattered at the intersection to the ray from the given light..." alt="" coords="191,5,294,33"/>
+<area shape="rect" id="node3" href="$a00012.html#a646e440049ec43067444b2efa0c6b860" title="get_clip_points " alt="" coords="181,57,304,101"/>
+<area shape="rect" id="node6" href="$a00007.html#aa000dbdde858b3eb9078fe90d3ec71b2" title="get_clip_points " alt="" coords="168,125,317,153"/>
+<area shape="rect" id="node9" href="$a00073.html#ga397536f562058dee83e3be0813324e82" title="compute the reflected ray from the intersection data and the ray to the intersection ..." alt="" coords="214,177,271,205"/>
+<area shape="rect" id="node10" href="$a00073.html#ga1c7e1aae0ca65e600b252447bc817038" title="compute the refracted ray from the intersection data and the ray to the intersection ..." alt="" coords="213,229,272,257"/>
+<area shape="rect" id="node11" href="$a00071.html#gafdd7145eb904844de4296af68d315e39" title="test the visibility between an intersection and a light " alt="" coords="195,281,291,309"/>
+<area shape="rect" id="node4" href="$a00012.html#a39e9a7ebf491149b58fc079e250f18bb" title="clip a ray by a cylinder. " alt="" coords="381,15,478,43"/>
+<area shape="rect" id="node5" href="$a00012.html#aaf9bb0e9f800879eaa31070c9f7eb687" title="intersect a cylinder . " alt="" coords="365,67,493,95"/>
+<area shape="rect" id="node7" href="$a00007.html#a7ddf59f2bc68bc7d862fc915b2983702" title="clip a ray by a Cone. " alt="" coords="389,123,470,151"/>
+<area shape="rect" id="node8" href="$a00007.html#a525bf376cea933bf1fb4dd47ec77c3c1" title="intersect a ray and a cone. " alt="" coords="374,175,485,203"/>
+</map>

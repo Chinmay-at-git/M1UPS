@@ -1,0 +1,567 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>M1 Informatique - OIM - mini raytracer: Membres de classe - Fonctions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">M1 Informatique - OIM - mini raytracer
+   &#160;<span id="projectnumber">2013-2014</span>
+   </div>
+   <div id="projectbrief">Interface de programmation pour un raytracer minimal</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.4 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
+      <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li class="current"><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow3" class="tabs2">
+    <ul class="tablist">
+      <li><a href="functions.html"><span>Tout</span></a></li>
+      <li class="current"><a href="functions_func.html"><span>Fonctions</span></a></li>
+      <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_enum.html"><span>Énumérations</span></a></li>
+      <li><a href="functions_eval.html"><span>Valeurs&#160;énumérées</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="#index_a"><span>a</span></a></li>
+      <li><a href="#index_b"><span>b</span></a></li>
+      <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_d"><span>d</span></a></li>
+      <li><a href="#index_e"><span>e</span></a></li>
+      <li><a href="#index_f"><span>f</span></a></li>
+      <li><a href="#index_g"><span>g</span></a></li>
+      <li><a href="#index_h"><span>h</span></a></li>
+      <li><a href="#index_i"><span>i</span></a></li>
+      <li><a href="#index_l"><span>l</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
+      <li><a href="#index_o"><span>o</span></a></li>
+      <li><a href="#index_p"><span>p</span></a></li>
+      <li><a href="#index_r"><span>r</span></a></li>
+      <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
+      <li><a href="#index_u"><span>u</span></a></li>
+      <li><a href="#index_v"><span>v</span></a></li>
+      <li><a href="#index_w"><span>w</span></a></li>
+      <li><a href="#index_x"><span>x</span></a></li>
+      <li><a href="#index_y"><span>y</span></a></li>
+      <li><a href="#index_z"><span>z</span></a></li>
+      <li><a href="#index_0x7e"><span>~</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions_func.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="contents">
+&#160;
+
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>add()
+: <a class="el" href="a00018.html#a5875b7222430d9be92a654db194d0d60">IntervalSet</a>
+</li>
+<li>add_light()
+: <a class="el" href="a00028.html#a6403f0a1e1cb777d4b335a3eb093979d">Scene</a>
+</li>
+<li>add_primitive()
+: <a class="el" href="a00028.html#aab20b59647f0f9ba5cc40e5943377a87">Scene</a>
+</li>
+<li>at()
+: <a class="el" href="a00027.html#a44792845b5e6508be5959f21a3f26e9e">Ray</a>
+</li>
+<li>avg()
+: <a class="el" href="a00006.html#ab43c458dc1c46ffc762b7e9cb726ef3e">Color</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
+<li>bounds()
+: <a class="el" href="a00018.html#a071811cdb02ba0cf2c05140bcf466927">IntervalSet</a>
+</li>
+<li>Box3D()
+: <a class="el" href="a00003.html#a64d5d5e8d19b94d0b932bcb346dc20b3">Box3D</a>
+</li>
+<li>BSDF()
+: <a class="el" href="a00004.html#a49adf3e02a71382167669b97263d6321">BSDF</a>
+</li>
+<li>bsdf()
+: <a class="el" href="a00019.html#ad175c0c1162ae8050132013c4578d4fe">Isect</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>Camera()
+: <a class="el" href="a00005.html#a01f94c3543f56ede7af49dc778f19331">Camera</a>
+</li>
+<li>clip()
+: <a class="el" href="a00003.html#ae9726a96fc8d4b778bcfd9ba8fd693a1">Box3D</a>
+, <a class="el" href="a00011.html#af10ef9b38d6f02403ccc1586bfd042ef">CSGUnion</a>
+, <a class="el" href="a00008.html#abb5077f37138af94f364e00810f83955">CSGDifference</a>
+, <a class="el" href="a00007.html#a7ddf59f2bc68bc7d862fc915b2983702">Cone</a>
+, <a class="el" href="a00012.html#a39e9a7ebf491149b58fc079e250f18bb">Cylinder</a>
+, <a class="el" href="a00015.html#a767321b776e8662e39aa32347e8918ee">Geometry</a>
+, <a class="el" href="a00003.html#a9b6faa87b0537205d900ba98d48ef228">Box3D</a>
+, <a class="el" href="a00010.html#a78bebb84d2dedc6aaf3bc9f590f24afb">CSGNode</a>
+, <a class="el" href="a00024.html#ab07fd72491019dfdce875eaa677ba18f">Plane</a>
+, <a class="el" href="a00029.html#ac78e1c4b2d124b9df40f3688231f5b45">Sphere</a>
+, <a class="el" href="a00009.html#ab037a625412ab7566ceb204d869917d6">CSGIntersection</a>
+</li>
+<li>Color()
+: <a class="el" href="a00006.html#a92a9f1af6b0e33aac1f46d348d241c52">Color</a>
+</li>
+<li>compute_normal()
+: <a class="el" href="a00007.html#abfc6b31cd86ed95003711a77d613e0a2">Cone</a>
+</li>
+<li>Cone()
+: <a class="el" href="a00007.html#aec709e915b3271a750d420b14b215bfb">Cone</a>
+</li>
+<li>cross_product()
+: <a class="el" href="a00030.html#abd36ddbe10a7981949ecde1d9d2f457a">Vector3D</a>
+</li>
+<li>CSGDifference()
+: <a class="el" href="a00008.html#adad1d79bc56124f95fefc7b0e20077ed">CSGDifference</a>
+</li>
+<li>CSGIntersection()
+: <a class="el" href="a00009.html#a00bff73b70e6d527d877c8769db16c28">CSGIntersection</a>
+</li>
+<li>CSGNode()
+: <a class="el" href="a00010.html#a96fd17ebb413a9adf1dbcbeb00d901e5">CSGNode</a>
+</li>
+<li>CSGUnion()
+: <a class="el" href="a00011.html#a1f0fe43e4a2ff171773c38f5a41e4a24">CSGUnion</a>
+</li>
+<li>Cylinder()
+: <a class="el" href="a00012.html#a01dc978cb576f834b9545e43d4dad2a2">Cylinder</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>depth()
+: <a class="el" href="a00027.html#a5aca258edd0f8365436fbe2ff5305cd2">Ray</a>
+</li>
+<li>dg()
+: <a class="el" href="a00019.html#a6709cddc48c0c8e2631c7b23437bd6ef">Isect</a>
+</li>
+<li>Diff_Geom()
+: <a class="el" href="a00013.html#afcd0df3589385ac1aa0eb7d6cf300bea">Diff_Geom</a>
+</li>
+<li>difference_operator()
+: <a class="el" href="a00018.html#a9198fef85524577881942cf644e4d6b9">IntervalSet</a>
+</li>
+<li>dir()
+: <a class="el" href="a00027.html#a9bfb39f0ff5a7a2330ef9749b8e97e17">Ray</a>
+</li>
+<li>dot()
+: <a class="el" href="a00030.html#a293698c2fcdc50968fa63e125120bd61">Vector3D</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
+<li>evaluate()
+: <a class="el" href="a00004.html#a89754b621acdd482f06a0b11c0ecdf3a">BSDF</a>
+, <a class="el" href="a00025.html#a60041caca9b6f55483874f5b379c6598">Plastic</a>
+, <a class="el" href="a00023.html#a22590d1bdff3889b53e83cc7aa9731aa">Metal</a>
+, <a class="el" href="a00022.html#af0a76a90f66c8a28fa00c4006835419b">Matte</a>
+, <a class="el" href="a00021.html#a941d7be0b89fed12fe9f84b546c20b64">Material</a>
+, <a class="el" href="a00016.html#a11ebe65c2156443f435645d4bba4f8d5">Glass</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>free_memory()
+: <a class="el" href="a00018.html#a65b6f9cd4209012b0b0f88ab17f0f03f">IntervalSet</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>get_clip_points()
+: <a class="el" href="a00007.html#aa000dbdde858b3eb9078fe90d3ec71b2">Cone</a>
+, <a class="el" href="a00012.html#a646e440049ec43067444b2efa0c6b860">Cylinder</a>
+</li>
+<li>Glass()
+: <a class="el" href="a00016.html#ab6ccfb3332ac7a27d4c01e6654ac9b9e">Glass</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>has_reflection()
+: <a class="el" href="a00004.html#a770df55c2f2ba844764b341e93ea41f7">BSDF</a>
+</li>
+<li>has_refraction()
+: <a class="el" href="a00004.html#aca1d179bc6d6a06b395f8768019cc4f0">BSDF</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>Image()
+: <a class="el" href="a00017.html#a58edd1c45b4faeb5f789b0d036d02313">Image</a>
+</li>
+<li>importance()
+: <a class="el" href="a00027.html#af8e83498490cec0ce58b715533910bb5">Ray</a>
+</li>
+<li>init_blinn_phong()
+: <a class="el" href="a00004.html#aaa834a440a78af61ef56984c3fcc79f8">BSDF</a>
+</li>
+<li>init_diffuse()
+: <a class="el" href="a00004.html#a9dd8bf6529b8cc159f570600bbee872c">BSDF</a>
+</li>
+<li>init_fresnel()
+: <a class="el" href="a00004.html#a654638fb3e8f649825aea76416fe5a6d">BSDF</a>
+</li>
+<li>init_pure_refl()
+: <a class="el" href="a00004.html#a5721ae7c30efb1e90beb7ea6b49d9ca4">BSDF</a>
+</li>
+<li>intersect()
+: <a class="el" href="a00028.html#a0f1778fd9c133a40977e6e33f6a75b61">Scene</a>
+, <a class="el" href="a00003.html#ad5a9451718d7e98f7425aee8e00dcfbf">Box3D</a>
+, <a class="el" href="a00029.html#acb1c5b063489f881872e6faf155c4c18">Sphere</a>
+, <a class="el" href="a00007.html#a525bf376cea933bf1fb4dd47ec77c3c1">Cone</a>
+, <a class="el" href="a00010.html#ac96afa010d5587e244a75e0af2da6444">CSGNode</a>
+, <a class="el" href="a00012.html#aaf9bb0e9f800879eaa31070c9f7eb687">Cylinder</a>
+, <a class="el" href="a00015.html#ae992633602643893bbd1e286e2ca98f9">Geometry</a>
+, <a class="el" href="a00024.html#a8972d45fdd4d58cc736ce779da8e000a">Plane</a>
+, <a class="el" href="a00026.html#acc199bafa557f20ac329787ec39c9a05">Primitive</a>
+</li>
+<li>intersection_operator()
+: <a class="el" href="a00018.html#afab397d8b7684c651fb4e219b5586369">IntervalSet</a>
+</li>
+<li>IntervalSet()
+: <a class="el" href="a00018.html#af81849627d07e0ccb903789545403ae6">IntervalSet</a>
+</li>
+<li>is_zero()
+: <a class="el" href="a00006.html#addd9a00e50cad82c55c405c9683da443">Color</a>
+</li>
+<li>Isect()
+: <a class="el" href="a00019.html#ab85befe3cba162e3d6187258a691171e">Isect</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>le()
+: <a class="el" href="a00020.html#a67501efbaeb33e1392fedb8b0d768ac8">Light</a>
+</li>
+<li>Light()
+: <a class="el" href="a00020.html#aab4ed3906b9f59d5cf27ad83d75ad478">Light</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>make_basis()
+: <a class="el" href="a00030.html#a449ecda100969a0e070b997f0537840a">Vector3D</a>
+</li>
+<li>Matte()
+: <a class="el" href="a00022.html#aedbb461240afd13d1ced507d4885fe85">Matte</a>
+</li>
+<li>max_t()
+: <a class="el" href="a00027.html#a8cd07a7f52236e9a1f4c92fbf5c8786a">Ray</a>
+</li>
+<li>Metal()
+: <a class="el" href="a00023.html#aef8edb45e960d983ac9871c3588932eb">Metal</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>norm()
+: <a class="el" href="a00030.html#ab58e6202e20f0fd74fc35133eb780254">Vector3D</a>
+</li>
+<li>normal()
+: <a class="el" href="a00013.html#a5032f917f066531ab12142806d5cb023">Diff_Geom</a>
+</li>
+<li>normalize()
+: <a class="el" href="a00030.html#a5b3059961eb8b4db3dc6b79f283dcac1">Vector3D</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>operator()()
+: <a class="el" href="a00014.html#ad2bba165a891cd62afc077f4f8b28b96">Diff_Geom_MemoryLiberator</a>
+</li>
+<li>operator*()
+: <a class="el" href="a00006.html#a9ac7755b39d4e96e843741a62bdba24e">Color</a>
+, <a class="el" href="a00030.html#a48aa43ece28de6866ca2114ef0e639bf">Vector3D</a>
+, <a class="el" href="a00006.html#a53c38c4d10fe8f465cdc18843c8c7811">Color</a>
+</li>
+<li>operator+()
+: <a class="el" href="a00006.html#a7128adc74f8de23b922a70eceea09ef0">Color</a>
+, <a class="el" href="a00030.html#aa93b9e07c52647bb14d495cd7cad3a28">Vector3D</a>
+</li>
+<li>operator-()
+: <a class="el" href="a00030.html#a03f189f8d45eda497772364d19d30c7d">Vector3D</a>
+</li>
+<li>operator=()
+: <a class="el" href="a00013.html#abc6abf03ab17646ac0f134e955ab9a45">Diff_Geom</a>
+</li>
+<li>operator[]()
+: <a class="el" href="a00030.html#a8a2124a91503b56df56d482459351f7e">Vector3D</a>
+, <a class="el" href="a00006.html#ada85564386200034b6991cdf732e5fc8">Color</a>
+, <a class="el" href="a00030.html#a905e3b0a8224f9fb86498cadd3475258">Vector3D</a>
+</li>
+<li>ori()
+: <a class="el" href="a00027.html#aa0271e10968c04224e2986017abb67b3">Ray</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>p_camera()
+: <a class="el" href="a00028.html#a0f0b06829d508e600a712244d5ad7dd6">Scene</a>
+</li>
+<li>p_lights()
+: <a class="el" href="a00028.html#adce64c848c70c77a5ffb822f11a78aae">Scene</a>
+</li>
+<li>p_prims()
+: <a class="el" href="a00028.html#a77e742b6abe8cd60df0424d6bae33946">Scene</a>
+</li>
+<li>pixel()
+: <a class="el" href="a00017.html#a21a63d2b2768bab69266ca3dab6fb85d">Image</a>
+</li>
+<li>Plane()
+: <a class="el" href="a00024.html#aa174951fb18c608b8d29cfede77cc0ba">Plane</a>
+</li>
+<li>Plastic()
+: <a class="el" href="a00025.html#a277334a36838a4f095280ce928841821">Plastic</a>
+</li>
+<li>pos()
+: <a class="el" href="a00020.html#a305715f1db3acf3dbd9dbd54baaa804e">Light</a>
+, <a class="el" href="a00013.html#a5fa6ab4c50cd785ab124fcc4b4c1247a">Diff_Geom</a>
+</li>
+<li>Primitive()
+: <a class="el" href="a00026.html#ae6b6e9440d482575d1dcbf77a936c201">Primitive</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>Ray()
+: <a class="el" href="a00027.html#a2e3d2c29f2df4ab3da10da79d4acb852">Ray</a>
+</li>
+<li>ray_epsilon()
+: <a class="el" href="a00027.html#a9484c8a3d4eeca6f9188d6ce2ca14b77">Ray</a>
+</li>
+<li>ray_for_pixel()
+: <a class="el" href="a00005.html#a98275b6232248a9c1691cd9500d8134d">Camera</a>
+</li>
+<li>ray_for_screen_coords()
+: <a class="el" href="a00005.html#a8ab26e4004e5c2a753eb8119b153a44d">Camera</a>
+</li>
+<li>reflect_dir()
+: <a class="el" href="a00004.html#a0c1293b4a879f5797f9befcaef2c4c99">BSDF</a>
+</li>
+<li>refract_dir()
+: <a class="el" href="a00004.html#a072b04d8fc38b94911e023dcb3a0c28f">BSDF</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>Scene()
+: <a class="el" href="a00028.html#ad10176d75a9cc0da56626f682d083507">Scene</a>
+</li>
+<li>set_camera()
+: <a class="el" href="a00028.html#a92e1b2344129de2618f3b5f1ed22dd5e">Scene</a>
+</li>
+<li>set_max_t()
+: <a class="el" href="a00027.html#a67bf1057835b4a923a50c82f31d46d0d">Ray</a>
+</li>
+<li>set_normal()
+: <a class="el" href="a00013.html#a4f2c6b1f7c0699590b06378b238d7667">Diff_Geom</a>
+</li>
+<li>set_pos()
+: <a class="el" href="a00013.html#aa3099cd741f8252c6d846f72bcc6a250">Diff_Geom</a>
+</li>
+<li>set_t()
+: <a class="el" href="a00013.html#a3e7b5cdcdacacd9af56797a4634ddf4a">Diff_Geom</a>
+</li>
+<li>Sphere()
+: <a class="el" href="a00029.html#a8727e5ea0f74d523eadafc8114648014">Sphere</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>t()
+: <a class="el" href="a00013.html#ae931001b67b43308e984fee80902a17b">Diff_Geom</a>
+</li>
+<li>test_visibility()
+: <a class="el" href="a00028.html#aac2848f8a3c18972e5d5f077ab682f30">Scene</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
+<li>union_operator()
+: <a class="el" href="a00018.html#a877e525fbd78f4a34d51d3e22ea4ad87">IntervalSet</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
+<li>Vector3D()
+: <a class="el" href="a00030.html#a0b11a8d75da427b27443d8a94d0d296c">Vector3D</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
+<li>write_to_exr_file()
+: <a class="el" href="a00017.html#a4494a1ac16eb45ef862806694c8aa3d3">Image</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_x"></a>- x -</h3><ul>
+<li>x()
+: <a class="el" href="a00030.html#a15a162a986b897ebd0bb74df056d99c5">Vector3D</a>
+</li>
+<li>x_res()
+: <a class="el" href="a00017.html#a926a363fe861e5d0ac3a46cc89ecc0c4">Image</a>
+, <a class="el" href="a00005.html#afb6742de1f5a9bcbd80041485b5917eb">Camera</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_y"></a>- y -</h3><ul>
+<li>y()
+: <a class="el" href="a00030.html#a1819fd51b78ece8de462d3a2c979111a">Vector3D</a>
+</li>
+<li>y_res()
+: <a class="el" href="a00017.html#ad6d99103e357656543cf080f22c5858d">Image</a>
+, <a class="el" href="a00005.html#a8206d3f96cc607fbd43037ef017defc2">Camera</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_z"></a>- z -</h3><ul>
+<li>z()
+: <a class="el" href="a00030.html#a026531e883c967b7a7803a2f6b983d2c">Vector3D</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_0x7e"></a>- ~ -</h3><ul>
+<li>~CSGNode()
+: <a class="el" href="a00010.html#a5290d017db0eaf3423e61e47b4ebd958">CSGNode</a>
+</li>
+<li>~Geometry()
+: <a class="el" href="a00015.html#aedd2e92f79197c6f0671c5d14cf72578">Geometry</a>
+</li>
+<li>~Image()
+: <a class="el" href="a00017.html#a0294f63700543e11c0f0da85601c7ae5">Image</a>
+</li>
+<li>~Material()
+: <a class="el" href="a00021.html#a179e16d6a1bd4a0f039b8e4cbf2ade30">Material</a>
+</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré le Lundi Novembre 4 2013 17:01:57 pour M1 Informatique - OIM - mini raytracer par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
+  </ul>
+</div>
+</body>
+</html>

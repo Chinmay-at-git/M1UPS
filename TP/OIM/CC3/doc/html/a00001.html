@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>M1 Informatique - OIM - mini raytracer: DEVOIR : Arbres CSG en lancer de rayons</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">M1 Informatique - OIM - mini raytracer
+   &#160;<span id="projectnumber">2013-2014</span>
+   </div>
+   <div id="projectbrief">Interface de programmation pour un raytracer minimal</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.4 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('a00001.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">DEVOIR : Arbres CSG en lancer de rayons </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>L'objectif de ce devoir est de construire et de visualiser des objets complexes définis par des arbres CSG.</p>
+<p><b>ATTENTION</b> : veuillez récupérer l'archive <a href="../raytracing.tgz">raytracing.tgz</a> contenant les outils de base pour la gestion de la CSG qui ont été ajoutés par rapport à votre archive de TP. Ces outils concernent les classes <a class="el" href="a00010.html" title="The CSGNode class. ">CSGNode</a>, <a class="el" href="a00011.html" title="The CSGUnion class. ">CSGUnion</a>, <a class="el" href="a00009.html" title="The CSGIntersection class. ">CSGIntersection</a>, <a class="el" href="a00008.html" title="The CSGDifference class. ">CSGDifference</a> et <a class="el" href="a00018.html" title="The IntervalSet class. ">IntervalSet</a> ainsi que quelques évolution de la structure interne du moteur.</p>
+<p>Dans le fichier <a class="el" href="a00052.html">main.cpp</a>, réintégrez les fonctions <a class="el" href="a00052.html#ab1d1ac9ba4ad1639618cfd7613fee95f">compute_image()</a>, <a class="el" href="a00052.html#a0bb032ac4d4d1b49ce014a54feed764a">trace_ray()</a> et <a class="el" href="a00052.html#a9f1daa433c3bc9891cb1202a4e89080f">compute_direct_lighting()</a> que vous avez écrites en TP (avec, éventuellement, toute autre fonction que vous avez écrites). Ensuite, veuillez re-effectuer la première étape de compilation comme indiqué dans la section <a class="el" href="index.html#compilation_premiere">Première compilation</a> de cette documentation. (mkdir build &amp;&amp; cd build &amp;&amp; cmake .. &amp;&amp; make) ou l’équivalent via votre EDI.</p>
+<p>Votre devoir sera évalué par le code que vous aurez fourni et validé par le calcul de l'image suivante, dont la scène est construite par la fonction <a class="el" href="a00052.html#a4a1ad3a23e213ffed72c19f2bc39cd9a" title="to initialize the scene with the default one. ">make_test_scene()</a> :</p>
+<div class="image">
+<img src="csg.png" alt="csg.png"/>
+</div>
+<h1><a class="anchor" id="CSGSection"></a>
+Constructive Solid Geometry</h1>
+<h2><a class="anchor" id="CSGDefinition"></a>
+Définition</h2>
+<p>Lorsque l'on souhaite définir des formes complexes pour la CAO (Conception Assistée par Ordinateur) et la fabrication de pièces mécaniques, de nombreuses méthodes existent. Parmi celles-ci, La CSG (en anglais, "Constructive Solid Geometry") consiste à assembler de manière ensembliste des solides fondamentaux pour créer des solides complexes. Ainsi, à partir d'un ensemble de solides simples (sphère, cône, cylindre, parallélépipède rectangle (ou boite), ...) et des opérateurs ensemblistes union, intersection et différence, il est possible de créer des objets complexes pouvant ensuite être directement fabriqués par usinage ou impression 3D. </p>
+<div class="image">
+<img src="teaser.jpg" alt="teaser.jpg"/>
+</div>
+<p>Si l'on se limite aux opérateurs ensemblistes binaires union, intersection et différence, un arbre CSG peut se représenter comme sur l'image suivante. </p>
+<div class="image">
+<img src="csg_tree.png" alt="csg_tree.png"/>
+</div>
+<p>Aux feuilles de l'arbre, on retrouve nos primitives géométriques qui sont combinées deux à deux par les opérateurs. Si l'on se ramène à notre API, le noeud racine aura été créé par la fonction <a class="el" href="a00070.html#gabca30508a9802f1a60bc67185dcaa8fb" title="to create a difference CSG Node. ">create_csg_difference()</a>.</p>
+<p>Si l'on développe cet arbre avec notre API, cet objet est construit par l'expression</p>
+<div class="fragment"><div class="line"><a class="code" href="a00070.html#gabca30508a9802f1a60bc67185dcaa8fb" title="to create a difference CSG Node. ">create_csg_difference</a> (</div>
+<div class="line">                      <a class="code" href="a00070.html#ga6eda5cac4c7d6203bf2e1798c0b4f124" title="to create an intersection CSG Node. ">create_csg_intersection</a> (</div>
+<div class="line">                                              <a class="code" href="a00070.html#ga97f60add9f9b7177df6c8f2f2372561a" title="to create a box ">create_box</a>(...),</div>
+<div class="line">                                              <a class="code" href="a00070.html#ga2da051b943f32009496f94737261c248" title="to create a sphere ">create_sphere</a>(...)</div>
+<div class="line">                      ),</div>
+<div class="line">                      <a class="code" href="a00070.html#ga4d0d7fc79bead2d9745acc2d10c506bf" title="to create an union CSG Node. ">create_csg_union</a>(</div>
+<div class="line">                                        <a class="code" href="a00070.html#gabd60bd9dfe9afb36b127decf9145287d" title="to create a cylinder ">create_cylinder</a>(...),</div>
+<div class="line">                                        <a class="code" href="a00070.html#ga4d0d7fc79bead2d9745acc2d10c506bf" title="to create an union CSG Node. ">create_csg_union</a>(</div>
+<div class="line">                                                         <a class="code" href="a00070.html#gabd60bd9dfe9afb36b127decf9145287d" title="to create a cylinder ">create_cylinder</a>(...),</div>
+<div class="line">                                                         <a class="code" href="a00070.html#gabd60bd9dfe9afb36b127decf9145287d" title="to create a cylinder ">create_cylinder</a>(...)</div>
+<div class="line">                                        )</div>
+<div class="line">                      )</div>
+<div class="line">)</div>
+</div><!-- fragment --><p> Cet arbre, correspondant à l'objet au premier plan de l'image de validation que vous obtiendrez en fin de devoir peut aussi être exprimé par l'expression de style LISP suivante </p>
+<div class="fragment"><div class="line">(- (* (bo 0. 2.5 -3.25 1. 0. 0. 0. 0. 1. 1.0 1.0 1.0) (sp 0. 2.5 -3.25 0.65) ) (+ (cy 0. 2.5 -3.25 1.0 0.0 0.0 0.3 1.75) (+ (cy 0. 2.5 -3.25 0.0 1.0 0.0 0.3 1.75) (cy 0. 2.5 -3.25 0.0 0.0 1.0 0.3 1.75) ) ) )</div>
+</div><!-- fragment --><h2><a class="anchor" id="CSGRayTracing"></a>
+Intersection entre un rayon et un arbre CSG</h2>
+<p>Lorsque l'on souhaite visualiser un arbre CSG en lancer de rayons, on se ramène à un problème d'évaluation d'opérations sur des ensembles représentés par des intervalles. En effet, l’ensemble des points communs à un rayon et un solide peut être représenté par une collection d’intervalles réels [tmin, tmax] dans le repère du rayon (i.e. l'espace 1D définit par l'équation paramétrique du rayon P(t) = O + tD ). Les bornes de ces intervalles correspondent aux évènements d'entrée/sortie du rayon dans le solide.</p>
+<p>La structure de données <a class="el" href="a00018.html" title="The IntervalSet class. ">IntervalSet</a> stocke les intervalles par leurs évènements d'entrée/sortie (de type <a class="el" href="a00002.html" title="Une borne est défini par sa coordonnée t et une donnée opaque data. ">Bound</a>) en considérant qu'un évènement d'entrée sera obligatoirement suivi d'un évènement de sortie. Cette propriété est à la base du fonctionnement des opérateurs ensemblistes qui sont utilisés pour calculer l'intersection entre un rayon et un arbre CSG. Ce calcul d’intersection est donc un problème similaire à un problème d'évaluation d'expressions arithmétiques et l’arbre CSG est assimilable à un arbre de syntaxe abstraite tel que vous les avez vu en traduction des langages.</p>
+<p>Concernant les noeuds primitives géométriques, <a class="el" href="a00029.html" title="Sphere geometric object. ">Sphere</a>, <a class="el" href="a00012.html" title="Cylinder geometric object. ">Cylinder</a>, <a class="el" href="a00007.html" title="Cone geometric object. ">Cone</a> et <a class="el" href="a00003.html" title="Box geometric object. ">Box3D</a>, qui sont des solides convexes, il y a au plus un seul intervalle possible représentant l’intersection entre un rayon et ce solide. Les méthodes <a class="el" href="a00029.html#ac78e1c4b2d124b9df40f3688231f5b45" title="clip a ray by a sphere. ">Sphere::clip()</a>, <a class="el" href="a00012.html#a39e9a7ebf491149b58fc079e250f18bb" title="clip a ray by a cylinder. ">Cylinder::clip()</a>, <a class="el" href="a00007.html#a7ddf59f2bc68bc7d862fc915b2983702" title="clip a ray by a Cone. ">Cone::clip()</a> et <a class="el" href="a00003.html#a9b6faa87b0537205d900ba98d48ef228" title="clip a segment by the Box3D. ">Box3D::clip()</a> calculent cet intervalle, à partir des coordonnées t sur le rayon, d'entrée et de sortie de la primitive.</p>
+<p>Concernant les noeuds opérateurs <a class="el" href="a00011.html" title="The CSGUnion class. ">CSGUnion</a>, <a class="el" href="a00009.html" title="The CSGIntersection class. ">CSGIntersection</a> et <a class="el" href="a00008.html" title="The CSGDifference class. ">CSGDifference</a>, il peut y avoir plusieurs intervalles d'intersection entre le rayon et le noeud. Ces intervalles sont calculés par les méthodes <a class="el" href="a00011.html#af10ef9b38d6f02403ccc1586bfd042ef" title="clip a ray by a CSGUnion. ">CSGUnion::clip()</a>, <a class="el" href="a00009.html#ab037a625412ab7566ceb204d869917d6" title="clip a ray by a CSGIntersection. ">CSGIntersection::clip()</a> et <a class="el" href="a00008.html#abb5077f37138af94f364e00810f83955" title="clip a ray by a CSGDifference. ">CSGDifference::clip()</a> à partir des intervalles évalués sur les deux arguments de l'opérateur. Le comportement de ces opérateurs sur des intervalles peuvent s'illustrer comme sur le tableau suivants. Dans ce tableau, La première ligne représente le résultat de l’opération entre un cube et une sphère, la seconde ligne schématise le comportement des opérateurs sur des intervalles. Dans ces schémas, une ligne représente l'espace paramétrique 1D d'un rayon. Une portion bleue indique que le rayon est en dehors de la primitive, une portion rouge que le rayon est à l'intérieur d'une primitive. Les transitions entre ces deux zones sont les informations calculées par la méthode polymorphe <a class="el" href="a00015.html#a767321b776e8662e39aa32347e8918ee" title="clip a ray by a geometry. ">Geometry::clip()</a> et définissent les bornes des intervalles.</p>
+<table  border="1" style="margin: 1em auto; text-align: center; border-collapse: collapse; border-color: #aaa;">
+<tr>
+<th align="center" colspan="3">Opérateurs ensembliste sur les intervalles  </th></tr>
+<tr>
+<td>Union </td><td>Intersection </td><td>Différence  </td></tr>
+<tr>
+<td width="250"><div class="image">
+<img src="../images/boolean_union.png"  alt="Union" width="250"/>
+</div>
+ </td><td width="250"><div class="image">
+<img src="../images/boolean_intersection.png"  alt="Intersection" width="250"/>
+</div>
+ </td><td width="250"><div class="image">
+<img src="../images/boolean_difference.png"  alt="Difference" width="250"/>
+</div>
+  </td></tr>
+<tr style="vertical-align: bottom;">
+<td width="250"><div class="image">
+<img src="../images/union.png"  alt="Octaèdre" width="250"/>
+</div>
+ </td><td width="250"><div class="image">
+<img src="../images/intersection.png"  alt="Dodécaèdre" width="250"/>
+</div>
+ </td><td width="250"><div class="image">
+<img src="../images/difference.png"  alt="Icosaèdre" width="250"/>
+</div>
+  </td></tr>
+</table>
+<p>Le principe algorithmique de ces opérateurs reposent sur la notion d'intérieur/extérieur (appelée parité) par rapport à une primitive. Lorsque l'on parcours la collection d'intervalles (représentés par des évènements), le premier évènement rencontré (d'abscisse t minimale) est obligatoirement un évènement d'entrée dans la primitive. Dans la même collection d'intervalle, l'évènement suivant sera alors obligatoirement une sortie, suivie éventuellement d'une entrée, etc... Le dernier évènement sera obligatoirement une sortie.</p>
+<p>Ces opérateurs parcourent en simultané les deux collections d'intervalles associées aux deux arguments de l'opérateur en traitant les évènements dans l’ordre arithmétique, du plus petit au plus grand. En fonction de la position intérieur/extérieur (de la parité) dans chaque collection et de la sémantique de l'opérateur, une collection résultante contenant tout ou partie des évènements des deux collections initiales est crée. Pour l’opération d’union, par exemple, un évènement ne sera ajouté dans l’ensemble résultant uniquement s’il fait passer de l’extérieur des deux objets à l’intérieur d’un seul ou réciproquement. Un évènement faisant passer de l’intérieur d’un objet à l’intérieur des deux, ou réciproquement, ne sera pas ajouté dans l’ensemble résultant.</p>
+<p>Lorsque les évènements d'entrée/sortie du solide ont étés calculés à la racine de l'arbre, l'algorithme du lancer de rayons conserve le plus proche de l'origine du rayon dans le sens positif qui caractérise alors le point d'intersection entre le rayon et l'arbre.</p>
+<h1><a class="anchor" id="TRDV3"></a>
+Travail à réaliser</h1>
+<h2><a class="anchor" id="TRDV3_1"></a>
+Programmation d'opérateurs ensemblistes pour le lancer de Rayons</h2>
+<p>Afin de pouvoir visualiser en lancer de rayons les arbres CSG, il ne manque à notre logiciel de lancer de rayons que 3 fonctions de traitement des opérateurs ensemblistes sur nos collections d'intervalles. Dans le fichier <a class="el" href="a00046.html">intervaloperators.cpp</a> (situé dans le répertoire main), vous devrez programmer les trois opérateurs <a class="el" href="a00068.html#gac6b53e72e199766315087879f7d015e5" title="Chaque évènements est de type Bound et le champs data doit être manipulé de façon opaque...">union_of_intervals()</a>, <a class="el" href="a00068.html#ga26806eb167bb645a89e1b39f01dd5bca" title="Chaque évènements est de type Bound et le champs data doit être manipulé de façon opaque...">intersection_of_intervals()</a> et <a class="el" href="a00068.html#ga405c977f6831f22f9b822f0a1a2a4bb7" title="Chaque évènements est de type Bound et le champs data doit être manipulé de façon opaque...">difference_of_intervals()</a>.</p>
+<p>Vous pouvez programmer autant de fonctions annexes que vous le souhaitez, la seule contrainte est de programmer ces trois opérateurs en respectant scrupuleusement leur interface et leurs documentation.</p>
+<p>Après avoir écrit ces opérateurs, si vous lancez le programme sans avoir modifié la fonction <a class="el" href="a00052.html#a4a1ad3a23e213ffed72c19f2bc39cd9a" title="to initialize the scene with the default one. ">make_test_scene()</a>, vous devriez obtenir l'image suivante. </p>
+<div class="image">
+<img src="operateurs.png" alt="operateurs.png"/>
+</div>
+<h2><a class="anchor" id="TRDV3_2"></a>
+Construction d'un arbre CSG à partir d'une chaine de caractère</h2>
+<p>Comme nous l'avons vu dans la section <a class="el" href="a00001.html#CSGDefinition">Définition</a>, un arbre CSG correspond à un programme puisqu'il définit une arbre de syntaxe abstraite pour l’évaluation d'opérateurs ensemblistes. Afin de pouvoir facilement créer des objets objets complexes, nous souhaitons ajouter à notre lancer de rayon la possibilité de traduire une expression LISP-like définissant un arbre CSG en un objet de type <a class="el" href="a00015.html" title="Abstract class for geometric object. ">Geometry</a> qui pourra être ajouté à la scène.</p>
+<p>On définit notre langage de description d'arbre CSG de la façon suivante : </p>
+<div class="fragment"><div class="line">Objet :</div>
+<div class="line">  <a class="code" href="a00029.html" title="Sphere geometric object. ">Sphere</a> = (sp pos_x pos_y pos_z radius)</div>
+<div class="line">          -- sphére définie par son centre et son rayon</div>
+<div class="line">  <a class="code" href="a00012.html" title="Cylinder geometric object. ">Cylinder</a> = (cy pos_x pos_y pos_z axis_x axis_y axis_z radius length)</div>
+<div class="line">          -- cylindre définit par son centre son axe, son rayon et sa longueur</div>
+<div class="line">  <a class="code" href="a00007.html" title="Cone geometric object. ">Cone</a> = (co pos_x pos_y pos_z vertex_x vertex_y vertex_z radius)</div>
+<div class="line">          -- cone définit par le centre de sa base, son sommet et le rayon de sa base</div>
+<div class="line">  <a class="code" href="a00003.html" title="Box geometric object. ">Box3D</a> = (bo pos_x pos_y pos_z baseX_x baseX_y baseX_z baseY_x baseY_y baseY_z size_x size_y size_z)</div>
+<div class="line">          -- boite définie par son centre, deux vecteurs définissant son plan de base et les longueurs des aretes</div>
+<div class="line">Operateur :</div>
+<div class="line">  <a class="code" href="a00011.html" title="The CSGUnion class. ">CSGUnion</a>        : (+ Operateur|Objet Operateur|Objet)</div>
+<div class="line">  <a class="code" href="a00009.html" title="The CSGIntersection class. ">CSGIntersection</a> : (* Operateur|Objet Operateur|Objet)</div>
+<div class="line">  <a class="code" href="a00008.html" title="The CSGDifference class. ">CSGDifference</a>   : (- Operateur|Objet Operateur|Objet)</div>
+</div><!-- fragment --><p>Programmez la fonction <a class="el" href="a00037.html#af96e58a2ddc9ee2ae0caf5bdccd11a65" title="csg_parse : analyse la chaine str et construit l&#39;arbre CSG résultant ">csg_parse()</a>, dans le fichier <a class="el" href="a00037.html">csg_parser.cpp</a> qui, à partir d'une chaine de caractère contenant la description de l'arbre à visualiser, construit le noeud <a class="el" href="a00015.html" title="Abstract class for geometric object. ">Geometry</a> correspondant. Lorsque cette fonction aura été écrite, en lançant le programme sans avoir modifié la fonction <a class="el" href="a00052.html#a4a1ad3a23e213ffed72c19f2bc39cd9a" title="to initialize the scene with the default one. ">make_test_scene()</a>, vous devriez obtenir l'image suivante dont l'objet en bas au centre est défini par la chaine : </p>
+<div class="fragment"><div class="line">(- (* (bo 0. 2.5 -3.25 1. 0. 0. 0. 0. 1. 1.0 1.0 1.0) (sp 0. 2.5 -3.25 0.65) ) (+ (cy 0. 2.5 -3.25 1.0 0.0 0.0 0.3 1.75) (+ (cy 0. 2.5 -3.25 0.0 1.0 0.0 0.3 1.75) (cy 0. 2.5 -3.25 0.0 0.0 1.0 0.3 1.75) ) ) )</div>
+</div><!-- fragment --> <div class="image">
+<img src="csg.png" alt="csg.png"/>
+</div>
+<h2><a class="anchor" id="BAREME"></a>
+Fichiers attendus, barème et notation</h2>
+<p>Vous devez déposer sous moodle une archive au format tar.gz (et uniquement à ce format là) nommée : prénom.nom-OIMD3.tar.gz (remplacez prénom et nom par VOTRE prénom et VOTRE nom).</p>
+<p>Cette archive devra contenir UNIQUEMENT : </p>
+<ul>
+<li>
+les répertoires main et coreraytracer </li>
+<li>
+le fichier racine CMakeLists.txt </li>
+<li>
+éventuellement un document au format pdf ou texte contenant les informations que vous souhaitez communiquer sur votre travail (Liste des fichiers modifiés, références bibliographiques, ajouts faits par rapport au sujet, bugs trouvés et corrigés, bug trouvés et non corrigés, bugs rajoutés, ...) </li>
+</ul>
+<p>Ce devoir sera évalué et noté de la façon suivante : </p>
+<ol>
+<li>
+Respect des consignes de dépot : 2 points </li>
+<li>
+Compilation : 3 points <ul>
+<li>
+Si la compilation échoue, la note 0 sera donnée à cette partie et la correction s'arrêtera là </li>
+</ul>
+</li>
+<li>
+<p class="startli">Execution : 5 points </p>
+<ul>
+<li>
+Si l'exécution du programme obtenu correspond uniquement au TP ou si le programme ne fonctionne pas, la note 0 sera donnée à cette partie et la correction s'arrêtera là. </li>
+<li>
+Il sera compté 1 point par opérateur fonctionnant (union, intersection et différence) et 2 points si la fonction <a class="el" href="a00037.html#af96e58a2ddc9ee2ae0caf5bdccd11a65" title="csg_parse : analyse la chaine str et construit l&#39;arbre CSG résultant ">csg_parse()</a> fourni la bonne forme. </li>
+</ul>
+<p class="endli"></p>
+</li>
+<li>
+Par opérateur, la qualité du code apportera 2 points au maximum. Les critères évalués seront la lisibilité, l'efficacité et l'élégance algorithmique. </li>
+<li>
+Pour l'analyseur syntaxique, 2 points maximum seront ajoutés en fonction de sa robustesse, de son extensibilité (est-il simple de rajouter un opérateur ou un objet de base ?) et de la qualité de son code. </li>
+<li>
+<b>BONUS</b> : 2 points de bonus seront attribués en fonction des différentes extension que vous avez ajouté par rapport au sujet : <ul>
+<li>
+Création d'objets complexes ou mise en scène originale </li>
+<li>
+Extension de l'analyseur pour permettre la définition de "variables" </li>
+<li>
+Association d’un matériau différent à chaque feuille de l’arbre CSG </li>
+<li>
+Transformation du lancer de rayon en programme multi-thread </li>
+<li>
+Toute surprise agréable et inattendue ... laisser aller votre imagination! </li>
+</ul>
+</li>
+</ol>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré le Lundi Novembre 4 2013 17:01:57 pour M1 Informatique - OIM - mini raytracer par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
+  </ul>
+</div>
+</body>
+</html>

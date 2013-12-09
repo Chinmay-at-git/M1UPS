@@ -1,0 +1,12 @@
+<map id="Plane::clip" name="Plane::clip">
+<area shape="rect" id="node2" href="$a00018.html#a5875b7222430d9be92a654db194d0d60" title="IntervalSet::add" alt="" coords="139,5,253,33"/>
+<area shape="rect" id="node4" href="$a00027.html#a44792845b5e6508be5959f21a3f26e9e" title="Ray::at" alt="" coords="164,57,228,85"/>
+<area shape="rect" id="node5" href="$a00027.html#a9bfb39f0ff5a7a2330ef9749b8e97e17" title="Ray::dir" alt="" coords="162,109,230,137"/>
+<area shape="rect" id="node6" href="$a00030.html#a293698c2fcdc50968fa63e125120bd61" title="Vector3D::dot" alt="" coords="145,161,247,189"/>
+<area shape="rect" id="node10" href="$a00027.html#aa0271e10968c04224e2986017abb67b3" title="Ray::ori" alt="" coords="162,213,230,241"/>
+<area shape="rect" id="node11" href="$a00027.html#a9484c8a3d4eeca6f9188d6ce2ca14b77" title="to avoid auto intersection " alt="" coords="136,265,256,293"/>
+<area shape="rect" id="node3" href="$a00013.html#ae931001b67b43308e984fee80902a17b" title="Diff_Geom::t" alt="" coords="304,5,400,33"/>
+<area shape="rect" id="node7" href="$a00030.html#a15a162a986b897ebd0bb74df056d99c5" title="Vector3D::x" alt="" coords="307,109,397,137"/>
+<area shape="rect" id="node8" href="$a00030.html#a1819fd51b78ece8de462d3a2c979111a" title="Vector3D::y" alt="" coords="307,161,397,189"/>
+<area shape="rect" id="node9" href="$a00030.html#a026531e883c967b7a7803a2f6b983d2c" title="Vector3D::z" alt="" coords="307,213,397,241"/>
+</map>

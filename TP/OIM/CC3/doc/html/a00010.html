@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>M1 Informatique - OIM - mini raytracer: Référence de la classe CSGNode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">M1 Informatique - OIM - mini raytracer
+   &#160;<span id="projectnumber">2013-2014</span>
+   </div>
+   <div id="projectbrief">Interface de programmation pour un raytracer minimal</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.4 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
+      <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('a00010.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groupes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pro-attribs">Attributs protégés</a> &#124;
+<a href="a00156.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence de la classe CSGNode<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="a00075.html">Simple Raytracer</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="a00010.html" title="The CSGNode class. ">CSGNode</a> class.  
+ <a href="a00010.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="a00036_source.html">csg.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Graphe d'héritage de CSGNode:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00157.png" border="0" usemap="#_c_s_g_node_inherit__map" alt="Inheritance graph"/></div>
+<map name="_c_s_g_node_inherit__map" id="_c_s_g_node_inherit__map">
+<area shape="rect" id="node3" href="a00008.html" title="The CSGDifference class. " alt="" coords="5,363,136,461"/><area shape="rect" id="node4" href="a00009.html" title="The CSGIntersection class. " alt="" coords="160,363,299,461"/><area shape="rect" id="node5" href="a00011.html" title="The CSGUnion class. " alt="" coords="323,363,428,461"/><area shape="rect" id="node2" href="a00015.html" title="Abstract class for geometric object. " alt="" coords="175,6,283,119"/></map>
+</div>
+<div class="dynheader">
+Graphe de collaboration de CSGNode:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00158.png" border="0" usemap="#_c_s_g_node_coll__map" alt="Collaboration graph"/></div>
+<map name="_c_s_g_node_coll__map" id="_c_s_g_node_coll__map">
+<area shape="rect" id="node2" href="a00015.html" title="Abstract class for geometric object. " alt="" coords="6,6,113,119"/></map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a96fd17ebb413a9adf1dbcbeb00d901e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00010.html#a96fd17ebb413a9adf1dbcbeb00d901e5">CSGNode</a> (<a class="el" href="a00015.html">Geometry</a> *a, <a class="el" href="a00015.html">Geometry</a> *b)</td></tr>
+<tr class="separator:a96fd17ebb413a9adf1dbcbeb00d901e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5290d017db0eaf3423e61e47b4ebd958"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00010.html#a5290d017db0eaf3423e61e47b4ebd958">~CSGNode</a> ()</td></tr>
+<tr class="separator:a5290d017db0eaf3423e61e47b4ebd958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac96afa010d5587e244a75e0af2da6444"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00010.html#ac96afa010d5587e244a75e0af2da6444">intersect</a> (<a class="el" href="a00027.html">Ray</a> &amp;ray_, <a class="el" href="a00013.html">Diff_Geom</a> *p_diff_geom_) const </td></tr>
+<tr class="memdesc:ac96afa010d5587e244a75e0af2da6444"><td class="mdescLeft">&#160;</td><td class="mdescRight">intersect a geometric object.  <a href="#ac96afa010d5587e244a75e0af2da6444">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ac96afa010d5587e244a75e0af2da6444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78bebb84d2dedc6aaf3bc9f590f24afb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00010.html#a78bebb84d2dedc6aaf3bc9f590f24afb">clip</a> (<a class="el" href="a00027.html">Ray</a> &amp;ray_, <a class="el" href="a00018.html">IntervalSet</a> &amp;bounds) const =0</td></tr>
+<tr class="memdesc:a78bebb84d2dedc6aaf3bc9f590f24afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">clip a ray by a <a class="el" href="a00010.html" title="The CSGNode class. ">CSGNode</a>.  <a href="#a78bebb84d2dedc6aaf3bc9f590f24afb">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a78bebb84d2dedc6aaf3bc9f590f24afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00015"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00015')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques inherited from <a class="el" href="a00015.html">Geometry</a></td></tr>
+<tr class="memitem:aedd2e92f79197c6f0671c5d14cf72578 inherit pub_methods_a00015"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00015.html#aedd2e92f79197c6f0671c5d14cf72578">~Geometry</a> ()</td></tr>
+<tr class="separator:aedd2e92f79197c6f0671c5d14cf72578 inherit pub_methods_a00015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Attributs protégés</h2></td></tr>
+<tr class="memitem:a2175794072fb73a663932ec4af17c039"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00015.html">Geometry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00010.html#a2175794072fb73a663932ec4af17c039">m_a</a></td></tr>
+<tr class="separator:a2175794072fb73a663932ec4af17c039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cc2a9f5bf0808eeda0066abb588dabd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00015.html">Geometry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00010.html#a3cc2a9f5bf0808eeda0066abb588dabd">m_b</a></td></tr>
+<tr class="separator:a3cc2a9f5bf0808eeda0066abb588dabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_static_attribs_a00015"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_a00015')"><img src="closed.png" alt="-"/>&#160;Attributs protégés statiques inherited from <a class="el" href="a00015.html">Geometry</a></td></tr>
+<tr class="memitem:a1b7caac32d27a55620cd630ab8c8bde9 inherit pro_static_attribs_a00015"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="a00013.html">Diff_Geom</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00015.html#a1b7caac32d27a55620cd630ab8c8bde9">garbage</a></td></tr>
+<tr class="memdesc:a1b7caac32d27a55620cd630ab8c8bde9 inherit pro_static_attribs_a00015"><td class="mdescLeft">&#160;</td><td class="mdescRight">garbage for easy memory management  <a href="#a1b7caac32d27a55620cd630ab8c8bde9">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a1b7caac32d27a55620cd630ab8c8bde9 inherit pro_static_attribs_a00015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>The <a class="el" href="a00010.html" title="The CSGNode class. ">CSGNode</a> class. </p>
+
+<p>Définition à la ligne <a class="el" href="a00036_source.html#l00017">17</a> du fichier <a class="el" href="a00036_source.html">csg.hpp</a>.</p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a class="anchor" id="a96fd17ebb413a9adf1dbcbeb00d901e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CSGNode::CSGNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00015.html">Geometry</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00015.html">Geometry</a> *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="a00036_source.html#l00023">23</a> du fichier <a class="el" href="a00036_source.html">csg.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5290d017db0eaf3423e61e47b4ebd958"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual CSGNode::~CSGNode </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="a00036_source.html#l00027">27</a> du fichier <a class="el" href="a00036_source.html">csg.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a class="anchor" id="a78bebb84d2dedc6aaf3bc9f590f24afb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CSGNode::clip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00027.html">Ray</a> &amp;&#160;</td>
+          <td class="paramname"><em>ray_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00018.html">IntervalSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>clip a ray by a <a class="el" href="a00010.html" title="The CSGNode class. ">CSGNode</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ray_</td><td>the ray to clip </td></tr>
+    <tr><td class="paramname">bounds</td><td>ray-space sorted bounds of the resulting clipped segments. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true if ray was clipped. bounds parameter is filled by this method</dd></dl>
+<p>For complex objects, values in bounds represent an ordered set of in - out events. An in event is when the ray enters the geometry, an out is when the ray leaves the geometry. The first event of this array is an in event, followed by an out and so on. </p>
+
+<p>Implémente <a class="el" href="a00015.html#a767321b776e8662e39aa32347e8918ee">Geometry</a>.</p>
+
+<p>Implémenté dans <a class="el" href="a00008.html#abb5077f37138af94f364e00810f83955">CSGDifference</a>, <a class="el" href="a00011.html#af10ef9b38d6f02403ccc1586bfd042ef">CSGUnion</a>, et <a class="el" href="a00009.html#ab037a625412ab7566ceb204d869917d6">CSGIntersection</a>.</p>
+
+<p>Référencé par <a class="el" href="a00036_source.html#l00037">intersect()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00010_a78bebb84d2dedc6aaf3bc9f590f24afb_icgraph.png" border="0" usemap="#a00010_a78bebb84d2dedc6aaf3bc9f590f24afb_icgraph" alt=""/></div>
+<map name="a00010_a78bebb84d2dedc6aaf3bc9f590f24afb_icgraph" id="a00010_a78bebb84d2dedc6aaf3bc9f590f24afb_icgraph">
+<area shape="rect" id="node2" href="a00010.html#ac96afa010d5587e244a75e0af2da6444" title="intersect a geometric object. " alt="" coords="163,5,303,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac96afa010d5587e244a75e0af2da6444"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CSGNode::intersect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00027.html">Ray</a> &amp;&#160;</td>
+          <td class="paramname"><em>ray_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00013.html">Diff_Geom</a> *&#160;</td>
+          <td class="paramname"><em>p_diff_geom_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>intersect a geometric object. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ray_</td><td>the ray </td></tr>
+    <tr><td class="paramname">p_diff_geom_</td><td>the result of the intersection </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true if the ray intersects the geometry Modifies the ray_.max_t() value, intersect only if the intersection is before ray_.max_t() </dd></dl>
+
+<p>Implémente <a class="el" href="a00015.html#ae992633602643893bbd1e286e2ca98f9">Geometry</a>.</p>
+
+<p>Définition à la ligne <a class="el" href="a00036_source.html#l00037">37</a> du fichier <a class="el" href="a00036_source.html">csg.hpp</a>.</p>
+
+<p>Références <a class="el" href="a00049_source.html#l00052">IntervalSet::bounds()</a>, <a class="el" href="a00010.html#a78bebb84d2dedc6aaf3bc9f590f24afb">clip()</a>, <a class="el" href="a00049_source.html#l00077">IntervalSet::free_memory()</a>, <a class="el" href="a00059_source.html#l00068">Ray::max_t()</a>, <a class="el" href="a00059_source.html#l00081">Ray::ray_epsilon()</a>, <a class="el" href="a00059_source.html#l00072">Ray::set_max_t()</a>, et <a class="el" href="a00041_source.html#l00043">Diff_Geom::t()</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="a00010_ac96afa010d5587e244a75e0af2da6444_cgraph.png" border="0" usemap="#a00010_ac96afa010d5587e244a75e0af2da6444_cgraph" alt=""/></div>
+<map name="a00010_ac96afa010d5587e244a75e0af2da6444_cgraph" id="a00010_ac96afa010d5587e244a75e0af2da6444_cgraph">
+<area shape="rect" id="node2" href="a00018.html#a071811cdb02ba0cf2c05140bcf466927" title="IntervalSet::bounds" alt="" coords="212,5,348,33"/><area shape="rect" id="node3" href="a00010.html#a78bebb84d2dedc6aaf3bc9f590f24afb" title="clip a ray by a CSGNode. " alt="" coords="225,57,335,85"/><area shape="rect" id="node4" href="a00018.html#a65b6f9cd4209012b0b0f88ab17f0f03f" title="IntervalSet::free_memory" alt="" coords="194,109,366,137"/><area shape="rect" id="node5" href="a00027.html#a8cd07a7f52236e9a1f4c92fbf5c8786a" title="Ray::max_t" alt="" coords="236,161,324,189"/><area shape="rect" id="node6" href="a00027.html#a9484c8a3d4eeca6f9188d6ce2ca14b77" title="to avoid auto intersection " alt="" coords="220,213,340,241"/><area shape="rect" id="node7" href="a00027.html#a67bf1057835b4a923a50c82f31d46d0d" title="Ray::set_max_t" alt="" coords="223,265,337,293"/><area shape="rect" id="node8" href="a00013.html#ae931001b67b43308e984fee80902a17b" title="Diff_Geom::t" alt="" coords="232,317,328,345"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a class="anchor" id="a2175794072fb73a663932ec4af17c039"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00015.html">Geometry</a>* CSGNode::m_a</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="a00036_source.html#l00019">19</a> du fichier <a class="el" href="a00036_source.html">csg.hpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00036_source.html#l00099">CSGIntersection::clip()</a>, <a class="el" href="a00036_source.html#l00131">CSGUnion::clip()</a>, et <a class="el" href="a00036_source.html#l00160">CSGDifference::clip()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3cc2a9f5bf0808eeda0066abb588dabd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00015.html">Geometry</a>* CSGNode::m_b</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="a00036_source.html#l00020">20</a> du fichier <a class="el" href="a00036_source.html">csg.hpp</a>.</p>
+
+<p>Référencé par <a class="el" href="a00036_source.html#l00099">CSGIntersection::clip()</a>, <a class="el" href="a00036_source.html#l00131">CSGUnion::clip()</a>, et <a class="el" href="a00036_source.html#l00160">CSGDifference::clip()</a>.</p>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<li><a class="el" href="a00036_source.html">csg.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="a00010.html">CSGNode</a></li>
+    <li class="footer">Généré le Lundi Novembre 4 2013 17:01:57 pour M1 Informatique - OIM - mini raytracer par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
+  </ul>
+</div>
+</body>
+</html>

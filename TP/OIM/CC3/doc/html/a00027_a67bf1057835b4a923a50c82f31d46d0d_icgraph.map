@@ -1,0 +1,10 @@
+<map id="Ray::set_max_t" name="Ray::set_max_t">
+<area shape="rect" id="node2" href="$a00024.html#a8972d45fdd4d58cc736ce779da8e000a" title="intersect a plan. " alt="" coords="182,5,295,33"/>
+<area shape="rect" id="node4" href="$a00029.html#acb1c5b063489f881872e6faf155c4c18" title="intersect a sphere. " alt="" coords="178,57,300,85"/>
+<area shape="rect" id="node5" href="$a00010.html#ac96afa010d5587e244a75e0af2da6444" title="intersect a geometric object. " alt="" coords="169,109,309,137"/>
+<area shape="rect" id="node6" href="$a00003.html#ad5a9451718d7e98f7425aee8e00dcfbf" title="intersect a geometric object. " alt="" coords="179,161,298,189"/>
+<area shape="rect" id="node3" href="$a00007.html#a525bf376cea933bf1fb4dd47ec77c3c1" title="intersect a ray and a cone. " alt="" coords="358,109,469,137"/>
+<area shape="rect" id="node7" href="$a00012.html#aaf9bb0e9f800879eaa31070c9f7eb687" title="intersect a cylinder . " alt="" coords="175,265,303,293"/>
+<area shape="rect" id="node8" href="$a00028.html#aac2848f8a3c18972e5d5f077ab682f30" title="test the visibility between a point and a light " alt="" coords="168,317,309,345"/>
+<area shape="rect" id="node9" href="$a00071.html#gafdd7145eb904844de4296af68d315e39" title="test the visibility between an intersection and a light " alt="" coords="365,317,461,345"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="Geometry" name="Geometry">
+<area shape="rect" id="node2" href="$a00003.html" title="Box geometric object. " alt="" coords="5,193,96,370"/>
+<area shape="rect" id="node3" href="$a00007.html" title="Cone geometric object. " alt="" coords="120,169,257,394"/>
+<area shape="rect" id="node4" href="$a00010.html" title="The CSGNode class. " alt="" coords="282,209,392,354"/>
+<area shape="rect" id="node8" href="$a00012.html" title="Cylinder geometric object. " alt="" coords="416,185,543,378"/>
+<area shape="rect" id="node9" href="$a00024.html" title="Plane geometric object. " alt="" coords="567,217,659,346"/>
+<area shape="rect" id="node10" href="$a00029.html" title="Sphere geometric object. " alt="" coords="683,209,775,354"/>
+<area shape="rect" id="node5" href="$a00008.html" title="The CSGDifference class. " alt="" coords="113,443,244,541"/>
+<area shape="rect" id="node6" href="$a00009.html" title="The CSGIntersection class. " alt="" coords="268,443,407,541"/>
+<area shape="rect" id="node7" href="$a00011.html" title="The CSGUnion class. " alt="" coords="431,443,536,541"/>
+</map>

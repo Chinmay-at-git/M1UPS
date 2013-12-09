@@ -1,0 +1,22 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$a00052.html#ab1d1ac9ba4ad1639618cfd7613fee95f" title="compute_image" alt="" coords="109,291,225,319"/>
+<area shape="rect" id="node3" href="$a00052.html#a4a1ad3a23e213ffed72c19f2bc39cd9a" title="to initialize the scene with the default one. " alt="" coords="104,343,230,371"/>
+<area shape="rect" id="node20" href="$a00074.html#gaee5a58a341bc2053065b4fa8c8950577" title="to save the image to a file " alt="" coords="120,525,213,553"/>
+<area shape="rect" id="node4" href="$a00070.html#gad67f595be55be0bc50b4ec08a9c74192" title="to set the parameters of the camera " alt="" coords="313,5,404,33"/>
+<area shape="rect" id="node6" href="$a00070.html#ga5e9b1752bc3635d8e03aeedce96f1378" title="to create a plastic material " alt="" coords="292,57,425,85"/>
+<area shape="rect" id="node7" href="$a00070.html#gaf8b0ecdd64116491706ebede06c13b54" title="to create a plane " alt="" coords="309,109,408,137"/>
+<area shape="rect" id="node8" href="$a00070.html#gadf3f8ea1c8bf943db640af01230ed0f7" title="to add a new object to the scene, from its geometry and its material " alt="" coords="315,161,402,189"/>
+<area shape="rect" id="node10" href="$a00070.html#ga97f60add9f9b7177df6c8f2f2372561a" title="to create a box " alt="" coords="315,213,402,241"/>
+<area shape="rect" id="node11" href="$a00070.html#ga2da051b943f32009496f94737261c248" title="to create a sphere " alt="" coords="305,265,412,293"/>
+<area shape="rect" id="node12" href="$a00070.html#ga4d0d7fc79bead2d9745acc2d10c506bf" title="to create an union CSG Node. " alt="" coords="295,317,422,345"/>
+<area shape="rect" id="node13" href="$a00070.html#ga6eda5cac4c7d6203bf2e1798c0b4f124" title="to create an intersection CSG Node. " alt="" coords="278,369,440,397"/>
+<area shape="rect" id="node14" href="$a00070.html#gabca30508a9802f1a60bc67185dcaa8fb" title="to create a difference CSG Node. " alt="" coords="283,421,435,449"/>
+<area shape="rect" id="node15" href="$a00070.html#ga27c1a3eeb2869e55865f2cc6d3e717f1" title="to create a cone " alt="" coords="311,473,406,501"/>
+<area shape="rect" id="node16" href="$a00070.html#gabd60bd9dfe9afb36b127decf9145287d" title="to create a cylinder " alt="" coords="303,525,415,553"/>
+<area shape="rect" id="node17" href="$a00037.html#af96e58a2ddc9ee2ae0caf5bdccd11a65" title="csg_parse : analyse la chaine str et construit l&#39;arbre CSG résultant " alt="" coords="317,577,400,605"/>
+<area shape="rect" id="node18" href="$a00070.html#ga7338897b0e82076338fb7dd7cadeaddc" title="to add a light to the scene " alt="" coords="321,629,396,657"/>
+<area shape="rect" id="node5" href="$a00028.html#a92e1b2344129de2618f3b5f1ed22dd5e" title="Scene::set_camera" alt="" coords="493,5,629,33"/>
+<area shape="rect" id="node9" href="$a00028.html#aab20b59647f0f9ba5cc40e5943377a87" title="Scene::add_primitive" alt="" coords="488,161,634,189"/>
+<area shape="rect" id="node19" href="$a00028.html#a6403f0a1e1cb777d4b335a3eb093979d" title="Scene::add_light" alt="" coords="501,629,622,657"/>
+<area shape="rect" id="node21" href="$a00017.html#a4494a1ac16eb45ef862806694c8aa3d3" title="Image::write_to_exr_file" alt="" coords="277,681,440,709"/>
+</map>
