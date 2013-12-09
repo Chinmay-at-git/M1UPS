@@ -1,2 +1,2 @@
-/home/21007631/Documents/TP-OIM/TP6/build/CMakeFiles/main.dir
-/home/21007631/Documents/TP-OIM/TP6/build/CMakeFiles/raytracing.dir
+/media/shared/Tp/M1UPS/TP/OIM/Tp6/build/CMakeFiles/main.dir
+/media/shared/Tp/M1UPS/TP/OIM/Tp6/build/CMakeFiles/raytracing.dir

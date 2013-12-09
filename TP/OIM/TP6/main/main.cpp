@@ -1,6 +1,10 @@
 //#include "raytracing.h"
 #include "solidesplaton.h"
 
+
+int LARGEUR = 800;
+int HAUTEUR = 600;
+int NB_REFLEX = 10;
 /*******
  Fonction à écrire par les etudiants
  ******/
@@ -15,12 +19,20 @@ Color compute_direct_lighting (Ray ray_, Isect isect_) {
  * \ref RayAPI (pour calculer la visibilité entre un point et une source de lumière) et \ref LightAPI (pour calculer l'éclairage direct).
  */
     Color l;
+    int i, isVisi;
+    Light* light_;
 
     l = init_color (0.f, 0.f, 0.f);
+    
+    for (i=0; i<nb_lights(); i++){
+      light_ = get_light(i);
+      isVisi =  test_visibility ( isect_, light_);
+      if (isVisi!=0){
+		l = l+direct_lighting (ray_, isect_, light_);
+      }
+    }
 
- 
     return l;
-
 }
 
 /***************************************************/
@@ -56,7 +68,31 @@ Color trace_ray (Ray ray_) {
  *
 */
 
-	Color l = init_color (0.f, 0.f, 0.f);
+	Color l = init_color (0.075f, 0.075f, 0.075f);
+	Isect isect_;
+	
+	int isInter = intersect_scene (&ray_, &isect_ );
+	
+	if (isInter!=0){
+	  l = compute_direct_lighting (ray_, isect_);
+	}
+	
+	if (ray_depth(ray_)>10 || ray_importance(ray_)<0.01f)
+	  return (l);
+	
+	//reflection
+	if(isect_has_reflection(isect_)){
+		Ray refl_ray;
+		Color refl_col = reflect(ray_, isect_, &refl_ray);
+		l = l+refl_col*(trace_ray(refl_ray));
+	}
+	//refraction
+	if(isect_has_refraction(isect_)){
+	 Ray rafr_ray;
+	 Color rafr_col = refract(ray_, isect_, &rafr_ray);
+	 if(color_is_black(rafr_col)==0)
+	  l = l+rafr_col*(trace_ray(rafr_ray));
+	}
 
 	return l;
 }
@@ -79,6 +115,19 @@ void compute_image () {
  * et la couleur calculée à l'aide de ce rayon doit être stockée sur le pixel (x,y).
 */
 
+  int i,j, img_height, img_width;
+  Ray ray_;
+  Color col_;
+
+  get_image_resolution(&img_width, &img_height);
+  
+  for(i=0; i<img_width; i++){
+   for(j=0; j<img_height; j++){
+     ray_ = camera_ray(i,j);
+     col_ = trace_ray (ray_);
+     set_pixel_color (i, j, col_);
+   }
+  }
 }
 
 /***************************************************/
@@ -90,8 +139,8 @@ void compute_image () {
  */
 int main () {
 
-        //make_platon_scene (800, 600);
-        make_default_scene(800, 600);
+        //make_platon_scene (LARGEUR, HAUTEUR);
+        make_default_scene(LARGEUR, HAUTEUR);
 
 	compute_image();
 	

@@ -1,1 +1,1 @@
-/usr/bin/c++    -g -Wall -ansi -fPIC -Wno-unknown-pragmas -Wno-unsafe-loop-optimizations -Wextra -fdiagnostics-show-option -Wno-unused-parameter -mmmx -msse -msse2 -msse3 -mfpmath=sse   CMakeFiles/main.dir/main.cpp.o  -o main -rdynamic libraytracing.a -lIlmImf -lHalf -lIex 
+/usr/bin/c++    -g -Wall -ansi -fPIC -Wno-unknown-pragmas -Wno-unsafe-loop-optimizations -Wextra -fdiagnostics-show-option -Wno-unused-parameter -mmmx -msse -msse2 -msse3 -mfpmath=sse -lrt    CMakeFiles/main.dir/main.cpp.o  -o main -rdynamic libraytracing.a -lIlmImf -lHalf -lIex 

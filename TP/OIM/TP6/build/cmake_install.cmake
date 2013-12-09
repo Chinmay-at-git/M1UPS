@@ -1,4 +1,4 @@
-# Install script for directory: /home/21007631/Documents/TP-OIM/TP6/main
+# Install script for directory: /media/shared/Tp/M1UPS/TP/OIM/Tp6/main
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/21007631/Documents/TP-OIM/TP6/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/media/shared/Tp/M1UPS/TP/OIM/Tp6/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/21007631/Documents/TP-OIM/TP6/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/media/shared/Tp/M1UPS/TP/OIM/Tp6/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)
