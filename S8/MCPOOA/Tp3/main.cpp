@@ -7,6 +7,7 @@
 
 #include <cstdlib>
 #include "Livre.h"
+#include "Article.h"
 #include <string>
 using namespace std;
 
@@ -30,6 +31,17 @@ int main(int argc, char** argv) {
     d = &l1;
     cout << "Affichage Doc (polymorphisme livre 1)" << endl;
     d->afficher(cout);
+    
+    
+    Article a1("titreRevue", "editeur", 2014, doc);
+    d = &a1;
+    cout << "Affichage Doc (polymorphisme Article 1)" << endl;
+    d->afficher(cout);
+    
+    cout << "Test operateur affectation" << endl;
+    Livre l2;
+    l2 = l1;
+    l2.afficher(cout);
     
     
     return 0;

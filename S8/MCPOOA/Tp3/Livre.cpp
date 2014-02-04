@@ -14,7 +14,7 @@ Livre::Livre(const Livre& orig) :
         editeur(orig.editeur), annee(orig.annee), Document(orig){}
 
 ostream& Livre::afficher(ostream& out) const{
-    out << "Editeur -> " << editeur << "\t" << annee << endl;
+    out << "Editeur -> " << editeur << "\tAnnee -> " << annee << endl;
     Document::afficher(out);
     return out;
 }
@@ -22,6 +22,17 @@ ostream& Livre::afficher(ostream& out) const{
 
 Livre* Livre::clone() const{
 	return new Livre(*this);
+}
+Document& Livre::operator=(const Document& doc){
+    if(this != &doc){
+        //appel de l'operateur de la classe de base
+        Document::operator =(doc);
+        //on ne peut effectuer cette affectation que si Document est polymorphe
+        const Livre& livre = dynamic_cast<const Livre&> (doc);
+        this->annee = livre.annee;
+        this->editeur = livre.editeur;
+    }
+    return *this;
 }
 
 

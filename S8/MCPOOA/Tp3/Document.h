@@ -22,7 +22,6 @@ public:
     
     
     friend std::ostream& operator<<(std::ostream& out, const Document& doc);
-    Document& operator=(const Document& doc);
     /*
      *un destructeur doit toujours être virtuel si on utilise le polymorphisme.
      */
@@ -33,6 +32,10 @@ public:
      */
     virtual std::ostream& afficher(std::ostream& out) const;
     virtual Document* clone() const;
+    //l'operateur d'affectation doit etre redefinie. S'il ne l'est pas
+    //l'affectation ne s'appliquera que sur le type de base, donc les certains
+    //membres de la classe derivee ne seront pas copie
+    virtual Document& operator=(const Document& doc);
 	
 };
 

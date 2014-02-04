@@ -16,9 +16,10 @@ public:
     Livre();
     Livre(std::string, int, Document doc);
     Livre(const Livre& orig);
-    ~Livre();
+    virtual ~Livre();
     virtual std::ostream& afficher(std::ostream& out) const;
     virtual Livre* clone() const;
+    virtual Document& operator=(const Document& doc);
 
 };
 

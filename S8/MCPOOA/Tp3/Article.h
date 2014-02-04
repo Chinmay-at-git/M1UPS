@@ -12,10 +12,16 @@
 class Article : public Document{
 public:
     Article();
+    Article(std::string titreR, std::string edit, int publie, Document doc);
     Article(const Article& orig);
     virtual ~Article();
+    virtual std::ostream& afficher(std::ostream& out) const;
+    virtual Article* clone() const;
+    Document& operator=(const Document& doc);
 private:
-
+    std::string titreRevue;
+    std::string editeur;
+    int annee;
 };
 
 #endif	/* ARTICLE_H */
