@@ -14,10 +14,6 @@ using namespace std;
 /*
  * 
  */
-
-void presenter(const Document doc){
-    doc.afficher(cout);
-}
 int main(int argc, char** argv) {
     string title="titre du doc";
     string resume="resume";
