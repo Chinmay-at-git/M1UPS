@@ -1,0 +1,52 @@
+/usr/bin/subl sublime
+alias gcc = 'gcc -Wall -ansi -pedantic -Werror'
+
+# pacman -Syu : Upgrading packages 
+# pacman -Rs package_name : Removing packages
+# pacman -S package_name1 package_name2 ... : Installing packages *
+
+
+Create a new repository on the command line
+
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/username/Licence3.git
+git push -u origin master
+
+Push an existing repository from the command line
+
+git remote add origin https://github.com/username/Licence3.git
+git push -u origin master
+
+Clone an existing repository from the command line
+git clone git://github.com/schacon/grit.git mongrit
+
+Update local repository
+git pull origin master
+
+Status
+git status
+
+Cancel last commit
+git commit --amend
+
+Remove file
+git rm
+
+move file
+git mv
+
+Configuration
+git config --global user.name "oumarPoulo"
+git config --global user.email "aob.diallo@gmail.com"
+git config --global credential.helper 'cache --timeout=3600'
+
+alias of git
+git config --global alias.ce checkout
+git config --global alias.br branch
+git config --global alias.co commit
+git config --global alias.st status
+//the last commit
+git config --global alias.last 'log -1 HEAD'

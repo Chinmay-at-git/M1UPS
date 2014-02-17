@@ -1,0 +1,45 @@
+import services.S_ConnectServer
+import services.S_SendMessageToServer
+
+namespace CS{
+	/**
+	 * Type composant du client
+	 */
+	component ClientComponentType{
+		/**
+		 * service fournis : envoie du message
+		 */
+		provides c_send : S_SendMessageToServer
+		/**
+		 * services requis : demande de connection au serveur
+		 */
+		requires s_connect : S_ConnectServer
+	}
+	
+	/**
+	 * Type composant du serveur (Composant simple)
+	 */
+	 component ServerComponentType{
+	 	/**
+	 	 * services fournis : connection du client au serveur
+	 	 */
+	 	provides c_connect : S_ConnectServer
+	 }
+	 
+	 /**
+	  * Composant composite (Le reseau)
+	  */
+	  component NetworkComponentType{
+	  	/**
+	  	 * definition du port, service d'envoie du message
+	  	 */
+	  	 provides sendService : S_SendMessageToServer = client.c_send
+	  	 
+	  	 //inclusion des parts
+	  	 part client : ClientComponentType{
+	  	 	bind s_connect to server.c_connect
+	  	 }
+	  	 part server : ServerComponentType
+	  }
+	
+}

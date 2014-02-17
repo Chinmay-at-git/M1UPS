@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<films xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="FilmProvider.xsd">
+    <realisateur id_realisateur="real_01">
+        <prenom>Pedro</prenom>
+        <nom>Almodovar</nom>
+    </realisateur>
+    <film id_film="film_01" id_realisateur="real_01" annee="2006">
+        <titre>Volver</titre>
+        <resume>
+            <text>Une histoire transgénérationnelle</text>
+        </resume>
+    </film>
+</films>

@@ -1,0 +1,20 @@
+Sélectionner les titres de tous les films
+/films/film/titre/text()
+
+Sélectionner le résumé (texte uniquement) du film dont le titre est "Minority Report"
+/films/film[titre='Minority Report']/resume/text/text()
+
+Sélectionner le nom du dernier réalisateur dans l'ordre du document
+/films/realisateur[last()]/nom/text()
+
+Sélectionner le titre du deuxième film dans l'ordre du document
+/films/film[2]/titre/text()
+
+Sélectionner les titres des films pour lesquels une image est disponible
+/films/film/resume/image/../../titre/text()
+
+Sélectionner les dates des films de Scorsese
+/films/film[@id_realisateur=/films/realisateur[nom='Scorsese']/@id_realisateur]/@annee
+
+Retourner le nombre de films sortis en 2003
+count(/films/film[@annee=2003])
