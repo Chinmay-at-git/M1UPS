@@ -1,0 +1,21 @@
+import question5.ComputableEval
+import question5.StorableEval
+import question3.EvalRequest
+import question4.InitRequest
+import compDefQ1.Identification
+
+namespace compDefQ5 {
+	component ComputeEval {
+		provides evalService : ComputableEval
+	}
+	component StoreEval {
+		provides storeService : StorableEval
+	}
+	component IdEvalThenStore {
+		provides evalReq : EvalRequest
+		provides initReq : InitRequest
+		requires idReq : Identification
+		requires compReq : ComputableEval
+		requires stoReq : StorableEval
+	}
+}

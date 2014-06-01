@@ -1,0 +1,11 @@
+import question2.AnnounceInit
+import question4.Init
+import question4.InitRequest
+
+namespace compDefQ4 {
+	component InitProcess {
+		provides doInit : Init
+		requires doAnnounce : AnnounceInit
+		requires initReq : InitRequest
+	}
+}

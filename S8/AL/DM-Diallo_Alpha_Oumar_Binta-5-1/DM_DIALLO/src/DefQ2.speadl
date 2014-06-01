@@ -1,0 +1,25 @@
+import compClientDefQ2.InitPrint
+import question2.AnnounceInit
+import question2.PrintingRequest
+
+namespace compDefQ2 {
+	component Print {
+		provides pReq : PrintingRequest
+	}
+	component CompositeQ2 {
+		provides announceService : AnnounceInit 
+					= init.announceService
+		part init : InitPrint {
+			bind printingService to pr.pReq
+		}
+		part pr : Print
+	}
+}
+
+namespace compClientDefQ2 {
+	
+	component InitPrint {
+		provides announceService : AnnounceInit
+		requires printingService : PrintingRequest
+	}
+}

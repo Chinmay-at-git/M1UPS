@@ -1,0 +1,8 @@
+import question1.Identifiable
+
+namespace compDefQ1{
+
+component Identification {
+	provides getID : Identifiable
+}
+}

@@ -1,0 +1,43 @@
+import question2.AnnounceInit
+import question4.Init
+import question4.InitRequest
+import compDefQ2.Print
+
+namespace compDefQ4 {
+	component InitProcess {
+		provides doInit : Init
+		requires doAnnounce : AnnounceInit
+		requires initReq : InitRequest
+	}
+	
+	component PrintIn {
+		requires inDoAnnounce : AnnounceInit
+		requires inInitReq : InitRequest
+		provides outDoAnnounce : AnnounceInit
+		provides outInitReq : InitRequest
+		part p : Print
+	}
+	
+	component PrintOut {
+		requires inDoInit : Init
+		provides outDoInit : Init
+		part p : Print
+	}
+	
+	component InitProcessVerb {
+		provides doInit : Init
+		requires doAnnounce : AnnounceInit
+		requires initReq : InitRequest
+		part pi : PrintIn {
+			bind inInitReq to initReq
+			bind inDoAnnounce to doAnnounce
+		}
+		part po : PrintOut {
+			bind inDoInit to pr.doInit
+		}
+		part pr : InitProcess {
+			bind doAnnounce to pi.outDoAnnounce
+			bind initReq to pi.outInitReq
+		}
+	}
+}
