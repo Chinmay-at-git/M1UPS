@@ -1,0 +1,40 @@
+Ci dessous la durée des traitements effectués sur chaque image du projet.
+
+c2i-066@c2i066-AO751h ~/Documents/save/DM1 $ make tests
+./test_script.sh
+./test_files/test-scene.pgm			0.103217
+./test_files/1234.pgm			0.000270
+./test_files/input1.pgm			0.000266
+./test_files/lena.pgm			0.045308
+./test_files/ordered.pgm			0.000270
+dct          [OK]
+./test_files/test-scene.pgm			0.144377
+./test_files/1234.pgm			0.000290
+./test_files/input1.pgm			0.000290
+./test_files/lena.pgm			0.058788
+./test_files/ordered.pgm			0.000287
+quantify     [OK]
+./test_files/test-scene.pgm			0.144873
+./test_files/1234.pgm			0.000295
+./test_files/input1.pgm			0.000286
+./test_files/lena.pgm			0.063991
+./test_files/ordered.pgm			0.000378
+vectorize    [OK]
+./test_files/test-scene.pgm			0.111821
+./test_files/1234.pgm			0.000193
+./test_files/input1.pgm			0.000195
+./test_files/lena.pgm			0.041783
+./test_files/ordered.pgm			0.000305
+compression  [OK]
+./test_files/test-scene.pgm			0.115303
+./test_files/test_decompression/test-scene.pgm.xxx			0.000004
+./test_files/1234.pgm			0.000265
+./test_files/test_decompression/1234.pgm.xxx			0.000003
+./test_files/input1.pgm			0.000338
+./test_files/test_decompression/input1.pgm.xxx			0.000003
+./test_files/lena.pgm			0.044336
+./test_files/test_decompression/lena.pgm.xxx			0.000002
+./test_files/ordered.pgm			0.000268
+./test_files/test_decompression/ordered.pgm.xxx			0.000002
+diff: ./test_files/test_decompression/test-scene.pgm: No such file or directory
+decompression [KO]
