@@ -15,9 +15,11 @@
 /*variante 2:
     Le compteur est declare en tant que variable globale
     on constate que les deux processus travaillent separemement,
-    la variabale compteur n'est pas partagee (ex: en affectant au compteur une 
-    valeur, on ne trouve pas la meme incremente ou decremente dans le 
-    processus suivant)
+    la variabale compteur n'est pas partagee.
+    Ex: en affectant au compteur une valeur dans un des processus (pere ou fils)
+    , on ne trouve pas la meme valeur incrementee ou decrementee. Les deux 
+    processus ne partage pas le compteur.
+    (*cpt=12 dans le fils par exemple)
 */
 
 int *cpt;
@@ -25,7 +27,6 @@ int *cpt;
 void incremente(int nbre){
     int i=0;
     printf("Salut, je suis le fils %d, j'incremente le compteur\n",getpid());
-    *cpt = 12;
     for(i=0; i < nbre; i++){
         *cpt+=1;
         printVal("cpt = %d\n", *cpt);
@@ -67,7 +68,7 @@ int main(int argc, char *argv[]){
     }
     decremente(iter);
     printf("Le pere se suicide\n");
-    /* on libere la memoire, tout malloc son free */
+    /* on libere la memoire, A tout malloc son free */
     free(cpt);
     return 0;
 }

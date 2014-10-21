@@ -22,8 +22,8 @@
     partage se fait bien).
     Conclusion:
         Ce code ne fait pas ce qu'on lui demande, il peut arriver que le pere
-        affiche le contenu de la memoire avant que le fils n'ait place sa valeur.
-        Il faut se servir d'un sémaphore pour gérer l'ordonnancement des tâches.
+        affiche le contenu de la memoire avant que le fils n'ait place sa valeur
+        Il faut se servir d'un sémaphore pour gérer l'ordonnancement des tâches
 */
 
 void incremente(int nbre, int shmid){
@@ -108,5 +108,58 @@ int main(int argc, char *argv[]){
 }
 
 /*
+oumar@diallopc:~/Bureau/MCPR/Tp1$ ./v4 4
+l'identificateur du segment est 6914071 
+ce segment est associe a la clef 16843535 
+Je suis le pere, je decremente le compteur
+Salut, je suis le fils 7087, j'incremente le compteur
+Je commence par m'attacher le segment de memoire
+incremente  1
+incremente  2
+incremente  3
+incremente  4
+je vais ecrire un reel 125.5 que mon pere va afficher
+Bon, proc_fils il est temps de mourrir
+avant tout detachons le segment partagee
+Le fils se suicide
+Je commence par m'attacher le segment de memoire
+decremente  3
+decremente  2
+decremente  1
+decremente  0
+je vais afficher un reel que mon fils a ecrit
+valeur lut par le pere = 125.500000
+Bon, proc_pere il est temps de mourrir
+avant tout detachons le segment partagee
+Le pere attend la mort de son fils
+Bon, faisons le menage et supprimons le segment partagee
+Le pere se suicide
+
+oumar@diallopc:~/Bureau/MCPR/Tp1$./v4 4
+l'identificateur du segment est 6946839 
+ce segment est associe a la clef 16843535 
+Je suis le pere, je decremente le compteur
+Salut, je suis le fils 7089, j'incremente le compteur
+Je commence par m'attacher le segment de memoire
+Je commence par m'attacher le segment de memoire
+incremente  1
+decremente  0
+incremente  1
+decremente  0
+incremente  1
+decremente  0
+incremente  1
+decremente  0
+je vais afficher un reel que mon fils a ecrit
+je vais ecrire un reel 125.5 que mon pere va afficher
+Bon, proc_fils il est temps de mourrir
+avant tout detachons le segment partagee
+valeur lut par le pere = 0.000000
+Bon, proc_pere il est temps de mourrir
+avant tout detachons le segment partagee
+Le fils se suicide
+Le pere attend la mort de son fils
+Bon, faisons le menage et supprimons le segment partagee
+Le pere se suicide
 
 */

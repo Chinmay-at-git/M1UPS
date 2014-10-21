@@ -18,10 +18,10 @@
     Toulouse III
 */ 
 
-/* Structure utilise pour la variable partage entre les processus*/
+/* Structure utilise pour la variable partagee entre les processus*/
 typedef struct{
     int cpt; /*compteur*/
-    double valeur; /*valeur reelle partage*/
+    double valeur; /*valeur reelle partagee*/
 }ValPartage;
 
 /**

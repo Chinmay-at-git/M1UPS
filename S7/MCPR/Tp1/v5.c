@@ -16,11 +16,11 @@
 */ 
 
 /*variante 5:
-    Ce code ne fait pas ce qu'on lui demande, il peut arriver que le pere affiche
-    le contenu de la memoire avant que le fils n'ait place sa valeur dedans.
-    Il faut se servir d'un sémaphore pour gérer l'ordonnancement des tâches.
-    Ne pas oublier de supprimer le segment apres avoir excuter le programme
-    (commande ipcrm -m shmid) cmd ipcs==>shmid
+    Ce code ne fait pas ce qu'on lui demande, il peut arriver que le pere 
+    affiche le contenu de la memoire avant que le fils n'ait place sa valeur 
+    dedans. Il faut se servir d'un sémaphore pour gérer l'ordonnancement des 
+    taches. Ne pas oublier de supprimer le segment apres avoir executer le 
+    programme (commande ipcrm -m shmid) cmd ipcs==>shmid
 */
 
 void incremente(int nbre, int shmid){
@@ -37,7 +37,8 @@ void incremente(int nbre, int shmid){
         printVal("incremente % d\n", p1->cpt);
     }
     printf("valeur avant= %f\n"
-        "je vais ecrire un reel 125.5 que le programme p2 va afficher\n", p1->valeur);
+        "je vais ecrire un reel 125.5 que le programme p2 va afficher\n",
+         p1->valeur);
     p1->valeur = 125.5;
     printf("Bon, Detachons le segment partagee p1\n");
     if(shmdt(p1) < 0){
@@ -73,7 +74,7 @@ int main(int argc, char *argv[]){
     /* identifiant du segment de memoire partage */
     int shmid = -1;
     if(argc != 3){
-        printf("Error :\t ./v5 nber_iteration [0-1 (0=p1, 1=p2)] end\n");
+        printf("Error :\t ./v5 nber_iteration [0-1 (0=p1, 1=p2)]\n");
         exit(EXIT_FAILURE);
     }
     iter = atoi(argv[1]);

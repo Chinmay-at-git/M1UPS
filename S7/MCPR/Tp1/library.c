@@ -73,7 +73,6 @@ void info_shm(int shmid){
 
 void delete_shm(int shmid){
   if (shmctl(shmid,IPC_RMID,NULL) == -1){
-    error("Erreur lors de la destruction", 1);
+    error("Erreur lors de la destruction du segment", 1);
   }
 }
-

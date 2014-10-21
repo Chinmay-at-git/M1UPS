@@ -17,6 +17,7 @@
     representant son traitement. On constate que le compteur est 
     incremente par le fils et decrementer par le pere, les valeurs
     sont differentes car il ne s'agit pas du meme compteur.
+    Le pere et le fils ne partage pas la meme variable.
 */
 
 void incremente(int nbre){
