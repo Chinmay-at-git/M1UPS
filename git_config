@@ -39,8 +39,8 @@ move file
 git mv
 
 Configuration
-git config --global user.name "oumarPoulo"
-git config --global user.email "aob.diallo@gmail.com"
+git config --global user.name "username"
+git config --global user.email "email"
 git config --global credential.helper 'cache --timeout=3600'
 
 alias of git
